@@ -13,8 +13,11 @@ related_publications: true
 
 2. We propose a method to accurately infer the distant, human-indicated spatial goals by estimating the laser trajectories. Despite the advantages of deictic gestures, current gesture interfaces may not be suitable for construction tasks that require a high level of precision. Within large-scale environments, these interfaces cover only a restricted proximity of the entire workspace and have limited accuracy in estimating the spatial locations of distant targets. Interfaces from other domains are mostly tested on close-proximity tabletops, whereas this study focuses on scenarios with more distant targets. This underscores the relevance and applicability of the proposed method in real-world scenarios where construction robots operate within expansive 3D workspaces.
 
-Related publications: {% cite yoon2024laserdex yoon2023effects %}, long references like {% reference yoon2024laserdex %}
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/projects/2021_spatial/1.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
+
+**Related publications**
+
+1. {% reference yoon2024laserdex %}
+2. {% reference yoon2023effects %}
