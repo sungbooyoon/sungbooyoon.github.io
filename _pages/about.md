@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
 subtitle: Ph.D. Candidate at <a href='https://en.snu.ac.kr/'>Seoul National University</a>. <a href='https://architecture.snu.ac.kr/'>Dept. of Architecture & Architectural Engineering</a>. <a href='https://cem.snu.ac.kr/'>Construction Engineering & Management Lab</a>. Advisor: <a href='https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao'>Prof. Changbum R. Ahn</a>
 
