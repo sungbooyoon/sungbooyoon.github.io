@@ -6,7 +6,7 @@ img: assets/img/projects/2021_modular/1.jpg
 importance: 1
 category: Others
 giscus_comments: true
-related_publications: true
+# related_publications: true
 ---
 
 Learn more about this project [here (Korean)](http://mcfro.co.kr/).

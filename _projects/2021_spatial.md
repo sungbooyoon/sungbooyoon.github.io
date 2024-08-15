@@ -6,7 +6,7 @@ img: assets/img/projects/2021_spatial/1.png
 importance: 1
 category: Human-Robot Interaction
 giscus_comments: true
-related_publications: true
+# related_publications: true
 ---
 
 1. We propose a new interface which can provide an effective and intuitive means of operating construction robots, enabling construction workers to communicate spatial goals without the need for extensive training in robotics. Current construction robots are limited in their ability to understand spatial instructions and goals on the worksite. Moreover, user interfaces, such as handheld controllers, require extensive training and operation time for users, which can be impractical for construction workers who are typically not experts in robotics.
