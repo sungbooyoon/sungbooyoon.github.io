@@ -240,8 +240,12 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
-      {% if entry.doi %}
-        <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {% if entry.html %}
+        {% if entry.html contains '://' %}
+          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+        {% else %}
+          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+        {% endif %}
       {% endif %}
       {% if entry.demo %}
         <a href="{{ entry.demo }}" class="btn btn-sm z-depth-0" role="button">Demo</a>
