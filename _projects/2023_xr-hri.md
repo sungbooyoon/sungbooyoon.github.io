@@ -4,7 +4,7 @@ title: XR-HRC in Construction
 description: With Ministry of Science and ICT, South Korea (2023.07 ~ 2023.12)
 img: assets/img/9.jpg
 importance: 1
-category: Robotics
+category: Human-Robot Interaction
 giscus_comments: true
 ---
 
