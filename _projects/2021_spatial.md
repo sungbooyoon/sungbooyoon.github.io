@@ -19,5 +19,7 @@ related_publications: true
 
 **Related publications**
 
-1. {% reference yoon2024laserdex %}
+1. {% reference yoon2021challenges % }
 2. {% reference yoon2023effects %}
+3. {% reference yoon2024deictic %} 
+4. {% reference yoon2024laserdex %}

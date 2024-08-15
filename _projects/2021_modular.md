@@ -24,3 +24,7 @@ Korea Agency for Infrastructure Technology Advancement (Award number: 21RERP –
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/projects/2021_modular/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
+
+**Related publications**
+
+1. {% reference yoon2021multi %}
