@@ -4,6 +4,13 @@
 "JCEM":
   url: https://ascelibrary.org/journal/jcemd4
 
+"i3CE":
+  color: "#009f36"
+
+"ISARC":
+  url: https://www.iaarc.org/publications/
+  color: "#00369f"
+  
 "AJP":
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
