@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Mid-High Rise Modular Construction
-description: With Ministry of Science and ICT, South Korea (2023.07 ~ 2023.12)
-img: assets/img/9.jpg
+description: With Korea Agency for Infrastructure Technology Advancement (2014.09 ~ 2023.06)
+img: assets/img/projects/2021_modular/1.jpg
 importance: 1
 category: Others
 giscus_comments: true
+related_publications: true
 ---
 
 Learn more about this project [here](http://mcfro.co.kr/) (Korean).
