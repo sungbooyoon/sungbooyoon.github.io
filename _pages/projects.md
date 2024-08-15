@@ -6,7 +6,7 @@ permalink: /projects/
 nav: true
 nav_order: 4
 display_categories: [Human-Robot Interaction, Robot Learning, Others]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
