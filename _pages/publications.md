@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 description: These publications are also available on <a href='https://scholar.google.com/citations?user=QFeaFbwAAAAJ'><u>Google Scholar</u></a>.
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 <!-- _pages/publications.md -->

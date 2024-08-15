@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+# description: A growing collection of your cool projects.
 nav: true
-nav_order: 3
-display_categories: [Human-Robot Interaction, Robot Learning, Modular Construction]
+nav_order: 4
+display_categories: [Human-Robot Interaction, Robot Learning, Others]
 horizontal: false
 ---
 
