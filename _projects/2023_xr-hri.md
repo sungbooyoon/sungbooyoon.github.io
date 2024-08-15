@@ -18,6 +18,6 @@ giscus_comments: true
     {% include figure.liquid loading="eager" path="assets/img/projects/2023_xr-hri/2.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 
-<!-- <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div> -->
+**Related Publications**
+
+1. {% reference Yoon2024evaluating %}

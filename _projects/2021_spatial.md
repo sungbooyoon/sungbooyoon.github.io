@@ -17,7 +17,7 @@ giscus_comments: true
     {% include figure.liquid loading="eager" path="assets/img/projects/2021_spatial/1.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 
-**Related publications**
+**Related Publications**
 
 1. {% reference yoon2021challenges %}
 2. {% reference yoon2023effects %}
