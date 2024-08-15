@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Candidate at <a href='https://en.snu.ac.kr/'>Seoul National University</a> (Advisor <a href='https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao'>Prof. Changbum R. Ahn</a>)
+subtitle: Ph.D. Candidate in Architectural Engineering @ <a href='https://en.snu.ac.kr/'>Seoul National University</a> (Advisor Prof. <a href='https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao'>Changbum R. Ahn</a>)
 
 profile:
   align: right
