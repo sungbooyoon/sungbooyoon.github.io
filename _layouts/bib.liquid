@@ -241,11 +241,7 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
       {% if entry.doi %}
-        {% if entry.doi contains '://' %}
-          <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
-        {% else %}
-          <a href="{{ entry.doi | prepend: '/assets/doi/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
-        {% endif %}
+        <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
       {% if entry.demo %}
         <a href="{{ entry.demo }}" class="btn btn-sm z-depth-0" role="button">Demo</a>
