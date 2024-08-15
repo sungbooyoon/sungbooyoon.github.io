@@ -6,7 +6,7 @@ img: assets/img/projects/2023_xr-hri/1.png
 importance: 1
 category: Human-Robot Interaction
 giscus_comments: true
-related_publications: true
+# related_publications: true
 ---
 
 **Research Objectives:** To develop multipurpose standard robotic platforms for performing three types of construction work at height (welding, plastering, and painting) and extended reality-based human-robot interaction technology for Level2 semi-autonomous remote teleoperations.
