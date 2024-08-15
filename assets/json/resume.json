@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Sungboo Yoon",
+    "label": "PhD Candidate",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "yoonsb24@snu.ac.kr",
+    "phone": "(+82) 2-880-8311",
+    "url": "https://sungbooyoon.github.io/",
+    "summary": "PhD Candidate in Architectural Engineering @ Seoul National University",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",

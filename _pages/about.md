@@ -1,17 +1,17 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Ph.D. Candidate at <a href='https://en.snu.ac.kr/'>Seoul National University</a>. <a href='https://architecture.snu.ac.kr/'>Dept. of Architecture & Architectural Engineering</a>. <a href='https://cem.snu.ac.kr/'>Construction Engineering & Management Lab</a>. Advisor: <a href='https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao'>Prof. Changbum R. Ahn</a>
 
 profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  align: left
+  image: profile_round.png
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Building 39 (Room 425)</p>
+    <p>1 Gwanak-ro, Gwanak-gu</p>
+    <p>Seoul, South Korea 08826</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
