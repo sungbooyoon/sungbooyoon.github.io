@@ -198,13 +198,6 @@
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
-      {% if entry.html %}
-        {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
-        {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
-        {% endif %}
-      {% endif %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
           <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
@@ -246,6 +239,19 @@
       {% endif %}
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% endif %}
+      {% if entry.doi %}
+        {% if entry.doi contains '://' %}
+          <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+        {% else %}
+          <a href="{{ entry.doi | prepend: '/assets/doi/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+        {% endif %}
+      {% endif %}
+      {% if entry.demo %}
+        <a href="{{ entry.demo }}" class="btn btn-sm z-depth-0" role="button">Demo</a>
+      {% endif %}
+      {% if entry.talk %}
+        <a href="{{ entry.talk }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
