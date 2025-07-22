@@ -175,7 +175,7 @@ collections:
   projects:
     output: true
 
- Includes & excludes
+# Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
@@ -197,6 +197,8 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _pages/repositories.md
+  - _pages/blog.md
 keep_files:
   - CNAME
   - .nojekyll
