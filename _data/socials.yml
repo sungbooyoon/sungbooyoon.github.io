@@ -10,7 +10,7 @@
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file
-# github_username: # your GitHub user name
+github_username: sungbooyoon # your GitHub user name
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # instagram_id: # your instagram id
