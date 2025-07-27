@@ -4,7 +4,7 @@ title: Multipurpose Robotic Platform and XR-Based Human-Robot Collaboration for 
 description: Joint Project by the Ministry of Land, Infrastructure and Transport & Ministry of Trade, Industry and Energy, South Korea (2025.04 ~ 2029.12)
 img: assets/img/projects/2023_xr-hri/1.png
 importance: 1
-category: Human-Robot Interaction
+category: Construction Robotics
 giscus_comments: true
 # related_publications: true
 ---

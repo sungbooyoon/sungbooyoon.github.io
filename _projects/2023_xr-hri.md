@@ -4,7 +4,7 @@ title: XR-HRI for Work-at-Height
 description: With Ministry of Science and ICT, South Korea (2023.07 ~ 2023.12)
 img: assets/img/projects/2023_xr-hri/1.png
 importance: 1
-category: Human-Robot Interaction
+category: Construction Robotics
 giscus_comments: true
 # related_publications: true
 ---

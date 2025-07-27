@@ -4,7 +4,7 @@ title: Spatial Referencing
 description: With Seoul National University (2021.10 ~ 2023.06)
 img: assets/img/projects/2021_spatial/1.png
 importance: 1
-category: Human-Robot Interaction
+category: Construction Robotics
 giscus_comments: true
 # related_publications: true
 ---

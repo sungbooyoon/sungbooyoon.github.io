@@ -5,7 +5,7 @@ permalink: /projects/
 # description: A growing collection of your cool projects.
 nav: true
 nav_order: 4
-display_categories: [Human-Robot Interaction, Robot Learning, Others]
+display_categories: [Construction Robotics, Others]
 horizontal: false
 ---
 
