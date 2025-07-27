@@ -50,7 +50,7 @@ A construction robot platform will be developed to support three specialized hig
 - **Real-Time Teleoperation**
   - Remote operation latency ≤ 200 ms
 
----
+<!-- ---
 
 ## Key Directions
 
@@ -69,7 +69,7 @@ Coordinate R&D efforts through:
 Phase 1 and 2 will be executed in parallel to maximize synergy between MOLIT and MOTIE projects.
 
 ### 4. Integrated Consortium for Inter-Ministerial Collaboration  
-Establish a balanced consortium comprising industry leaders, academia, research institutes, and government agencies, focused on delivering practical, field-oriented technology outcomes, accelerating commercialization, and driving the standardization of robotic systems for construction.
+Establish a balanced consortium comprising industry leaders, academia, research institutes, and government agencies, focused on delivering practical, field-oriented technology outcomes, accelerating commercialization, and driving the standardization of robotic systems for construction. -->
 
 ---
 
@@ -88,7 +88,7 @@ Establish a balanced consortium comprising industry leaders, academia, research 
  - (시공품질) 용접이음 인장강도 기준 만족, 도장 건조 도막 두께 기준 만족, 내화뿜칠 두께·밀도·부착강도 기준 만족
  - (원격작업 실시간성) 원격작업 지연시간 200ms
 
-## 4대 핵심 개발방향
+<!-- ## 4대 핵심 개발방향
 ### 1. 현장상황에 맞춰 자율레벨의 조정이 가능한 운영시스템
 건설현장의 인프라, 디지털화 수준, 작업 환경 등을 고려, 로봇 작업 구현 방식을 고도 자율화(자율주행, 자율작업)부터 부분 자동화(
 조종주행, 원격제어)까지 선택/조정할 수 있는 운영 시스템 구축
@@ -100,7 +100,7 @@ Establish a balanced consortium comprising industry leaders, academia, research 
 상용로봇 기반 핵심기술 개발(1단계), 개발로봇 기반 시스템 통합 및 테스트베드 실증(2단계), PoC를 통한 활성화(3단계)로 단계별 연구목표를 구성하여, 1세부 핵심 기술개발을 2세부 로봇 플랫폼 개발과 병행
 
 ### 4. 부처 간 협력체계 구축을 위한 최적 컨소시엄 구성
-산·학·연·관의 균형 잡힌 협력을 바탕으로 실증 중심의 기술 개발 및 건설로봇 기술의 상용화·표준화 추진
+산·학·연·관의 균형 잡힌 협력을 바탕으로 실증 중심의 기술 개발 및 건설로봇 기술의 상용화·표준화 추진 -->
 
 ---
 
