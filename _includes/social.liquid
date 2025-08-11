@@ -6,8 +6,6 @@
       <a href="{{ social[1] }}" title="Blogger"><i class="fa-brands fa-blogger-b"></i></a>
     {% when 'bluesky_url' %}
       <a href="{{ social[1] }}" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
-    {% when 'cv_pdf' %}
-      <a href="{{ social[1] | relative_url }}" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
     {% when 'dblp_url' %}
       <a href="{{ social[1] }}" title="DBLP"><i class="ai ai-dblp"></i></a>
     {% when 'discord_id' %}
@@ -22,6 +20,8 @@
       <a href="https://github.com/{{ social[1] }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
     {% when 'gitlab_username' %}
       <a href="https://gitlab.com/{{ social[1] }}" title="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+    {% when 'hal_id' %}
+      <a href="https://cv.hal.science/{{ social[1] }}/" title="HAL"><i class="ai ai-hal"></i></a>
     {% when 'ieee_id' %}
       <a href="https://ieeexplore.ieee.org/author/{{ social[1] }}/" title="IEEE Xplore"><i class="ai ai-ieee"></i></a>
     {% when 'inspirehep_id' %}
