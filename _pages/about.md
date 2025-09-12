@@ -17,14 +17,20 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Hello! I am a fourth-year Ph.D. candidte in the [Department of Architecture & Architectural Engineering](https://architecture.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/). I am fortunate to be advised by Professor [Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao), and I am a member of the [Construction Engineering & Management Lab](https://cem.snu.ac.kr/). My research interests span the fields of Construction Robotics and Machine Learning. My research goal is to design innovative interfaces that enhance human-robot collaboration on construction sites, facilitating efficient and effective interaction.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I previously completed both my bachelor's and master's degrees in Architectural Engineering at Seoul National University, where I conducted research on modular construction and human-robot interaction under the advisement of Professor [Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en).
+
+I am honored to be a recipient of the [Basic Science Research Program](https://www.nrf.re.kr/biz/info/info/view?menu_no=378&biz_no=416) (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *Jul 21, 2025*: &nbsp;🎉🎉 Our paper, "[Learning viewpoint control from human-initiated transitions for teleoperation in construction](http://dx.doi.org/10.1016/j.aei.2025.103665)", is now published online in Advanced Engineering Informatics!
+- *Feb 22, 2025*: &nbsp;🎉🎉 Our paper, "[Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://www.sciencedirect.com/science/article/pii/S0926580525000937)", is now published online in Automation in Construction!
+- *Dec 19, 2024*: Check out [this article](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php) on robotics research at Construction Engineering and Management Lab (SNUCEM).
+- *Sep 1, 2024*: &nbsp;🎉🎉 I was awarded the Basic Science Research Program (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
+- *Aug 15, 2024*: &nbsp; Finally migrated my personal website from google to github! :smile:
+- *May 1, 2024*: &nbsp;🎉🎉 Our paper, "[LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human–robot collaboration in construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)", has been chosen as an Editor's Choice selection in the Journal of Computing in Civil Engineering.
 
 # 📝 Publications 
 
