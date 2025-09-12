@@ -98,8 +98,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 - **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 \| [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
 
-
-# 🎖️ Honors and Awards
+# 🎖 Honors and Awards
 - *2024.05* [Editor’s Choice Article, ASCE Journal of Computing in Civil Engineering](https://ascelibrary.org/topic/badge/ed-choice)  
   Paper Title: "LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction." Yoon, S., Park, M., and Ahn, C. R. (2024).
 - *2024.11* Best Paper Award (Undergraduate Student Research), The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)  
@@ -116,30 +115,30 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 # 🎓 Education
 
-<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
+<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
 
 **Seoul National University**, South Korea  
 *Ph.D. in Architectural Engineering* (2022 – Present)  
 - Advisor: [Dr. Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en)  
 
-</div></div>
+<!-- </div></div> -->
 
-<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
+<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
 
 **Seoul National University**, South Korea  
 *M.S. in Architectural Engineering* (2020 – 2022)  
 - Thesis: *“Challenges in Spatial Communication Using Deictic Gesture for Human-Robot Collaboration in Construction”*  
 - Advisor: [Dr. Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en)  
 
-</div></div>
+<!-- </div></div> -->
 
-<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
+<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
 
 **Seoul National University**, South Korea  
 *B.S. in Architectural Engineering* (2014 – 2020)  
 - Graduated with honors (*Cum Laude*)  
 
-</div></div>
+<!-- </div></div> -->
 
 # 📚 Projects
 - To be updated soon!
