@@ -43,8 +43,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 *Advanced Engineering Informatics*, 2023, Invited paper
 
-</div>
-</div>
+</div></div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -62,7 +61,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">2024</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction]({https://doi.org/10.1061/JCCEE5.CPENG-5715)
+[LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)
 
 **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn
 
