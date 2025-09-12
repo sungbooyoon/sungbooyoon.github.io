@@ -59,7 +59,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2024</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction]({https://doi.org/10.1061/JCCEE5.CPENG-5715)
@@ -72,7 +72,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2023</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Effects of spatial characteristics on the human–robot communication using deictic gesture in construction](https://doi.org/10.1061/JCEMD4.COENG-12997)
@@ -118,7 +118,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 ## 🎓 Education
 
-<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
+<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
 
 **Seoul National University**, South Korea  
 *Ph.D. in Architectural Engineering* (2022 – Present)  
@@ -126,7 +126,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 </div></div>
 
-<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
+<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
 
 **Seoul National University**, South Korea  
 *M.S. in Architectural Engineering* (2020 – 2022)  
@@ -135,7 +135,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 </div></div>
 
-<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
+<div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
 
 **Seoul National University**, South Korea  
 *B.S. in Architectural Engineering* (2014 – 2020)  
@@ -144,8 +144,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 </div></div>
 
 # 📚 Projects
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- To be updated soon!
 
 # 🤖 Robots
-- 
+- To be updated soon!
