@@ -116,7 +116,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 - *2019* Second Place Award, Mooyoung CM Competition, Mooyoung CM  
 - *2019–2022* Dean's List, Seoul National University  
 
-## 🎓 Education
+# 🎓 Education
 
 <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1">
 
