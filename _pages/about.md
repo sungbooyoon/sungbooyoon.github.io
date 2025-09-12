@@ -97,7 +97,8 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 - Chan Heo, Changbum R. Ahn, **Sungboo Yoon**, Minhyuk Jung, Moonseo Park, Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects, *The 9th International Conference on Construction Engineering and Project Management (ICCEPM)*, 2022
 
-- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 | [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
+- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 \| [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
+
 
 # 🎖️ Honors and Awards
 - *2024.05* [Editor’s Choice Article, ASCE Journal of Computing in Civil Engineering](https://ascelibrary.org/topic/badge/ed-choice)  
