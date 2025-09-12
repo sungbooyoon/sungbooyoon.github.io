@@ -55,10 +55,9 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 *Automation in Construction*, 2025
 
-[**[Demo]**](https://youtu.be/L5rUZPR6Q5s?si=gL7IdSM34BIRqZlJ)
+[[Demo]](https://youtu.be/L5rUZPR6Q5s?si=gL7IdSM34BIRqZlJ)
 
-</div>
-</div>
+</div></div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -69,10 +68,9 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 *Journal of Computing in Civil Engineering*, 2024, Invited paper, <span style="color:red"> **Editor's choice** </span> 
 
-[**[Demo]**](https://youtu.be/w-w-SI-smOE)
+[[Demo]](https://youtu.be/w-w-SI-smOE)
 
-</div>
-</div>
+</div></div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -83,8 +81,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 *Journal of Construction Engineering and Management*, 2023
 
-</div>
-</div>
+</div></div>
 
 - Chaeeun Lee, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments](https://doi.org/10.55785/jcar.3.3.6), Journal of Construction Automation and Robotics, 2024
 
@@ -100,7 +97,7 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 - Chan Heo, Changbum R. Ahn, **Sungboo Yoon**, Minhyuk Jung, Moonseo Park, Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects, *The 9th International Conference on Construction Engineering and Project Management (ICCEPM)*, 2022
 
-- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 [**[Talk]**](https://www.youtube.com/watch?v=oktfEh3FvMg)
+- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 | [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
 
 
 
@@ -121,36 +118,30 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 ## 🎓 Education
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/snu.png' alt="SNU" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
 
 **Seoul National University**, South Korea  
 *Ph.D. in Architectural Engineering* (2022 – Present)  
 - Advisor: [Dr. Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en)  
 
-</div>
-</div>
+</div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/snu.png' alt="SNU" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
 
-**Seoul National University**, South Korea
+**Seoul National University**, South Korea  
 *M.S. in Architectural Engineering* (2020 – 2022)  
 - Thesis: *“Challenges in Spatial Communication Using Deictic Gesture for Human-Robot Collaboration in Construction”*  
 - Advisor: [Dr. Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en)  
 
-</div>
-</div>
+</div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/snu.png' alt="SNU" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="edu-box"><div class="edu-logo"><img src="images/snu.png" alt="SNU"></div><div class="edu-text" markdown="1">
 
-**Seoul National University**, South Korea
+**Seoul National University**, South Korea  
 *B.S. in Architectural Engineering* (2014 – 2020)  
 - Graduated with honors (*Cum Laude*)  
 
-</div>
-</div>
+</div></div>
 
 # 📚 Projects
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
