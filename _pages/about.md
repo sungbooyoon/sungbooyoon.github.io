@@ -142,7 +142,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 - *2019–2022* Dean's List, Seoul National University  
 
 # 🤖 Robots
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Turtlebot</div><img src='images/robots/turtlebot.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Turtlebot</div><img src='images/robots/turtlebot.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### Yujin Robot, Turtlebot v2
@@ -151,7 +151,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KR6</div><img src='images/robots/kr6.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KR6</div><img src='images/robots/kr6.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### KUKA, KR 6 R900 sixx
@@ -160,7 +160,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/panda.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/panda.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### Franka Emika, Panda (virtual)
@@ -169,7 +169,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/rb10.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/rb10.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### Rainbow Robotics, RB10-1300U
