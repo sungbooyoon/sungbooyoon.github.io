@@ -176,6 +176,8 @@ Korea Agency for Infrastructure Technology Advancement, 2014-09-21 ~ 2023-10-31 
 - *2019–2022* Dean's List, Seoul National University  
 
 # 🤖 Robots
+Robots I have worked with in my research
+
 <div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/turtlebot.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
