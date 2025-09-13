@@ -25,78 +25,105 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 
 
 # 🔥 News
-- *Jul 21, 2025*: &nbsp;🤖 Our paper, "[Learning viewpoint control from human-initiated transitions for teleoperation in construction](http://dx.doi.org/10.1016/j.aei.2025.103665)", is now published online in Advanced Engineering Informatics!
-- *Feb 22, 2025*: &nbsp;📷 Our paper, "[Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://www.sciencedirect.com/science/article/pii/S0926580525000937)", is now published online in Automation in Construction!
+- *Jul 21, 2025*: 🤖 Our paper, "[Learning viewpoint control from human-initiated transitions for teleoperation in construction](http://dx.doi.org/10.1016/j.aei.2025.103665)", is now published online in Advanced Engineering Informatics!
+- *Feb 22, 2025*: 📷 Our paper, "[Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://www.sciencedirect.com/science/article/pii/S0926580525000937)", is now published online in Automation in Construction!
 - *Dec 19, 2024*: Check out [this article](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php) on robotics research at Construction Engineering and Management Lab (SNUCEM).
-- *Sep 1, 2024*: &nbsp;🎉🎉 I was awarded the Basic Science Research Program (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
-- *Aug 15, 2024*: &nbsp; Finally migrated my personal website from google to github! :smile:
-- *May 1, 2024*: &nbsp;🎉🎉 Our paper, "[LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human–robot collaboration in construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)", has been chosen as an Editor's Choice selection in the Journal of Computing in Civil Engineering.
+- *Sep 1, 2024*: 🎉🎉 I was awarded the Basic Science Research Program (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
+- *Aug 15, 2024*: Finally migrated my personal website from google to github! :smile:
+- *May 1, 2024*: 🎉🎉 Our paper, "[LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human–robot collaboration in construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)", has been chosen as an Editor's Choice selection in the Journal of Computing in Civil Engineering.
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/2025_ADVEI.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/papers/2025_ADVEI.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Learning viewpoint control from human-initiated transitions for teleoperation in construction](https://doi.org/10.1016/j.aei.2025.103665)
-
-**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn
-
-*Advanced Engineering Informatics*, 2023, Invited paper
+### [Learning viewpoint control from human-initiated transitions for teleoperation in construction](https://doi.org/10.1016/j.aei.2025.103665)  
+**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
+*Advanced Engineering Informatics*, 2023  
+Invited paper
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2025</div><img src='images/papers/2025_AutoCon.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://doi.org/10.1016/j.autcon.2025.106053)
-
-**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn
-
-*Automation in Construction*, 2025
-
+### [Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://doi.org/10.1016/j.autcon.2025.106053)  
+**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
+*Automation in Construction*, 2025  
 [[Demo]](https://youtu.be/L5rUZPR6Q5s?si=gL7IdSM34BIRqZlJ)
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2024</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2024</div><img src='images/papers/2024_JCCE.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)
-
-**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn
-
-*Journal of Computing in Civil Engineering*, 2024, Invited paper, <span style="color:red"> **Editor's choice** </span> 
-
+### [LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)  
+**Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
+*Journal of Computing in Civil Engineering*, 2024  
+Invited paper, <span style="color:red"> Editor's choice </span>  
 [[Demo]](https://youtu.be/w-w-SI-smOE)
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2023</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">2023</div><img src='images/papers/2023_JCEM.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Effects of spatial characteristics on the human–robot communication using deictic gesture in construction](https://doi.org/10.1061/JCEMD4.COENG-12997)
-
-**Sungboo Yoon**, YeSeul Kim, Moonseo Park, Changbum R. Ahn
-
+### [Effects of spatial characteristics on the human–robot communication using deictic gesture in construction](https://doi.org/10.1061/JCEMD4.COENG-12997)  
+**Sungboo Yoon**, YeSeul Kim, Moonseo Park, Changbum R. Ahn  
 *Journal of Construction Engineering and Management*, 2023
 
 </div></div>
 
-- Chaeeun Lee, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments](https://doi.org/10.55785/jcar.3.3.6), Journal of Construction Automation and Robotics, 2024
+- Chaeeun Lee, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments](https://doi.org/10.55785/jcar.3.3.6), *Journal of Construction Automation and Robotics*, 2024
 
-- Dongwoo Kang, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Analysis of Factors Affecting the Acceptance of Smart Personal Protective Equipment(Smart-PPE) by Construction Workers Based on the Technology Acceptance Model (TAM) Framework](https://doi.org/10.20931/JCS.2024.7.1.019), *Journal of Construction Automation and Robotics*, 2024
+- Dongwoo Kang, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Analysis of Factors Affecting the Acceptance of Smart Personal Protective Equipment(Smart-PPE) by Construction Workers Based on the Technology Acceptance Model (TAM) Framework](https://doi.org/10.20931/JCS.2024.7.1.019), *Journal of the Korea Institute of Construction Safety*, 2024
 
-- **Sungboo Yoon**, Seungmin Shin, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots](https://3dgeoinfoeg-ice.webs.uvigo.es/proceedings), <span style="color:red"> **Recognized as a top paper and invited to the special issue of the Advanced Engineering Informatics**</span>
+- **Sungboo Yoon**, Seungmin Shin, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots](https://3dgeoinfoeg-ice.webs.uvigo.es/proceedings), *Proceedings of the 31st International Workshop on Intelligent Computing in Engineering*, 2024  
+<span style="color:red"> Recognized as a top paper and invited to the special issue of the Advanced Engineering Informatics</span>
 
-- **Sungboo Yoon**, Chaeeun Lee, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [A Taxonomy of Extended Reality for Human-Robot Interaction in Construction Based on a Systematic Literature Review](https://doi.org/10.3311/CCC2024-039), *Proceedings of the Creative Construction Conference 2024*, 2024
+- **Sungboo Yoon**, Chaeeun Lee, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [A Taxonomy of Extended Reality for Human-Robot Interaction in Construction Based on a Systematic Literature Review](https://doi.org/10.3311/CCC2024-039), *Proceedings of the Creative Construction Conference*, 2024
 
-- **Sungboo Yoon**, Jinsik Park, Moonseo Park, Changbum R. Ahn, [A Deictic Gesture-Based Human-Robot Interface for In Situ Task Specification in Construction](https://doi.org/10.1061/9780784485224.05), *Computing in Civil Engineering 2023*, 2024, <span style="color:red"> **Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering**</span>
+- **Sungboo Yoon**, Jinsik Park, Moonseo Park, Changbum R. Ahn, [A Deictic Gesture-Based Human-Robot Interface for In Situ Task Specification in Construction](https://doi.org/10.1061/9780784485224.05), *Computing in Civil Engineering*, 2024  
+<span style="color:red"> Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering</span>
 
 - **Sungboo Yoon**, Moonseo Park, Minhyuk Jung, Hosang Hyun, Suho Ahn, [Multi-objective Optimization Model for Tower Crane Layout Planning in Modular Construction](https://doi.org/10.6106/KJCEM.2021.22.1.036), *Korean Journal of Construction Engineering and Management*, 2021
 
 - Chan Heo, Changbum R. Ahn, **Sungboo Yoon**, Minhyuk Jung, Moonseo Park, Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects, *The 9th International Conference on Construction Engineering and Project Management (ICCEPM)*, 2022
 
 - **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 \| [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
+
+# 🎓 Education
+
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div markdown="1">
+
+**Seoul National University**, South Korea  
+*Ph.D. in Architectural Engineering* (2022 – Present)  
+- Advisor: [Dr. Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en)  
+
+</div></div>
+
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div markdown="1">
+
+**Seoul National University**, South Korea  
+*M.S. in Architectural Engineering* (2020 – 2022)  
+- Thesis: *“Challenges in Spatial Communication Using Deictic Gesture for Human-Robot Collaboration in Construction”*  
+- Advisor: [Dr. Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en)  
+
+</div></div>
+
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div markdown="1">
+
+**Seoul National University**, South Korea  
+*B.S. in Architectural Engineering* (2014 – 2020)  
+- Graduated with honors (*Cum Laude*)  
+
+</div></div>
+
+# 📚 Projects
+- To be updated soon!
 
 # 🏆 Honors and Awards
 - *2024.05* [Editor’s Choice Article, ASCE Journal of Computing in Civil Engineering](https://ascelibrary.org/topic/badge/ed-choice)  
@@ -113,35 +140,38 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 - *2019* Second Place Award, Mooyoung CM Competition, Mooyoung CM  
 - *2019–2022* Dean's List, Seoul National University  
 
-# 🎓 Education
-
-<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
-
-**Seoul National University**, South Korea  
-*Ph.D. in Architectural Engineering* (2022 – Present)  
-- Advisor: [Dr. Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en)  
-
-<!-- </div></div> -->
-
-<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
-
-**Seoul National University**, South Korea  
-*M.S. in Architectural Engineering* (2020 – 2022)  
-- Thesis: *“Challenges in Spatial Communication Using Deictic Gesture for Human-Robot Collaboration in Construction”*  
-- Advisor: [Dr. Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en)  
-
-<!-- </div></div> -->
-
-<!-- <div class="paper-box edu-logo"><div class="paper-box-image"><img src="images/snu.png" alt="SNU"></div><div class="paper-box-text" markdown="1"> -->
-
-**Seoul National University**, South Korea  
-*B.S. in Architectural Engineering* (2014 – 2020)  
-- Graduated with honors (*Cum Laude*)  
-
-<!-- </div></div> -->
-
-# 📚 Projects
-- To be updated soon!
-
 # 🤖 Robots
-- To be updated soon!
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Turtlebot</div><img src='images/robots/turtlebot.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+### Yujin Robot, Turtlebot v2
+- Description: Kobuki-based mobile platform equipped with an Intel RealSense D435 RGB-D camera and Intel NUC computer running ROS
+- Usage: Used to interpret deictic (pointing) gestures through vision-based 3D human pose estimation in human–robot spatial communication studies in construction
+
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KR6</div><img src='images/robots/kr6.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+### KUKA, KR 6 R900 sixx
+- Description: A 6-DoF industrial manipulator (payload 6 kg, reach 900 mm) equipped with a Makita 3706 drywall cutting tool and an Intel RealSense D435 RGB-D camera, mounted on a mobile lift
+- Usage: Used for precise drywall cutting in human–robot interface studies combining deictic gestures, speech, and dynamic laser pointing
+
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/panda.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+### Franka Emika, Panda (virtual)
+- Description: 7-DoF collaborative robot arm simulated in VR, used as a manipulation arm with a MIG-welding tool and a camera arm with an RGB-D sensor
+- Usage: Used for dynamic viewpoint control for teleoperated robotic welding at height in construction
+
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Panda</div><img src='images/robots/rb10.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+### Rainbow Robotics, RB10-1300U
+- To be updated
+</div></div>
+
