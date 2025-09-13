@@ -90,11 +90,12 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 - Chan Heo, Changbum R. Ahn, **Sungboo Yoon**, Minhyuk Jung, Moonseo Park, Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects, *The 9th International Conference on Construction Engineering and Project Management (ICCEPM)*, 2022
 
-- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021 \| [[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
+- **Sungboo Yoon**, YeSeul Kim, Changbum R. Ahn, Moonseo Park, [Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction](https://doi.org/10.22260/ISARC2021/0067), *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction*, 2021  
+[[Talk]](https://www.youtube.com/watch?v=oktfEh3FvMg)
 
 # 🎓 Education
 
-<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:80px; height:auto;"></div>
 <div markdown="1">
 
 **Seoul National University**, South Korea  
@@ -103,7 +104,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 </div></div>
 
-<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:80px; height:auto;"></div>
 <div markdown="1">
 
 **Seoul National University**, South Korea  
@@ -113,7 +114,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 </div></div>
 
-<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:90px; height:auto;"></div>
+<div style="display:flex; align-items:flex-start; gap: 20px; margin-top: 10px;"><div style="flex:0 0 auto;"><img src="images/snu.png" alt="SNU" style="width:80px; height:auto;"></div>
 <div markdown="1">
 
 **Seoul National University**, South Korea  
