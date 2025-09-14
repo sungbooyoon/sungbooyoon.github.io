@@ -40,7 +40,7 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
 
 ### [Learning viewpoint control from human-initiated transitions for teleoperation in construction](https://doi.org/10.1016/j.aei.2025.103665)  
 **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
-*Advanced Engineering Informatics*, 2023  
+*Advanced Engineering Informatics*, 2023 <strong><span class='show_paper_citations' data='QFeaFbwAAAAJ:dhFuZR0502QC'></span></strong>  
 Invited paper
 
 </div></div>
@@ -50,7 +50,7 @@ Invited paper
 
 ### [Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://doi.org/10.1016/j.autcon.2025.106053)  
 **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
-*Automation in Construction*, 2025  
+*Automation in Construction*, 2025 <strong><span class='show_paper_citations' data='QFeaFbwAAAAJ:7PzlFSSx8tAC'></span></strong>  
 [[Demo]](https://youtu.be/L5rUZPR6Q5s?si=gL7IdSM34BIRqZlJ)
 
 </div></div>
@@ -60,7 +60,7 @@ Invited paper
 
 ### [LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)  
 **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
-*Journal of Computing in Civil Engineering*, 2024  
+*Journal of Computing in Civil Engineering*, 2024 <strong><span class='show_paper_citations' data='QFeaFbwAAAAJ:W7OEmFMy1HYC'></span></strong>  
 Invited paper, <span style="color:red"> Editor's choice </span>  
 [[Demo]](https://youtu.be/w-w-SI-smOE)
 
@@ -71,7 +71,7 @@ Invited paper, <span style="color:red"> Editor's choice </span>
 
 ### [Effects of spatial characteristics on the human–robot communication using deictic gesture in construction](https://doi.org/10.1061/JCEMD4.COENG-12997)  
 **Sungboo Yoon**, YeSeul Kim, Moonseo Park, Changbum R. Ahn  
-*Journal of Construction Engineering and Management*, 2023
+*Journal of Construction Engineering and Management*, 2023 <strong><span class='show_paper_citations' data='QFeaFbwAAAAJ:qjMakFHDy7sC'></span></strong>  
 
 </div></div>
 
@@ -176,23 +176,13 @@ Korea Agency for Infrastructure Technology Advancement, 2014-09-21 ~ 2023-10-31 
 - *2019–2022* Dean's List, Seoul National University  
 
 # 🤖 Robots
-Robots I have worked with in my research
+Robots I have worked with in my research.
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/turtlebot.png' alt="sym" width="80%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/rb10.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-### Yujin Robot, Turtlebot v2
-- Description: Kobuki-based mobile platform equipped with an Intel RealSense D435 RGB-D camera and Intel NUC computer running ROS
-- Usage: Used to interpret deictic (pointing) gestures through vision-based 3D human pose estimation in human–robot spatial communication studies in construction
-
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/kr6.png' alt="sym" width="80%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-### KUKA, KR 6 R900 sixx
-- Description: A 6-DoF industrial manipulator (payload 6 kg, reach 900 mm) equipped with a Makita 3706 drywall cutting tool and an Intel RealSense D435 RGB-D camera, mounted on a mobile lift
-- Usage: Used for precise drywall cutting in human–robot interface studies combining deictic gestures, speech, and dynamic laser pointing
+### Rainbow Robotics, RB10-1300U
+- To be updated
 
 </div></div>
 
@@ -205,10 +195,20 @@ Robots I have worked with in my research
 
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/rb10.png' alt="sym" width="80%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/kr6.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-### Rainbow Robotics, RB10-1300U
-- To be updated
+### KUKA, KR 6 R900 sixx
+- Description: A 6-DoF industrial manipulator (payload 6 kg, reach 900 mm) equipped with a Makita 3706 drywall cutting tool and an Intel RealSense D435 RGB-D camera, mounted on a mobile lift
+- Usage: Used for precise drywall cutting in human–robot interface studies combining deictic gestures, speech, and dynamic laser pointing
+
 </div></div>
 
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/robots/turtlebot.png' alt="sym" width="80%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+### Yujin Robot, Turtlebot v2
+- Description: Kobuki-based mobile platform equipped with an Intel RealSense D435 RGB-D camera and Intel NUC computer running ROS
+- Usage: Used to interpret deictic (pointing) gestures through vision-based 3D human pose estimation in human–robot spatial communication studies in construction
+
+</div></div>
