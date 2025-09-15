@@ -15,10 +15,10 @@ google_scholar_stats_use_cdn : true
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
-google_site_verification :  google7f650c65c0e2330e.html # get google_site_verification from https://search.google.com/search-console/about
+google_site_verification :  google7f650c65c0e2330e # get google_site_verification from https://search.google.com/search-console/about
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
-naver_site_verification  :  naver7de4098da90a59a469379862b9a1b497.html # get naver_site_verification from https://searchadvisor.naver.com/
+naver_site_verification  :  naver7de4098da90a59a469379862b9a1b497 # get naver_site_verification from https://searchadvisor.naver.com/
 
 # Site Author
 author:
