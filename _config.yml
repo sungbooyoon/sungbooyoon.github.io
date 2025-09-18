@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Sungboo Yoon (윤성부)"
+title                    : "Sungboo Yoon"
 description              : "Construction robotics, Human-robot interaction, Robot learning"
 repository               : "sungbooyoon/sungbooyoon.github.io"
 google_scholar_stats_use_cdn : true
@@ -22,7 +22,7 @@ naver_site_verification  :  naver7de4098da90a59a469379862b9a1b497 # get naver_si
 
 # Site Author
 author:
-  name             : "Sungboo Yoon"
+  name             : "Sungboo Yoon (윤성부)"
   avatar           : "images/android-chrome-512x512.png"
   bio              : "PhD Candidate @ Seoul National University"
   location         : "Seoul, South Korea"
