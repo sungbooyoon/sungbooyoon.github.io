@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Sungboo Yoon (윤성부)"
+title                    : "Sungboo Yoon\n(윤성부)"
 description              : "Construction robotics, Human-robot interaction, Robot learning"
 repository               : "sungbooyoon/sungbooyoon.github.io"
 google_scholar_stats_use_cdn : true
