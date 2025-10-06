@@ -5,3 +5,5 @@ I previously completed both my bachelor's and master's degrees in Architectural 
 I am honored to be a recipient of the [Basic Science Research Program](https://www.nrf.re.kr/biz/info/info/view?menu_no=378&biz_no=416) (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
 
 Currently, I serve as a student coordinator of a joint project funded by the Ministry of Land, Infrastructure and Transport & Ministry of Trade, Industry and Energy, South Korea, on developing a multipurpose robotic platform and XR-based human–robot collaboration system for construction work at height. If you are interested, please visit [this page](https://cem.snu.ac.kr/research/90) for more details.
+
+Download my **CV** <a href="Academic_CV_Template.pdf"> here
