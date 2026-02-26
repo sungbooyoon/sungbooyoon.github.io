@@ -26,7 +26,7 @@ Invited paper
 ### [LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human–Robot Collaboration in Construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)  
 **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn  
 *Journal of Computing in Civil Engineering*, 2024 <strong><span class='show_paper_citations' data='QFeaFbwAAAAJ:W7OEmFMy1HYC'></span></strong>  
-Invited paper, <span style="color:navy"> Editor's choice </span>  
+Invited paper, <span style="color:dark navy"> Editor's choice </span>  
 [[Demo]](https://youtu.be/w-w-SI-smOE)
 
 </div></div>
@@ -45,12 +45,12 @@ Invited paper, <span style="color:navy"> Editor's choice </span>
 - Dongwoo Kang, **Sungboo Yoon**, Moonseo Park, Changbum R. Ahn, [Analysis of Factors Affecting the Acceptance of Smart Personal Protective Equipment(Smart-PPE) by Construction Workers Based on the Technology Acceptance Model (TAM) Framework](https://doi.org/10.20931/JCS.2024.7.1.019), *Journal of the Korea Institute of Construction Safety*, 2024
 
 - **Sungboo Yoon**, Seungmin Shin, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots](https://3dgeoinfoeg-ice.webs.uvigo.es/proceedings), *Proceedings of the 31st International Workshop on Intelligent Computing in Engineering*, 2024  
-<span style="color:navy"> Recognized as a top paper and invited to the special issue of the Advanced Engineering Informatics</span>
+<span style="color:dark navy"> Recognized as a top paper and invited to the special issue of the Advanced Engineering Informatics</span>
 
 - **Sungboo Yoon**, Chaeeun Lee, SangHyun Lee, Moonseo Park, Changbum R. Ahn, [A Taxonomy of Extended Reality for Human-Robot Interaction in Construction Based on a Systematic Literature Review](https://doi.org/10.3311/CCC2024-039), *Proceedings of the Creative Construction Conference*, 2024
 
 - **Sungboo Yoon**, Jinsik Park, Moonseo Park, Changbum R. Ahn, [A Deictic Gesture-Based Human-Robot Interface for In Situ Task Specification in Construction](https://doi.org/10.1061/9780784485224.05), *Computing in Civil Engineering*, 2024  
-<span style="color:navy"> Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering</span>
+<span style="color:dark navy"> Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering</span>
 
 - **Sungboo Yoon**, Moonseo Park, Minhyuk Jung, Hosang Hyun, Suho Ahn, [Multi-objective Optimization Model for Tower Crane Layout Planning in Modular Construction](https://doi.org/10.6106/KJCEM.2021.22.1.036), *Korean Journal of Construction Engineering and Management*, 2021
 
