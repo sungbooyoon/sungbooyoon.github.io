@@ -14,7 +14,7 @@ $indent-var                 : 0.5em;
 
 /* system typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
+$sans-serif                 : "Helvetica Neue", Helvetica, sans-serif;
 // $sans-serif                 : Georgia, serif, sans-serif;
 
 // $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
@@ -36,14 +36,16 @@ $header-font-family         : $sans-serif;
 $caption-font-family        : $serif;
 
 /* type scale */
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.4em;  // ~25.008px
-$type-size-4                : 1.2em;   // ~20px
-$type-size-5                : 1em;      // ~16px
-$type-size-6                : 1em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
+$type-scale-factor: 1.5;
+
+$type-size-1: 2.441em * $type-scale-factor;
+$type-size-2: 1.953em * $type-scale-factor;
+$type-size-3: 1.4em   * $type-scale-factor;
+$type-size-4: 1.2em   * $type-scale-factor;
+$type-size-5: 1em     * $type-scale-factor;
+$type-size-6: 1em     * $type-scale-factor;
+$type-size-7: 0.6875em* $type-scale-factor;
+$type-size-8: 0.625em * $type-scale-factor;
 
 
 /*
