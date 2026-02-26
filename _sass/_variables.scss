@@ -6,7 +6,7 @@
    Typography
    ========================================================================== */
 
-$doc-font-size              : 20;
+$doc-font-size              : 30;
 
 /* paragraph indention */
 $paragraph-indent           : false; // true, false (default)
@@ -14,8 +14,8 @@ $indent-var                 : 0.5em;
 
 /* system typefaces */
 $serif                      : Georgia, Times, serif;
-// $sans-serif                 : "Helvetica Neue", Helvetica, sans-serif;
-$sans-serif                 : "Calisto MT", serif, sans-serif;
+$sans-serif                 : "Helvetica Neue", Helvetica, sans-serif;
+// $sans-serif                 : "Calisto MT", serif, sans-serif;
 
 // $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
