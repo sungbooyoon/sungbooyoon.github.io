@@ -3,5 +3,4 @@
 - *Feb 22, 2025*: 📷 Our paper, "[Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction](https://www.sciencedirect.com/science/article/pii/S0926580525000937)", is now published online in Automation in Construction!
 - *Dec 19, 2024*: Check out [this article](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php) on robotics research at Construction Engineering and Management Lab (SNUCEM).
 - *Sep 1, 2024*: 🎉🎉 I was awarded the Basic Science Research Program (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
-- *Aug 15, 2024*: Finally migrated my personal website from google to github! :smile:
 - *May 1, 2024*: 🎉🎉 Our paper, "[LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human–robot collaboration in construction](https://doi.org/10.1061/JCCEE5.CPENG-5715)", has been chosen as an Editor's Choice selection in the Journal of Computing in Civil Engineering.
