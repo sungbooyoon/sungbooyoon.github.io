@@ -6,7 +6,7 @@
    Typography
    ========================================================================== */
 
-$doc-font-size              : 14;
+$doc-font-size              : 16;
 
 /* paragraph indention */
 $paragraph-indent           : false; // true, false (default)
@@ -36,7 +36,7 @@ $header-font-family         : $sans-serif;
 $caption-font-family        : $serif;
 
 /* type scale */
-$type-scale-factor: 1.5;
+$type-scale-factor: 1.0;
 
 $type-size-1: 2.441em * $type-scale-factor;
 $type-size-2: 1.953em * $type-scale-factor;
