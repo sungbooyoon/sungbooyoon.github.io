@@ -11,7 +11,7 @@ const siteConfig: SiteConfig = {
         alt: 'Sungboo'
     },
     title: 'Sungboo Yoon (윤성부)',
-    subtitle: 'PhD Candidate @ Seoul National University\n Seoul, South Korea',
+    subtitle: 'PhD Candidate @ Seoul National University',
     description: 'Construction Robotics, Human-Robot Interaction, Robot Learning',
     image: {
         src: '/dante-preview.jpg',
@@ -79,7 +79,7 @@ I previously completed both my bachelor's and master's degrees in Architectural 
 
 I am honored to be a recipient of the [Basic Science Research Program](https://www.nrf.re.kr/biz/info/info/view?menu_no=378&biz_no=416) (Ph.D. Fellowship) from the National Research Foundation of Korea (NRF).
 
-Currently, I serve as a student coordinator of a joint project funded by the Ministry of Land, Infrastructure and Transport & Ministry of Trade, Industry and Energy, South Korea, on developing a multipurpose robotic platform and XR-based human-robot collaboration system for construction work at height. If you are interested, please visit [this page](https://cem.snu.ac.kr/research/90) for more details.`,
+Currently, I serve as a student coordinator of a joint project funded by the Ministry of Land, Infrastructure and Transport & Ministry of Trade, Industry and Energy, South Korea, on developing a multipurpose robotic platform and XR-based human-robot collaboration system for construction work at height. If you are interested, please visit [this page](https://cem.snu.ac.kr/research/90) for more details!`,
         images: [
             { src: hero1, alt: '' },
             { src: hero2, alt: '' },
@@ -98,7 +98,7 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
 
     },
     subscribe: {
-        enabled: true,
+        enabled: false,
         title: 'Subscribe to Dante Newsletter',
         text: 'One update per week. All the latest posts directly in your inbox.',
         form: {
