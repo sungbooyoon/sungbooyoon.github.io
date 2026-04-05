@@ -1,6 +1,7 @@
 import avatar from '../assets/images/avatar.jpg';
 import hero1 from '../assets/images/hero1.jpg';
 import hero2 from '../assets/images/hero2.jpeg';
+import hero3 from '../assets/images/hero3.jpg';
 import type { SiteConfig } from '../types';
 
 const siteConfig: SiteConfig = {
@@ -81,7 +82,8 @@ I am honored to be a recipient of the [Basic Science Research Program](https://w
 Currently, I serve as a student coordinator of a joint project funded by the Ministry of Land, Infrastructure and Transport & Ministry of Trade, Industry and Energy, South Korea, on developing a multipurpose robotic platform and XR-based human-robot collaboration system for construction work at height. If you are interested, please visit [this page](https://cem.snu.ac.kr/research/90) for more details.`,
         images: [
             { src: hero1, alt: '' },
-            { src: hero2, alt: '' }
+            { src: hero2, alt: '' },
+            { src: hero3, alt: '' }
         ],
         actions: [
             {

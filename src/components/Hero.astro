@@ -17,47 +17,52 @@ const hasCarousel = heroImages.length > 1;
             {title && <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>}
             {heroImages.length > 0 && (
                 <div class="flex flex-col gap-3" data-hero-carousel={hasCarousel ? 'true' : 'false'}>
-                    <div class="grid">
-                        {heroImages.map((heroImage, index) => (
-                            <figure
-                                class:list={[
-                                    'col-start-1 row-start-1 transition-opacity duration-700 ease-out',
-                                    index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'
-                                ]}
-                                data-hero-slide
-                                data-active={index === 0 ? 'true' : 'false'}
-                                aria-hidden={index === 0 ? 'false' : 'true'}
-                            >
-                                <CustomImage
-                                    class="w-full"
-                                    {...heroImage}
-                                    widths={[480, 640, 768, 1024, 1536]}
-                                    sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
-                                    fetchpriority={index === 0 ? 'high' : 'auto'}
-                                    loading={index === 0 ? 'eager' : 'lazy'}
-                                />
-                                {heroImage.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{heroImage.caption}</figcaption>}
-                            </figure>
-                        ))}
-                    </div>
-                    {
-                        hasCarousel && (
-                            <div class="flex justify-center gap-2" aria-label="Hero image navigation">
-                                {heroImages.map((_, index) => (
-                                    <button
-                                        type="button"
-                                        class:list={[
-                                            'h-2.5 w-2.5 rounded-full border border-current transition-opacity',
-                                            index === 0 ? 'bg-current opacity-100' : 'bg-transparent opacity-40'
-                                        ]}
-                                        data-hero-dot
-                                        aria-label={`Show hero image ${index + 1}`}
-                                        aria-pressed={index === 0 ? 'true' : 'false'}
+                    <div class="relative">
+                        <div class="grid">
+                            {heroImages.map((heroImage, index) => (
+                                <figure
+                                    class:list={[
+                                        'col-start-1 row-start-1 transition-opacity duration-700 ease-out',
+                                        index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'
+                                    ]}
+                                    data-hero-slide
+                                    data-active={index === 0 ? 'true' : 'false'}
+                                    aria-hidden={index === 0 ? 'false' : 'true'}
+                                >
+                                    <CustomImage
+                                        class="w-full"
+                                        {...heroImage}
+                                        widths={[480, 640, 768, 1024, 1536]}
+                                        sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
+                                        fetchpriority={index === 0 ? 'high' : 'auto'}
+                                        loading={index === 0 ? 'eager' : 'lazy'}
                                     />
-                                ))}
-                            </div>
-                        )
-                    }
+                                    {heroImage.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{heroImage.caption}</figcaption>}
+                                </figure>
+                            ))}
+                        </div>
+                        {
+                            hasCarousel && (
+                                <div
+                                    class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2 sm:bottom-5"
+                                    aria-label="Hero image navigation"
+                                >
+                                    {heroImages.map((_, index) => (
+                                        <button
+                                            type="button"
+                                            class:list={[
+                                                'pointer-events-auto h-2.5 w-2.5 rounded-full border border-white/80 shadow-sm transition-opacity',
+                                                index === 0 ? 'bg-white opacity-100' : 'bg-white/20 opacity-70'
+                                            ]}
+                                            data-hero-dot
+                                            aria-label={`Show hero image ${index + 1}`}
+                                            aria-pressed={index === 0 ? 'true' : 'false'}
+                                        />
+                                    ))}
+                                </div>
+                            )
+                        }
+                    </div>
                 </div>
             )}
             {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}
@@ -107,10 +112,10 @@ const hasCarousel = heroImages.length > 1;
                 dots.forEach((dot, index) => {
                     const isActive = index === activeIndex;
                     dot.setAttribute('aria-pressed', String(isActive));
-                    dot.classList.toggle('bg-current', isActive);
-                    dot.classList.toggle('bg-transparent', !isActive);
+                    dot.classList.toggle('bg-white', isActive);
+                    dot.classList.toggle('bg-white/20', !isActive);
                     dot.classList.toggle('opacity-100', isActive);
-                    dot.classList.toggle('opacity-40', !isActive);
+                    dot.classList.toggle('opacity-70', !isActive);
                 });
             };
 
