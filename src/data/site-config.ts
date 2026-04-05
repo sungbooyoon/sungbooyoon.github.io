@@ -23,6 +23,10 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
         {
+            text: 'About',
+            href: '/about'
+        },
+        {
             text: 'Publications',
             href: '/publications'
         },
