@@ -9,20 +9,24 @@ My research interests include construction robotics, human-robot interaction, an
 
 For a complete list of publications, see my <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=QFeaFbwAAAAJ"><u>Google Scholar</u></a> profile.
 
-## Peer-Reviewed Journal Articles in Print or Accepted
+## Journal Articles
+
+### International
 
 - Yoon, S., Park, M., & Ahn, C. R. (2025). Learning viewpoint control from human-initiated transitions for teleoperation in construction. *Advanced Engineering Informatics, 68*, 103665.
 - Yoon, S., Park, M., & Ahn, C. R. (2025). Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction. *Automation in Construction, 172*, 106053.
 - Yoon, S., Park, M., & Ahn, C. R. (2024). LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human-robot collaboration in construction. *Journal of Computing in Civil Engineering, 38*(3), 04024012. Selected as Editor's Choice.
 - Yoon, S., Kim, Y., Park, M., & Ahn, C. R. (2023). Effects of spatial characteristics on the human-robot communication using deictic gesture in construction. *Journal of Construction Engineering and Management, 149*(7), 04023049.
 
-## Peer-Reviewed Domestic Journal Articles in Print or Accepted
+### Domestic
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2024). Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments. *Journal of Construction Automation and Robotics, 3*(3), 6-13.
 - Kang, D., Yoon, S., Park, M., & Ahn, C. R. (2024). Analysis of Factors Affecting the Acceptance of Smart Personal Protective Equipment (Smart-PPE) by Construction Workers Based on the Technology Acceptance Model (TAM) Framework. *Journal of the Korea Institute of Construction Safety, 7*(1), 19-24.
 - Yoon, S., Park, M., Jung, M., Hyun, H., & Ahn, S. (2021). Multi-objective optimization model for tower crane layout planning in modular construction. *Korean Journal of Construction Engineering and Management, 22*(1), 36-46.
 
-## Peer-Reviewed Papers in International Conference Proceedings
+## Conference Proceedings
+
+### International
 
 - Yoon, S., Shin, S., Lee, S. H., Park, M., & Ahn, C. R. (2024). Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots. In *31st International Workshop on Intelligent Computing in Engineering, EG-ICE 2024*. Recognized as a top paper and invited to the special issue of *Advanced Engineering Informatics*.
 - Yoon, S., Lee, C., Lee, S., Park, M., & Ahn, C. R. (2024). A Taxonomy of Extended Reality for Human-Robot Interaction in Construction Based on a Systematic Literature Review. In *Proceedings of the Creative Construction Conference 2024*.
@@ -31,17 +35,19 @@ For a complete list of publications, see my <a href="https://scholar.google.com/
 - Heo, C., Ahn, C., Yoon, S., Jung, M., & Park, M. (2022). Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects. In *International Conference on Construction Engineering and Project Management* (pp. 269-276).
 - Yoon, S., Kim, Y., Ahn, C. R., & Park, M. (2021). Challenges in Deictic Gesture-Based Spatial Referencing for Human-Robot Interaction in Construction. In *ISARC. Proceedings of the International Symposium on Automation and Robotics in Construction, 38* (pp. 491-497).
 
-## Peer-Reviewed Papers in Domestic Conference Proceedings
+### Domestic
 
 - Shin, S., Yoon, S., Park, M., & Ahn, C. R. (2024). Imitation Learning Framework for Construction Tasks Using Constraint Learning. *The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*. Best Paper Award.
 - Park, J., Yoon, S., Park, M., & Ahn, C. R. (2023). Personal Protection Equipment (PPE) Detection with Learning-based Mobile Robot Navigation. *The 2023 Autumn Annual Conference of Architectural Institute of Korea (AIK)*.
 - Kang, D., Yoon, S., Ahn, C. R., & Park, M. (2023). A Utilizing Technology Acceptance Models for Performance Evaluation of Smart Safety Equipment. *The 2023 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*.
 - Park, J., Yoon, S., Park, M., & Ahn, C. R. (2022). Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites. *The 2022 Autumn Annual Conference of Architectural Institute of Korea (AIK)*. Best Paper Award.
 
-## Peer-Reviewed Published Abstracts
+## Posters & Abstracts
+
+- Yoon, S. (2026). “Achieving Human-Level Perception and Skills for Construction Robots.” *SNU Robotics Day 2026*, Seoul, Korea.
 
 - Yoon, S., Shin, S., Lee, S. H., Park, M., & Ahn, C. R. (2024). Designing a Virtual Reality Interface for Teleoperation of Welding Robots in Construction. *3rd Workshop on Future of Construction: Lifelong Learning Robots in Changing Construction Sites (ICRA 2024)*, Yokohama, Japan.
 
-## Non-Referred Invited Articles
+## Articles
 
 - Ahn, C. R., & Yoon, S. (2022). Intelligent Robots in Construction. *Review of Architecture and Building Science, 66*(10), 40-43.
