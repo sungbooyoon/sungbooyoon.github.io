@@ -52,3 +52,39 @@ Korean National Police Agency, Public Security Division
 2016-2018
 
 Coordinated daily situational monitoring, command oversight, and personnel deployment planning for nationwide public assemblies and protests.
+
+## Honors, Awards & Fellowships
+
+- 2024-2026: Ph.D. Fellowship, Basic Science Research Program, National Research Foundation of Korea (NRF)
+- 2025: Graduate Fellowship, Korean Society of Automation and Robotics in Construction (KSARC)
+- 2024: Editor's Choice Article, ASCE Journal of Computing in Civil Engineering
+  Awarded paper: "LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human-Robot Collaboration in Construction."
+- 2024: Best Paper Award, The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)
+  Awarded paper: "Imitation Learning Framework for Construction Tasks Using Constraint Learning."
+- 2023: Graduate Fellowship, Foundation for Industrial Safety Partnerships
+- 2023: Graduate Fellowship, Engineering Research Foundation
+- 2022-2023: Academic Fellowship, Seoul National University
+- 2022: Best Paper Award, The 2022 Autumn Annual Conference of Architectural Institute of Korea (AIK)
+  Awarded paper: "Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites."
+- 2019-2022: Academic Fellowship, Seoul National University
+- 2020: Graduate Fellowship, Hanssem DBEW Research Foundation
+- 2019: Second Place Award, Graduation Exhibition, Seoul National University
+- 2019: Second Place Award, Mooyoung CM Competition, Mooyoung CM
+
+## Professional Leadership & Service Activities
+
+### Professional
+
+- 2025-Present: Member, Korea Robotics Society (KROS)
+- 2024-Present: Student Member, Institute of Electrical and Electronics Engineers (IEEE)
+- 2024-Present: Member, Korean Society of Automation and Robotics in Construction (KSARC)
+- 2023-Present: Student Member, Data, Sensing and Analysis (DSA) Committee, ASCE
+- 2022-Present: Student Member, American Society of Civil Engineers (ASCE)
+- 2020-Present: Member, Korea Institute of Construction Engineering and Management
+- 2020-Present: Member, Architectural Institute of Korea (AIK)
+
+### Reviewer Activities
+
+- 2026: Reviewer, Computing in Civil Engineering (i3CE 2026)
+- 2025-Present: Reviewer, Automation in Construction
+- 2025: Reviewer, Journal of Computing in Civil Engineering
