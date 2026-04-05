@@ -13,6 +13,7 @@ export type Hero = {
     title?: string;
     text?: string;
     image?: ImageInput;
+    images?: ImageInput[];
     actions?: Link[];
 };
 

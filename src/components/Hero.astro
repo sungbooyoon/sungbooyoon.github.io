@@ -6,25 +6,59 @@ import CustomImage from './CustomImage.astro';
 
 type Props = HeroProps;
 
-const { title, image, text, actions } = Astro.props;
+const { title, image, images, text, actions } = Astro.props;
+const heroImages = images?.length ? images : image?.src ? [image] : [];
+const hasCarousel = heroImages.length > 1;
 ---
 
 {
-    (title || image?.src || text || (actions && actions.length > 0)) && (
+    (title || heroImages.length > 0 || text || (actions && actions.length > 0)) && (
         <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
             {title && <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>}
-            {image?.src && (
-                <figure>
-                    <CustomImage
-                        class="w-full"
-                        {...image}
-                        widths={[480, 640, 768, 1024, 1536]}
-                        sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
-                        fetchpriority="high"
-                        loading="eager"
-                    />
-                    {image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{image.caption}</figcaption>}
-                </figure>
+            {heroImages.length > 0 && (
+                <div class="flex flex-col gap-3" data-hero-carousel={hasCarousel ? 'true' : 'false'}>
+                    <div class="grid">
+                        {heroImages.map((heroImage, index) => (
+                            <figure
+                                class:list={[
+                                    'col-start-1 row-start-1 transition-opacity duration-700 ease-out',
+                                    index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'
+                                ]}
+                                data-hero-slide
+                                data-active={index === 0 ? 'true' : 'false'}
+                                aria-hidden={index === 0 ? 'false' : 'true'}
+                            >
+                                <CustomImage
+                                    class="w-full"
+                                    {...heroImage}
+                                    widths={[480, 640, 768, 1024, 1536]}
+                                    sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
+                                    fetchpriority={index === 0 ? 'high' : 'auto'}
+                                    loading={index === 0 ? 'eager' : 'lazy'}
+                                />
+                                {heroImage.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{heroImage.caption}</figcaption>}
+                            </figure>
+                        ))}
+                    </div>
+                    {
+                        hasCarousel && (
+                            <div class="flex justify-center gap-2" aria-label="Hero image navigation">
+                                {heroImages.map((_, index) => (
+                                    <button
+                                        type="button"
+                                        class:list={[
+                                            'h-2.5 w-2.5 rounded-full border border-current transition-opacity',
+                                            index === 0 ? 'bg-current opacity-100' : 'bg-transparent opacity-40'
+                                        ]}
+                                        data-hero-dot
+                                        aria-label={`Show hero image ${index + 1}`}
+                                        aria-pressed={index === 0 ? 'true' : 'false'}
+                                    />
+                                ))}
+                            </div>
+                        )
+                    }
+                </div>
             )}
             {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}
             {actions && actions.length > 0 && (
@@ -37,3 +71,84 @@ const { title, image, text, actions } = Astro.props;
         </section>
     )
 }
+
+<script is:inline>
+    (() => {
+        const AUTO_ADVANCE_MS = 5000;
+        const windowWithHeroCarousel = window;
+
+        function setupHeroCarousel(root) {
+            if (!(root instanceof HTMLElement) || root.dataset.carouselReady === 'true') return;
+
+            const slides = Array.from(root.querySelectorAll('[data-hero-slide]'));
+            const dots = Array.from(root.querySelectorAll('[data-hero-dot]'));
+
+            if (slides.length < 2 || slides.length !== dots.length) return;
+
+            root.dataset.carouselReady = 'true';
+
+            let activeIndex = slides.findIndex((slide) => slide.getAttribute('data-active') === 'true');
+            let timerId;
+
+            if (activeIndex < 0) activeIndex = 0;
+
+            const updateSlide = (nextIndex) => {
+                activeIndex = (nextIndex + slides.length) % slides.length;
+
+                slides.forEach((slide, index) => {
+                    const isActive = index === activeIndex;
+                    slide.setAttribute('data-active', String(isActive));
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                    slide.classList.toggle('opacity-100', isActive);
+                    slide.classList.toggle('opacity-0', !isActive);
+                    slide.classList.toggle('pointer-events-none', !isActive);
+                });
+
+                dots.forEach((dot, index) => {
+                    const isActive = index === activeIndex;
+                    dot.setAttribute('aria-pressed', String(isActive));
+                    dot.classList.toggle('bg-current', isActive);
+                    dot.classList.toggle('bg-transparent', !isActive);
+                    dot.classList.toggle('opacity-100', isActive);
+                    dot.classList.toggle('opacity-40', !isActive);
+                });
+            };
+
+            const startAutoAdvance = () => {
+                window.clearInterval(timerId);
+                timerId = window.setInterval(() => {
+                    if (!document.body.contains(root)) {
+                        window.clearInterval(timerId);
+                        return;
+                    }
+
+                    updateSlide(activeIndex + 1);
+                }, AUTO_ADVANCE_MS);
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlide(index);
+                    startAutoAdvance();
+                });
+            });
+
+            root.addEventListener('pointerenter', () => window.clearInterval(timerId));
+            root.addEventListener('pointerleave', startAutoAdvance);
+
+            updateSlide(activeIndex);
+            startAutoAdvance();
+        }
+
+        function initHeroCarousels() {
+            document.querySelectorAll('[data-hero-carousel="true"]').forEach(setupHeroCarousel);
+        }
+
+        initHeroCarousels();
+        if (windowWithHeroCarousel.__heroCarouselEventsBound) return;
+
+        windowWithHeroCarousel.__heroCarouselEventsBound = true;
+        document.addEventListener('astro:page-load', initHeroCarousels);
+        document.addEventListener('astro:after-swap', initHeroCarousels);
+    })();
+</script>
