@@ -10,10 +10,6 @@ seo:
 
 ![About](../../assets/images/about.jpg)
 
-I am a Ph.D. candidate in Architectural Engineering at Seoul National University, working at the intersection of construction robotics, human-robot interaction, and robot learning. My work focuses on building systems that can translate research ideas into practical tools for safer and more effective construction work.
-
-For a full academic record, see my [Curriculum Vitae](https://docs.google.com/document/d/1Tnd3iKZz4WaJ9mfMOJuBAnpDzHikDSTn2WGahqZOZII/edit?usp=sharing).
-
 ## Education
 
 ### Ph.D. in Architectural Engineering
