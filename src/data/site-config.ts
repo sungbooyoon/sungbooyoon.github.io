@@ -23,6 +23,10 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
         {
+            text: 'Publications',
+            href: '/publications'
+        },
+        {
             text: 'Projects',
             href: '/projects'
         },
@@ -77,7 +81,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: '',
-        text: `Hello! I am a fifth-year Ph.D. candidate in the [Department of Architecture & Architectural Engineering](https://architecture.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/). I am fortunate to be advised by Professor [Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao), and I am a member of the [Construction Engineering & Management Lab](https://cem.snu.ac.kr/). My research interests include construction robotics, human-robot interaction, and robot learning. I have published 10+ papers in major international journals and conferences in civil engineering, including Automation in Construction, JCEM, JCCE, and Advanced Engineering Informatics. I am passionate about bringing ideas into reality and developing systems that have tangible impacts on the work and safety of real human workers on construction sites.
+        text: `Hello! I am a fifth-year Ph.D. candidate in the [Department of Architecture & Architectural Engineering](https://architecture.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/). I am fortunate to be advised by Professor [Changbum R. Ahn](https://scholar.google.com/citations?user=PJfny7sAAAAJ&hl=en&oi=ao), and I am a member of the [Construction Engineering & Management Lab](https://cem.snu.ac.kr/). My research interests include construction robotics, human-robot interaction, and robot learning. I have published 10+ papers in major international journals and conferences in civil engineering, including Automation in Construction, JCEM, JCCE, and Advanced Engineering Informatics.
 
 I previously completed both my bachelor's and master's degrees in Architectural Engineering at Seoul National University, where I conducted research on modular construction and human-robot interaction under the advisement of Professor [Moonseo Park](https://scholar.google.com/citations?user=lkrSqmIAAAAJ&hl=en).
 
@@ -91,13 +95,21 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
         ],
         actions: [
             {
+                text: 'More About Me',
+                href: '/about'
+            },
+            {
                 text: 'Curriculum Vitae',
                 href: 'https://docs.google.com/document/d/1Tnd3iKZz4WaJ9mfMOJuBAnpDzHikDSTn2WGahqZOZII/edit?usp=sharing'
             },
             {
                 text: 'Google Scholar',
                 href: 'https://scholar.google.com/citations?user=QFeaFbwAAAAJ'
-            }
+            },
+            {
+                text: 'Contact',
+                href: '/contact'
+            },
         ]
 
     },
