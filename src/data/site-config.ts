@@ -35,7 +35,7 @@ const siteConfig: SiteConfig = {
             href: '/tags'
         },
         {
-            text: 'CV',
+            text: 'CV↗',
             href: 'https://docs.google.com/document/d/1Tnd3iKZz4WaJ9mfMOJuBAnpDzHikDSTn2WGahqZOZII/edit?usp=sharing'
         }
     ],
