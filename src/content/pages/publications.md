@@ -7,7 +7,7 @@ seo:
 
 My research interests include construction robotics, human-robot interaction, and robot learning. I am passionate about bringing ideas into reality and developing systems that have tangible impacts on the work and safety of real human workers on construction sites.
 
-For a complete list of publications, see my <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=QFeaFbwAAAAJ"><u>Google Scholar</u></a> profile.
+For a complete list of publications, see my [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=QFeaFbwAAAAJ) profile.
 
 ## 2025
 
