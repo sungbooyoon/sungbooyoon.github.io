@@ -5,11 +5,18 @@ import ArrowRight from '../assets/icons/arrow-right.svg';
 type Props = { project: CollectionEntry<'projects'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { project, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, description } = project.data;
+const { title, description, externalUrl } = project.data;
 const TitleTag = headingLevel;
+const href = externalUrl ?? `/projects/${project.id}/`;
+const isExternal = Boolean(externalUrl);
 ---
 
-<a class:list={['group flex items-start justify-between gap-8', className]} href={`/projects/${project.id}/`}>
+<a
+    class:list={['group flex items-start justify-between gap-8', className]}
+    href={href}
+    target={isExternal ? '_blank' : undefined}
+    rel={isExternal ? 'noreferrer' : undefined}
+>
     <div class="grow">
         <TitleTag
             class="font-serif text-xl leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:decoration-1 group-hover:underline-offset-4 sm:text-2xl"
