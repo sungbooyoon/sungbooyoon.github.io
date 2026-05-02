@@ -3,39 +3,51 @@ import type { GetStaticPathsOptions, Page } from 'astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Pagination from '../../../components/Pagination.astro';
 import PostPreview from '../../../components/PostPreview.astro';
+import ProjectPreview from '../../../components/ProjectPreview.astro';
 import Subscribe from '../../../components/Subscribe.astro';
 import siteConfig from '../../../data/site-config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getAllTags, getPostsByTag, sortItemsByDateDesc } from '../../../utils/data-utils';
+import { getAllTags, getItemsByTag, sortItemsByDateDesc, type TaggableEntry } from '../../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-    const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-    const tags = getAllTags(posts);
+    const posts = await getCollection('blog');
+    const projects = await getCollection('projects');
+    const items = [...posts, ...projects].sort(sortItemsByDateDesc);
+    const tags = getAllTags(items);
 
     return tags.flatMap((tag) => {
-        const filteredPosts = getPostsByTag(posts, tag.id);
-        return paginate(filteredPosts, {
+        const filteredItems = getItemsByTag(items, tag.id);
+        return paginate(filteredItems, {
             params: { id: tag.id },
             pageSize: siteConfig.postsPerPage || 4
         });
     });
 }
 
-type Props = { page: Page<CollectionEntry<'blog'>> };
+type Props = { page: Page<TaggableEntry> };
 
 const { page } = Astro.props;
-const blog = page.data;
+const taggedItems = page.data;
 const params = Astro.params;
 const allPosts = await getCollection('blog');
-const allTags = getAllTags(allPosts);
+const allProjects = await getCollection('projects');
+const allTags = getAllTags([...allPosts, ...allProjects]);
 const currentTag = allTags.find((tag) => {
     return tag.id === params.id;
 });
+
+function isBlogEntry(item: TaggableEntry): item is CollectionEntry<'blog'> {
+    return item.collection === 'blog';
+}
 ---
 
-<BaseLayout title={`Posts Tagged ${currentTag?.name}`} description={`Explore a curated collection of blog posts under ${currentTag?.name}`} showHeader={false}>
-    <h1 class="mb-12 font-serif text-2xl leading-tight italic sm:mb-16 sm:text-4xl">Posts Tagged "{currentTag?.name}"</h1>
-    {blog.map((post) => <PostPreview post={post} class="mb-10 sm:mb-12" />)}
+<BaseLayout title={`Tagged ${currentTag?.name}`} description={`Explore posts and projects tagged ${currentTag?.name}`} showHeader={false}>
+    <h1 class="mb-12 font-serif text-2xl leading-tight italic sm:mb-16 sm:text-4xl">Tagged "{currentTag?.name}"</h1>
+    {
+        taggedItems.map((item) =>
+            isBlogEntry(item) ? <PostPreview post={item} class="mb-10 sm:mb-12" /> : <ProjectPreview project={item} class="mb-10 sm:mb-12" />
+        )
+    }
     <Pagination page={page} class="my-16 sm:my-24" />
     <Subscribe class="my-16 sm:my-24" />
 </BaseLayout>

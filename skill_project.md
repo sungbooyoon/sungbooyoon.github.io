@@ -10,7 +10,7 @@ Do not imitate any existing website content or project-page examples unless expl
 
 ## Default Output Structure
 
-For each project, organize the content in the following order:
+For each standard local project page, organize the content in the following order:
 
 1. YAML frontmatter
 2. Project preview image
@@ -23,6 +23,8 @@ For each project, organize the content in the following order:
 9. Related links
 
 Use these exact section titles unless the user requests otherwise.
+
+If the user wants the project card to open an external page instead of a local project page, use the `externalUrl` pattern described below.
 
 ---
 
@@ -38,8 +40,8 @@ title: 'Project Title'
 description: One concise sentence summarizing the project, suitable for metadata and project-card previews.
 publishDate: 'May 2 2026'
 tags:
-  - Web
-  - Guide
+  - Construction robotics
+  - Teleoperation
 isFeatured: true
 seo:
   image:
@@ -57,9 +59,39 @@ Guidelines:
 3. The `description` should be reused or lightly refined in the TL;DR callout in the body.
 4. Use the user-provided publish date, tags, featured status, image path, and image alt text when available.
 5. Place `tags` and `isFeatured` immediately below `publishDate`.
-6. If the user does not provide tags, use concise placeholders such as `Web` and `Guide` only when the user has provided that format; otherwise write `TBD` or omit based on the site convention.
-7. If the user does not provide an image path, use a minimal placeholder such as `../../assets/images/project-1.jpg`.
-8. Do not fabricate a specific image file name unless the user provides it or asks for one.
+6. Always provide 1–3 relevant tags when the source material supports them.
+7. Prefer site-consistent, sentence-case tags such as `Construction robotics`, `Teleoperation`, `Extended reality`, `Human-robot interface`, and `Modular construction` when they fit the project.
+8. Do not use generic placeholder tags such as `Web`, `Guide`, or `TBD`.
+9. If the user does not provide an image path, use a minimal placeholder such as `../../assets/images/project-1.jpg`.
+10. Do not fabricate a specific image file name unless the user provides it or asks for one.
+
+---
+
+## External-Link Project Entries
+
+Use this pattern when the user wants the project card on the main site to open another URL instead of a local project detail page.
+
+Use this format:
+
+```md
+---
+title: 'Project Title'
+description: One concise sentence summarizing the linked project for project-card previews.
+publishDate: 'May 2 2026'
+tags:
+  - Construction robotics
+isFeatured: true
+externalUrl: 'https://example.com/project'
+---
+```
+
+Guidelines:
+
+1. Add `externalUrl` only when the user explicitly wants the project card to route to another page.
+2. Use the exact external URL provided by the user.
+3. Keep the `description` meaningful for the card preview. Do not replace it with `External link` unless the user explicitly wants that text.
+4. Frontmatter-only output is acceptable for external-link entries when no local detail page is needed.
+5. If the user still wants a full local project page, keep the normal body structure and include `externalUrl` only when the listing should route externally.
 
 ---
 
@@ -70,17 +102,17 @@ After the project preview image, include a short TL;DR callout that summarizes t
 Use this format:
 
 ```md
-> **TL;DR**  
-> One or two concise sentences summarizing the project objective, approach, and main value.
+> **TL;DR** One or two concise sentences summarizing the project objective, approach, and main value.
 ```
 
 Guidelines:
 
 1. The TL;DR should restate the frontmatter `description` in a slightly more explanatory form.
 2. Keep it to one or two sentences.
-3. Focus on the project-level idea, not detailed results.
-4. Avoid promotional phrasing.
-5. Do not introduce unsupported claims that are not developed in the body.
+3. Keep the label and summary on the same blockquote line by default, matching the current project-page style.
+4. Focus on the project-level idea, not detailed results.
+5. Avoid promotional phrasing.
+6. Do not introduce unsupported claims that are not developed in the body.
 
 ---
 
@@ -421,7 +453,7 @@ The user may provide one or more of the following:
 7. website draft;
 8. raw notes;
 9. links to papers, videos, repositories, or project pages;
-10. project title, description, publish date, image path, or other metadata.
+10. project title, description, publish date, tags, image path, external URL, or other metadata.
 
 When a paper is provided:
 
@@ -451,9 +483,10 @@ When rich project text is provided:
 
 When metadata is provided:
 
-1. Use the provided title, publish date, and image path exactly unless correction is clearly needed.
+1. Use the provided title, publish date, tags, image path, and external URL exactly unless correction is clearly needed.
 2. Write the frontmatter `description` as a one-sentence project summary.
 3. Reuse or lightly expand the description in the TL;DR callout.
+4. If `externalUrl` is provided and the user wants a link-out entry, the body may be omitted.
 
 ---
 
@@ -574,7 +607,7 @@ Keep each numbered item to one sentence when possible.
 
 ## Output Format
 
-Use clean Markdown. Start every project page with YAML frontmatter, followed by a preview image, a TL;DR callout, and the project sections.
+Use clean Markdown. Standard local project pages should start with YAML frontmatter, followed by a preview image, a TL;DR callout, and the project sections. External-link entries may use frontmatter only.
 
 Default example:
 
@@ -584,8 +617,8 @@ title: 'Project Title'
 description: One concise sentence summarizing the project.
 publishDate: 'May 2 2026'
 tags:
-  - Web
-  - Guide
+  - Construction robotics
+  - Teleoperation
 isFeatured: true
 seo:
   image:
@@ -595,8 +628,7 @@ seo:
 
 ![Project preview](../../assets/images/project-1.jpg)
 
-> **TL;DR**  
-> One or two concise sentences summarizing the project objective, approach, and main value.
+> **TL;DR** One or two concise sentences summarizing the project objective, approach, and main value.
 
 ## Objectives
 
@@ -628,4 +660,18 @@ This project ...
 
 - Project page: [Title](URL)
 - Paper: [Title](URL)
+```
+
+External-link entry example:
+
+```md
+---
+title: 'Project Title'
+description: One concise sentence summarizing the linked project.
+publishDate: 'May 2 2026'
+tags:
+  - Construction robotics
+isFeatured: true
+externalUrl: 'https://example.com/project'
+---
 ```

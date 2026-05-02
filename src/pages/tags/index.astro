@@ -3,13 +3,15 @@ import { getCollection } from 'astro:content';
 import ArrowRight from '../../assets/icons/arrow-right.svg';
 import Subscribe from '../../components/Subscribe.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllTags, getPostsByTag, sortItemsByDateDesc } from '../../utils/data-utils';
+import { getAllTags, getItemsByTag, sortItemsByDateDesc } from '../../utils/data-utils';
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-const tags = getAllTags(posts).sort((tagA, tagB) => {
-    const postCountTagA = getPostsByTag(posts, tagA.id).length;
-    const postCountTagB = getPostsByTag(posts, tagB.id).length;
-    return postCountTagB - postCountTagA;
+const posts = await getCollection('blog');
+const projects = await getCollection('projects');
+const items = [...posts, ...projects].sort(sortItemsByDateDesc);
+const tags = getAllTags(items).sort((tagA, tagB) => {
+    const countTagA = getItemsByTag(items, tagA.id).length;
+    const countTagB = getItemsByTag(items, tagB.id).length;
+    return countTagB - countTagA;
 });
 ---
 
@@ -21,16 +23,19 @@ const tags = getAllTags(posts).sort((tagA, tagB) => {
     <h1 class="mb-12 font-serif text-2xl italic sm:mb-16 sm:text-4xl">All Tags</h1>
     {
         tags.map((tag) => {
-            const postCount = getPostsByTag(posts, tag.id).length;
+            const taggedItems = getItemsByTag(items, tag.id);
+            const postCount = taggedItems.filter((item) => item.collection === 'blog').length;
+            const projectCount = taggedItems.filter((item) => item.collection === 'projects').length;
+            const countText = [postCount ? `${postCount} ${postCount === 1 ? 'post' : 'posts'}` : '', projectCount ? `${projectCount} ${projectCount === 1 ? 'project' : 'projects'}` : '']
+                .filter(Boolean)
+                .join(' + ');
             return (
                 <a class="group mb-10 flex items-start justify-between gap-8 sm:mb-12" href={`/tags/${tag.id}`}>
                     <div class="grow">
                         <h2 class="font-serif text-xl leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:decoration-1 group-hover:underline-offset-4 sm:text-2xl">
                             {tag.name}
                         </h2>
-                        <div class="mt-1 text-sm leading-normal">
-                            {postCount} {postCount === 1 ? 'post' : 'posts'}
-                        </div>
+                        <div class="mt-1 text-sm leading-normal">{countText}</div>
                     </div>
                     <div class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:shrink-0 sm:items-center sm:gap-1">
                         View Tag Archive <ArrowRight class="h-4 w-4 fill-current" />

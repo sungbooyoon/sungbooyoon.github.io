@@ -5,8 +5,10 @@ export function sortItemsByDateDesc(itemA: CollectionEntry<'blog' | 'projects'>,
     return new Date(itemB.data.publishDate).getTime() - new Date(itemA.data.publishDate).getTime();
 }
 
-export function getAllTags(posts: CollectionEntry<'blog'>[]) {
-    const tags: string[] = [...new Set(posts.flatMap((post) => post.data.tags || []).filter(Boolean))];
+export type TaggableEntry = CollectionEntry<'blog'> | CollectionEntry<'projects'>;
+
+export function getAllTags(items: TaggableEntry[]) {
+    const tags: string[] = [...new Set(items.flatMap((item) => item.data.tags || []).filter(Boolean))];
     return tags
         .map((tag) => {
             return {
@@ -19,7 +21,6 @@ export function getAllTags(posts: CollectionEntry<'blog'>[]) {
         });
 }
 
-export function getPostsByTag(posts: CollectionEntry<'blog'>[], tagId: string) {
-    const filteredPosts: CollectionEntry<'blog'>[] = posts.filter((post) => (post.data.tags || []).map((tag) => slugify(tag)).includes(tagId));
-    return filteredPosts;
+export function getItemsByTag(items: TaggableEntry[], tagId: string) {
+    return items.filter((item) => (item.data.tags || []).map((tag) => slugify(tag)).includes(tagId));
 }
