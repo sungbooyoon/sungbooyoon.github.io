@@ -1,6 +1,6 @@
 ---
 title: 'Multimodal Interface for Human-Robot Collaboration in Construction'
-description: This project develops multimodal interfaces that allow construction workers to communicate spatial goals to robots through deictic gestures, laser pointing, and speech commands in large-scale construction environments.
+description: This project develops intuitive multimodal interfaces for spatial tasking in construction robotics. By combining deictic gestures, laser pointing, and speech commands, the system enables workers to communicate distant spatial goals to robots without relying on low-level robot control.
 publishDate: 'Dec 31 2024'
 tags: 
   - Human-robot interface

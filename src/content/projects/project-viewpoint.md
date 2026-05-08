@@ -1,6 +1,6 @@
 ---
 title: 'Viewpoint Control for Teleoperation in Construction'
-description: This project investigates and learns dynamic viewpoint control strategies for VR-based teleoperation in construction, focusing on robotic welding-at-height tasks that require precise manipulation and frequent visual adjustment.
+description: This project studies how construction robot operators should view remote workspaces during teleoperation. It compares coupled, decoupled, and hybrid viewpoint control techniques and develops a learning-based model for user-aligned viewpoint transitions.
 publishDate: 'Dec 31 2025'
 tags:
   - Teleoperation
