@@ -15,12 +15,12 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
   [DOI](https://doi.org/10.1016/j.aei.2025.103665)
 
 - Yoon, S., Park, M., & Ahn, C. R. (2025). Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction. *Automation in Construction, 172*, 106053.  
-  [DOI](https://doi.org/10.1016/j.autcon.2025.106053)
+  [DOI](https://doi.org/10.1016/j.autcon.2025.106053) [Video](https://youtu.be/L5rUZPR6Q5s)
 
 ## 2024
 
 - Yoon, S., Park, M., & Ahn, C. R. (2024). LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human-robot collaboration in construction. *Journal of Computing in Civil Engineering, 38*(3), 04024012. **Selected as Editor's Choice.**  
-  [DOI](https://doi.org/10.1061/JCCEE5.CPENG-5715)
+  [DOI](https://doi.org/10.1061/JCCEE5.CPENG-5715) [Video](https://youtu.be/w-w-SI-smOE)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2024). Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments. *Journal of Construction Automation and Robotics, 3*(3), 6-13.  
   [DOI](https://doi.org/10.55785/JCAR.3.3.6)

@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slugify } from '../../utils/common-utils';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
@@ -24,7 +25,7 @@ type Props = {
 };
 
 const { project, prevProject, nextProject } = Astro.props;
-const { title, description, seo } = project.data;
+const { title, description, tags = [], seo } = project.data;
 const { Content } = await render(project);
 ---
 
@@ -36,6 +37,17 @@ const { Content } = await render(project);
         <div class="prose sm:prose-lg max-w-none">
             <Content />
         </div>
+        {
+            tags.length > 0 && (
+                <div class="mt-8 flex flex-wrap gap-x-5 gap-y-1 text-sm sm:mt-12 sm:text-base">
+                    {tags.map((tag) => (
+                        <a class="text-main hover:underline" href={`/tags/${slugify(tag)}`}>
+                            #{tag}
+                        </a>
+                    ))}
+                </div>
+            )
+        }
     </article>
     {
         (prevProject || nextProject) && (
