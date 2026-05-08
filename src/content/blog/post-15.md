@@ -10,10 +10,10 @@ tags:
 seo:
   image:
     src: '../../assets/images/post-15.jpg'
-    alt: Construction robotics research areas and workflow diagram
+    alt: XR teleoperation concept for construction robotics
 ---
 
-![Construction robotics research areas and workflow diagram](../../assets/images/post-15.jpg)
+![XR teleoperation concept for construction robotics](../../assets/images/post-15.jpg)
 
 _Source: [SNU Innovations vol.08, "Human-Centered Robotics in Dynamic and Unstructured Construction Environments"](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php)._
 
