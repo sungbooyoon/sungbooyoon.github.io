@@ -1,4 +1,4 @@
-import avatar from '../assets/images/avatar.jpg';
+import avatar from '../assets/images/avatar.png';
 import hero0 from '../assets/images/hero0.png';
 import hero1 from '../assets/images/hero1.jpg';
 import hero2 from '../assets/images/hero2.jpeg';
