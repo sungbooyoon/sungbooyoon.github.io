@@ -55,19 +55,19 @@ Coordinated daily situational monitoring, command oversight, and personnel deplo
 
 ## Honors, Awards & Fellowships
 
-- 2026: Best Paper Award, International Conference on Computing in Civil Engineering (i3CE 2026)
+- 2026: Best Paper Award, International Conference on Computing in Civil Engineering (i3CE 2026), 1st Place in the Research in Robotics, Sensing, and Human-Centered Computing
   Paper Title: “Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application.” Yoon, S., Park, M., and Ahn, C. R. (2026).
 - 2024-2026: Ph.D. Fellowship, Basic Science Research Program, National Research Foundation of Korea (NRF)
 - 2025: Graduate Fellowship, Korean Society of Automation and Robotics in Construction (KSARC)
 - 2024: Editor's Choice Article, ASCE Journal of Computing in Civil Engineering
-  Paper Title: "LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human-Robot Collaboration in Construction."
+  Paper Title: “LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human-Robot Collaboration in Construction.” Yoon, S., Park, M., and Ahn, C. R. (2024).
 - 2024: Best Paper Award, The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)
-  Paper Title: "Imitation Learning Framework for Construction Tasks Using Constraint Learning."
+  Paper Title: “Imitation Learning Framework for Construction Tasks Using Constraint Learning.” Shin, S., Yoon, S., Park, M., Ahn, C. R. (2024).
 - 2023: Graduate Fellowship, Foundation for Industrial Safety Partnerships
 - 2023: Graduate Fellowship, Engineering Research Foundation
 - 2022-2023: Academic Fellowship, Seoul National University
 - 2022: Best Paper Award, The 2022 Autumn Annual Conference of Architectural Institute of Korea (AIK)
-  Paper Title: "Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites."
+  Paper Title: “Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites.” Park, J., Yoon, S., Park, M., Ahn, C. R. (2022).
 - 2019-2022: Academic Fellowship, Seoul National University
 - 2020: Graduate Fellowship, Hanssem DBEW Research Foundation
 - 2019: Second Place Award, Graduation Exhibition, Seoul National University
