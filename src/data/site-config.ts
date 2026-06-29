@@ -108,10 +108,10 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
                 text: 'Publications',
                 href: '/publications'
             },
-            {
-                text: 'Get in Touch',
-                href: '/contact'
-            },
+            // {
+            //     text: 'Get in Touch',
+            //     href: '/contact'
+            // },
             {
                 text: 'Curriculum Vitae',
                 href: 'https://docs.google.com/document/d/1Tnd3iKZz4WaJ9mfMOJuBAnpDzHikDSTn2WGahqZOZII/edit?usp=sharing'
