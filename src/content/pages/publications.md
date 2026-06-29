@@ -14,7 +14,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.  
   [DOI](https://doi.org/10.1016/j.kscej.2026.100638)
 
-- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. **Best Paper Award and invited to the special issue of the Journal of Computing in Civil Engineering.** 
+- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. **Best Paper Award and invited to the special issue of the Journal of Computing in Civil Engineering.**  
   [Video](https://youtu.be/Z28Tnz2dnQ0)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2026). Robotic Skill Acquisition for Construction Tasks from Augmented Reality-Assisted Robot-Free Demonstration: A Comparative Study of Visual Feedback Strategies. In *Computing in Civil Engineering 2026*.
