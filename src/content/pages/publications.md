@@ -11,9 +11,11 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 
 ## 2026
 
-- An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.
+- An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.  
+  [DOI](https://doi.org/10.1016/j.kscej.2026.100638)
 
-- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. **Best Paper Award and invited to the special issue of the Journal of Computing in Civil Engineering.**
+- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. **Best Paper Award and invited to the special issue of the Journal of Computing in Civil Engineering.** 
+  [Video](https://youtu.be/Z28Tnz2dnQ0)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2026). Robotic Skill Acquisition for Construction Tasks from Augmented Reality-Assisted Robot-Free Demonstration: A Comparative Study of Visual Feedback Strategies. In *Computing in Civil Engineering 2026*.
 
@@ -24,8 +26,6 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 
 - Yoon, S., Park, M., & Ahn, C. R. (2025). Comparing dynamic viewpoint control techniques for teleoperated robotic welding in construction. *Automation in Construction, 172*, 106053.  
   [DOI](https://doi.org/10.1016/j.autcon.2025.106053) [Video](https://youtu.be/L5rUZPR6Q5s)
-
-- Yoon, S., Park, M., & Ahn, C. R. (2025). Multi-Skill Robot Learning for Construction Finishing. *The ASCE International Conference on Computing in Civil Engineering (i3CE 2026)*, Incheon, South Korea.
 
 ## 2024
 
@@ -51,8 +51,6 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
   [DOI](https://doi.org/10.1061/9780784485224.054)
 
 - Shin, S., Yoon, S., Park, M., & Ahn, C. R. (2024). Imitation Learning Framework for Construction Tasks Using Constraint Learning. *The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*. **Best Paper Award.**
-
-- Yoon, S., Shin, S., Lee, S. H., Park, M., & Ahn, C. R. (2024). Designing a Virtual Reality Interface for Teleoperation of Welding Robots in Construction. *3rd Workshop on Future of Construction: Lifelong Learning Robots in Changing Construction Sites (ICRA 2024)*, Yokohama, Japan.
 
 ## 2023
 
