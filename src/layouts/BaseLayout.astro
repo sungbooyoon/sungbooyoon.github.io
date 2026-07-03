@@ -1,35 +1,38 @@
 ---
-import { ClientRouter } from 'astro:transitions';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Nav from '../components/Nav.astro';
+import SiteNavigation from '../components/astryx/SiteNavigation';
+import SiteShell from '../components/astryx/SiteShell';
+import siteConfig from '../data/site-config';
 
 export type Props = HeadProps & { showHeader?: boolean };
 
 const { showHeader = true, ...head } = Astro.props;
+const avatarSrc = siteConfig.avatar?.src;
+const resolvedAvatarSrc = typeof avatarSrc === 'string' ? avatarSrc : avatarSrc?.src;
 ---
 
 <!doctype html>
-<html lang="en" class="wrap-break-words antialiased">
+<html lang="en" data-astryx-theme="site">
     <head>
         <BaseHead {...head} />
-        <script>
-            if (localStorage.theme === 'dark') {
-                document.documentElement.classList.add('dark');
+        <script is:inline>
+            const savedMode = localStorage.getItem('astryx-theme');
+            if (savedMode === 'light' || savedMode === 'dark') {
+                document.documentElement.dataset.theme = savedMode;
             }
         </script>
-        <ClientRouter />
-        <script is:inline src="/theme-toggle.js"></script>
     </head>
-    <body class="bg-main text-main">
-        <div class="flex min-h-screen flex-col px-4 md:px-8">
-            <Nav />
-            {showHeader && <Header />}
-            <main class="mx-auto w-full max-w-3xl grow">
-                <slot />
-            </main>
-            <Footer />
-        </div>
+    <body>
+        <SiteShell
+            title={siteConfig.title}
+            subtitle={siteConfig.subtitle}
+            avatarSrc={resolvedAvatarSrc}
+            showHeader={showHeader}
+            footerNavLinks={siteConfig.footerNavLinks ?? []}
+            socialLinks={siteConfig.socialLinks ?? []}
+        >
+            <SiteNavigation slot="navigation" client:load pathname={Astro.url.pathname} title={siteConfig.title} links={siteConfig.headerNavLinks ?? []} />
+            <slot />
+        </SiteShell>
     </body>
 </html>

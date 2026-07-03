@@ -60,7 +60,7 @@ const siteConfig: SiteConfig = {
         {
             text: 'Terms',
             href: '/terms'
-        },
+        }
     ],
     socialLinks: [
         {
@@ -82,7 +82,7 @@ const siteConfig: SiteConfig = {
         {
             text: 'Orcid',
             href: 'https://orcid.org/0000-0003-4997-5792'
-        },
+        }
     ],
     hero: {
         title: '',
@@ -119,9 +119,8 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
             {
                 text: 'Google Scholar',
                 href: 'https://scholar.google.com/citations?user=QFeaFbwAAAAJ'
-            },
+            }
         ]
-
     },
     subscribe: {
         enabled: false,

@@ -15,7 +15,7 @@ seo:
 
 ![XR teleoperation concept for construction robotics](../../assets/images/post-15.jpg)
 
-_Source: [SNU Innovations vol.08, "Human-Centered Robotics in Dynamic and Unstructured Construction Environments"](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php)._
+_Source:_ [SNU Innovations vol.08, "Human-Centered Robotics in Dynamic and Unstructured Construction Environments"](https://webzine-eng.snu.ac.kr/web/snu_en/vol08/inno08_6.php).
 
 Construction robotics is moving quickly from controlled shop floors into real construction sites. Robots are already being used for off-site modular construction and on-site tasks such as overhead drilling, wall painting, and autonomous excavation. This shift is motivated by productivity and safety needs, but it is also shaped by deeper workforce challenges, including the aging of skilled workers and mismatches in labor supply and demand.
 
@@ -56,7 +56,7 @@ There are still many barriers before construction robots become common across jo
 ## References
 
 1. [ABB Robotics: Construction](https://new.abb.com/products/robotics/industries/construction)
-2. Y. Kim, H. Kim, R. Murphy, S. Lee, and C.R. Ahn, "Delegation or Collaboration: Understanding Different Construction Stakeholders' Perceptions of Robotization," _Journal of Management in Engineering_, 38, 04021084, 2022. [https://doi.org/10.1061/(ASCE)ME.1943-5479.0000994](https://doi.org/10.1061/(ASCE)ME.1943-5479.0000994)
+2. Y. Kim, H. Kim, R. Murphy, S. Lee, and C.R. Ahn, "Delegation or Collaboration: Understanding Different Construction Stakeholders' Perceptions of Robotization," _Journal of Management in Engineering_, 38, 04021084, 2022. [https://doi.org/10.1061/(ASCE)ME.1943-5479.0000994](<https://doi.org/10.1061/(ASCE)ME.1943-5479.0000994>)
 3. S. Yoon, Y. Kim, M. Park, and C.R. Ahn, "Effects of Spatial Characteristics on the Human-Robot Communication Using Deictic Gesture in Construction," _Journal of Construction Engineering and Management_, 149, 04023049, 2023. [https://doi.org/10.1061/JCEMD4.COENG-12997](https://doi.org/10.1061/JCEMD4.COENG-12997)
 4. S. Yoon, M. Park, and C.R. Ahn, "LaserDex: Improvising Spatial Tasks Using Deictic Gestures and Laser Pointing for Human-Robot Collaboration in Construction," _Journal of Computing in Civil Engineering_, 38, 04024012, 2024. [https://doi.org/10.1061/JCCEE5.CPENG-5715](https://doi.org/10.1061/JCCEE5.CPENG-5715)
 5. S. Yoon, S. Shin, S. Lee, M. Park, and C.R. Ahn, "Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots," in _Proceedings of the 31st International Workshop on Intelligent Computing in Engineering_, EG-ICE, 2024, pp. 345-354.

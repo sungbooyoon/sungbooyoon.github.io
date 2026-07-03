@@ -1,159 +1,29 @@
 ---
-import { marked } from 'marked';
+import { getImage } from 'astro:assets';
 import type { Hero as HeroProps } from '../types';
-import Button from './Button.astro';
-import CustomImage from './CustomImage.astro';
+import HeroContent from './astryx/HeroContent';
 
 type Props = HeroProps;
 
-const { title, image, images, text, actions } = Astro.props;
+const { title, image, images, text, actions = [] } = Astro.props;
 const heroImages = images?.length ? images : image?.src ? [image] : [];
-const hasCarousel = heroImages.length > 1;
+const resolvedImages = await Promise.all(
+    heroImages.map(async (heroImage) => {
+        if (typeof heroImage.src === 'string') {
+            return { src: heroImage.src, alt: heroImage.alt ?? '', caption: heroImage.caption };
+        }
+
+        const optimized = await getImage({
+            src: heroImage.src,
+            width: 1200,
+            height: 675,
+            format: 'webp',
+            fit: 'cover'
+        });
+
+        return { src: optimized.src, alt: heroImage.alt ?? '', caption: heroImage.caption };
+    })
+);
 ---
 
-{
-    (title || heroImages.length > 0 || text || (actions && actions.length > 0)) && (
-        <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
-            {title && <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>}
-            {heroImages.length > 0 && (
-                <div class="flex flex-col gap-3" data-hero-carousel={hasCarousel ? 'true' : 'false'}>
-                    <div class="relative">
-                        <div class="grid">
-                            {heroImages.map((heroImage, index) => (
-                                <figure
-                                    class:list={[
-                                        'col-start-1 row-start-1 transition-opacity duration-700 ease-out',
-                                        index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'
-                                    ]}
-                                    data-hero-slide
-                                    data-active={index === 0 ? 'true' : 'false'}
-                                    aria-hidden={index === 0 ? 'false' : 'true'}
-                                >
-                                    <CustomImage
-                                        class="w-full"
-                                        {...heroImage}
-                                        widths={[480, 640, 768, 1024, 1536]}
-                                        sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
-                                        fetchpriority={index === 0 ? 'high' : 'auto'}
-                                        loading={index === 0 ? 'eager' : 'lazy'}
-                                    />
-                                    {heroImage.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{heroImage.caption}</figcaption>}
-                                </figure>
-                            ))}
-                        </div>
-                        {
-                            hasCarousel && (
-                                <div
-                                    class="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2 sm:bottom-5"
-                                    aria-label="Hero image navigation"
-                                >
-                                    {heroImages.map((_, index) => (
-                                        <button
-                                            type="button"
-                                            class:list={[
-                                                'pointer-events-auto h-2.5 w-2.5 rounded-full border border-white/80 shadow-sm transition-opacity',
-                                                index === 0 ? 'bg-white opacity-100' : 'bg-white/20 opacity-70'
-                                            ]}
-                                            data-hero-dot
-                                            aria-label={`Show hero image ${index + 1}`}
-                                            aria-pressed={index === 0 ? 'true' : 'false'}
-                                        />
-                                    ))}
-                                </div>
-                            )
-                        }
-                    </div>
-                </div>
-            )}
-            {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}
-            {actions && actions.length > 0 && (
-                <div class="flex flex-wrap gap-4">
-                    {actions.map((action) => (
-                        <Button href={action.href}>{action.text}</Button>
-                    ))}
-                </div>
-            )}
-        </section>
-    )
-}
-
-<script is:inline>
-    (() => {
-        const AUTO_ADVANCE_MS = 5000;
-        const windowWithHeroCarousel = window;
-
-        function setupHeroCarousel(root) {
-            if (!(root instanceof HTMLElement) || root.dataset.carouselReady === 'true') return;
-
-            const slides = Array.from(root.querySelectorAll('[data-hero-slide]'));
-            const dots = Array.from(root.querySelectorAll('[data-hero-dot]'));
-
-            if (slides.length < 2 || slides.length !== dots.length) return;
-
-            root.dataset.carouselReady = 'true';
-
-            let activeIndex = slides.findIndex((slide) => slide.getAttribute('data-active') === 'true');
-            let timerId;
-
-            if (activeIndex < 0) activeIndex = 0;
-
-            const updateSlide = (nextIndex) => {
-                activeIndex = (nextIndex + slides.length) % slides.length;
-
-                slides.forEach((slide, index) => {
-                    const isActive = index === activeIndex;
-                    slide.setAttribute('data-active', String(isActive));
-                    slide.setAttribute('aria-hidden', String(!isActive));
-                    slide.classList.toggle('opacity-100', isActive);
-                    slide.classList.toggle('opacity-0', !isActive);
-                    slide.classList.toggle('pointer-events-none', !isActive);
-                });
-
-                dots.forEach((dot, index) => {
-                    const isActive = index === activeIndex;
-                    dot.setAttribute('aria-pressed', String(isActive));
-                    dot.classList.toggle('bg-white', isActive);
-                    dot.classList.toggle('bg-white/20', !isActive);
-                    dot.classList.toggle('opacity-100', isActive);
-                    dot.classList.toggle('opacity-70', !isActive);
-                });
-            };
-
-            const startAutoAdvance = () => {
-                window.clearInterval(timerId);
-                timerId = window.setInterval(() => {
-                    if (!document.body.contains(root)) {
-                        window.clearInterval(timerId);
-                        return;
-                    }
-
-                    updateSlide(activeIndex + 1);
-                }, AUTO_ADVANCE_MS);
-            };
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    updateSlide(index);
-                    startAutoAdvance();
-                });
-            });
-
-            root.addEventListener('pointerenter', () => window.clearInterval(timerId));
-            root.addEventListener('pointerleave', startAutoAdvance);
-
-            updateSlide(activeIndex);
-            startAutoAdvance();
-        }
-
-        function initHeroCarousels() {
-            document.querySelectorAll('[data-hero-carousel="true"]').forEach(setupHeroCarousel);
-        }
-
-        initHeroCarousels();
-        if (windowWithHeroCarousel.__heroCarouselEventsBound) return;
-
-        windowWithHeroCarousel.__heroCarouselEventsBound = true;
-        document.addEventListener('astro:page-load', initHeroCarousels);
-        document.addEventListener('astro:after-swap', initHeroCarousels);
-    })();
-</script>
+<HeroContent client:load title={title} text={text} images={resolvedImages} actions={actions} />

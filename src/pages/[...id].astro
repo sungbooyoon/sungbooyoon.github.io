@@ -1,6 +1,8 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { ArticleSurface, MarkdownBody, PageHeader } from '../components/astryx/PageSurface';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { prepareAstryxMarkdown } from '../utils/markdown-utils';
 
 export async function getStaticPaths() {
     const pages = await getCollection('pages');
@@ -16,16 +18,12 @@ type Props = { page: CollectionEntry<'pages'> };
 
 const { page } = Astro.props;
 const { title, seo } = page.data;
-const { Content } = await render(page);
+const content = await prepareAstryxMarkdown(page.body);
 ---
 
 <BaseLayout title={seo?.title ?? title} description={seo?.description} image={seo?.image} showHeader={false}>
-    <article class="mb-16 sm:mb-24">
-        <header class="mb-8">
-            <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>
-        </header>
-        <div class="prose sm:prose-lg max-w-none">
-            <Content />
-        </div>
-    </article>
+    <ArticleSurface>
+        <PageHeader title={title} />
+        <MarkdownBody content={content} />
+    </ArticleSurface>
 </BaseLayout>

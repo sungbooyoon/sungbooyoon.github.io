@@ -1,6 +1,6 @@
-# Dante - Astro & Tailwind CSS Theme by justgoodui.com
+# Sungboo Yoon — Astro + Astryx Portfolio
 
-Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).
+A bilingual academic portfolio and blog built with Astro and the Astryx design system.
 
 ![Dante Astro.js Theme](public/dante-preview.jpg)
 
@@ -17,7 +17,8 @@ Clicking the button above ☝️ will create a new repo for you that looks exact
 - ✅ Post tags support
 - ✅ Subscription form
 - ✅ View transitions
-- ✅ Tailwind CSS
+- ✅ Astryx component system and custom theme
+- ✅ Noto Sans KR / Noto Serif KR variable typography
 - ✅ Mobile-first responsive layout
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
 - ✅ Sitemap support
@@ -27,7 +28,9 @@ Clicking the button above ☝️ will create a new repo for you that looks exact
 
 ## Template Integrations
 
-- @astrojs/tailwind - https://docs.astro.build/en/guides/integrations-guide/tailwind/
+- @astryxdesign/core - https://astryx.atmeta.com/docs/getting-started
+- @astryxdesign/theme-neutral - https://astryx.atmeta.com/docs/getting-started
+- @astrojs/react - https://docs.astro.build/en/guides/integrations-guide/react/
 - @astrojs/sitemap - https://docs.astro.build/en/guides/integrations-guide/sitemap/
 - @astrojs/mdx - https://docs.astro.build/en/guides/markdown-content/
 - @astrojs/rss - https://docs.astro.build/en/guides/rss/
@@ -51,7 +54,7 @@ Images can be referenced either as imports from `src/assets/` (for optimized Ast
 
 ### Images
 
-The theme uses a `CustomImage` component that automatically displays images using Astro’s optimized `<Image />` or a standard `<img>` tag depending on the source.
+Hero and Markdown content images are optimized through Astro before being passed to Astryx components.
 
 - Content collection images (used in posts or pages) must be stored in `src/assets/` since they use Astro’s `image()` schema.
 - Site-config images (like the avatar, hero image, or social preview) can either be imported from `src/assets/` for optimization or referenced directly from `public/` if you prefer not to optimize them.

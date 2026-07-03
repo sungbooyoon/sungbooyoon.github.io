@@ -1,98 +1,79 @@
-@import '@fontsource-variable/inter' layer(base);
-@import '@fontsource-variable/newsreader' layer(base);
-@import '@fontsource-variable/newsreader/wght-italic.css' layer(base);
+@layer reset, base, astryx-base, astryx-theme, components;
 
-@import 'tailwindcss';
-@plugin '@tailwindcss/typography';
+@import '@fontsource-variable/noto-sans-kr' layer(base);
+@import '@fontsource-variable/noto-serif-kr' layer(base);
+@import '@astryxdesign/core/reset.css';
+@import '@astryxdesign/core/astryx.css';
+@import '../themes/site.css';
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-:root {
-    --text-main: #171717;
-    --bg-main: #f2f1ec;
-    --bg-muted: #eae9e1;
-    --border-main: #171717;
-}
-html.dark {
-    --text-main: #f2f1ec;
-    --bg-main: #171717;
-    --bg-muted: #242424;
-    --border-main: #f2f1ec;
-}
-
-/* Cyan */
-/*
-:root {
-    --text-main: #162a2b;
-    --bg-main: #d6e0e2;
-    --bg-muted: #ccd8db;
-    --border-main: #162a2b;
-}
-html.dark {
-    --text-main: #d6e0e2;
-    --bg-main: #162a2b;
-    --bg-muted: #1c3537;
-    --border-main: #d6e0e2;
-}
-*/
-
-/* Green */
-/*
-:root {
-    --text-main: #3a4238;
-    --bg-main: #f3efe6;
-    --bg-muted: #eee9dc;
-    --border-main: #3a4238;
-}
-html.dark {
-    --text-main: #f3efe6;
-    --bg-main: #5e6c5b;
-    --bg-muted: #596756;
-    --border-main: #f3efe6;
-}
-*/
-
-@theme inline {
-    --font-sans: 'Inter Variable', sans-serif;
-    --font-serif: 'Newsreader Variable', serif;
-    --text-color-main: var(--text-main);
-    --background-color-main: var(--bg-main);
-    --background-color-muted: var(--bg-muted);
-    --border-color-main: var(--border-main);
-}
-
-@layer utilities {
-    .prose {
-        --tw-prose-body: var(--text-color-main);
-        --tw-prose-headings: var(--text-color-main);
-        --tw-prose-lead: var(--text-color-main);
-        --tw-prose-links: var(--text-color-main);
-        --tw-prose-bold: var(--text-color-main);
-        --tw-prose-counters: var(--text-color-main);
-        --tw-prose-bullets: var(--text-color-main);
-        --tw-prose-hr: var(--border-color-main);
-        --tw-prose-quotes: var(--text-color-main);
-        --tw-prose-quote-borders: var(--border-color-main);
-        --tw-prose-captions: var(--text-color-main);
-        --tw-prose-kbd: var(--text-color-main);
-        --tw-prose-code: var(--text-color-main);
-        --tw-prose-th-borders: var(--border-color-main);
-        --tw-prose-td-borders: var(--border-color-main);
+@layer base {
+    body {
+        background: var(--color-background-body);
+        color: var(--color-text-primary);
+        font-family: var(--font-family-body);
     }
 
-    .prose a {
-        @apply underline font-normal decoration-1 underline-offset-2 decoration-dashed hover:decoration-solid;
+    img {
+        max-width: 100%;
+    }
+}
+
+@layer components {
+    html[data-theme='light'] {
+        color-scheme: light;
     }
 
-    .prose :where(h1, h2, h3, h4, h5, h6) {
-        @apply font-serif font-medium;
+    html[data-theme='dark'] {
+        color-scheme: dark;
     }
 
-    .prose :where(code, strong) {
-        @apply font-medium;
+    html[data-theme='light'] [data-astryx-theme='site'] {
+        color-scheme: light;
     }
 
-    .prose blockquote {
-        @apply font-serif font-normal italic border-none pl-0 text-[1.375em] leading-snug sm:text-[1.66667em];
+    html[data-theme='dark'] [data-astryx-theme='site'] {
+        color-scheme: dark;
+    }
+
+    .astryx-markdown {
+        overflow-x: clip;
+    }
+
+    .site-mobile-navigation {
+        display: none;
+    }
+
+    @media (width < 48rem) {
+        .site-desktop-navigation {
+            display: none;
+        }
+
+        .site-mobile-navigation {
+            display: flex;
+        }
+    }
+
+    .hero-media {
+        overflow: hidden;
+        border-radius: var(--radius-container);
+        background: var(--color-background-muted);
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
     }
 }
