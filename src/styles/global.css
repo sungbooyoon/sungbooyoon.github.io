@@ -44,7 +44,23 @@
 
     .site-desktop-navigation,
     .site-mobile-navigation {
+        background: transparent;
+    }
+
+    .astryx-app-shell-header:has(.site-desktop-navigation),
+    .astryx-app-shell-header:has(.site-mobile-navigation),
+    .astryx-layout-header:has(.site-desktop-navigation),
+    .astryx-layout-header:has(.site-mobile-navigation) {
+        background: transparent !important;
+    }
+
+    .site-desktop-navigation .astryx-top-nav,
+    .site-mobile-navigation .astryx-top-nav {
         background: var(--color-background-surface);
+        background: color-mix(in srgb, var(--color-background-surface) 80%, transparent);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        transition: background 0.3s ease;
     }
 
     .site-content {

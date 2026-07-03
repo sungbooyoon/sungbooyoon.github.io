@@ -22,7 +22,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                 <Heading level={2} type="display-3">
                     Selected publications
                 </Heading>
-                <Button label="View all publications" href="/publications" variant="secondary" size="md" />
+                <Button label="View all publications" href="/publications" variant="ghost" size="md" />
             </HStack>
             <VStack width="100%" gap={3}>
                 {entries.map((entry) => (
