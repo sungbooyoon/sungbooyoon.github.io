@@ -3,7 +3,8 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContentList from '../../components/astryx/ContentList';
 import CopyButton from '../../components/astryx/CopyButton';
-import { ArticleActions, ArticleSurface, MarkdownBody, PageHeader, PageStack } from '../../components/astryx/PageSurface';
+import OutlinedMarkdown from '../../components/astryx/OutlinedMarkdown';
+import { ArticleActions, ArticleSurface, PageHeader, PageStack } from '../../components/astryx/PageSurface';
 import TagLinks from '../../components/astryx/TagLinks';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { prepareAstryxMarkdown } from '../../utils/markdown-utils';
@@ -45,7 +46,7 @@ const nextEntries = [nextProject, prevProject]
     <PageStack>
         <ArticleSurface>
             <PageHeader title={title} description={description} />
-            <MarkdownBody content={content} />
+            <OutlinedMarkdown client:load content={content} />
             <ArticleActions>
                 {tags.length > 0 && <TagLinks tags={tags} />}
                 <CopyButton client:load value={href} />

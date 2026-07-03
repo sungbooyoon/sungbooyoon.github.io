@@ -24,17 +24,17 @@ export default function OutlinedMarkdown({ content }: OutlinedMarkdownProps) {
 
     return (
         <HStack width="100%" gap={8} className="outlined-document">
+            <div ref={contentRef} className="document-markdown">
+                <Markdown contentWidth={680} contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
+                    {content}
+                </Markdown>
+            </div>
             <VStack as="aside" gap={2} className="document-outline">
                 <Text type="supporting" weight="semibold">
                     On this page
                 </Text>
                 {isOutlineReady && <Outline items={items} density="compact" label="On this page" />}
             </VStack>
-            <div ref={contentRef} className="document-markdown">
-                <Markdown contentWidth={680} contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
-                    {content}
-                </Markdown>
-            </div>
         </HStack>
     );
 }

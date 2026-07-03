@@ -6,7 +6,7 @@ export const siteTheme = defineTheme({
     extends: neutralTheme,
     typography: {
         scale: {
-            base: 14,
+            base: 16,
             ratio: 1.2
         },
         body: {

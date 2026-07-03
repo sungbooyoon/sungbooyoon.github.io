@@ -4,7 +4,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Subscribe from '../../components/Subscribe.astro';
 import ContentList from '../../components/astryx/ContentList';
 import CopyButton from '../../components/astryx/CopyButton';
-import { ArticleActions, ArticleSurface, MarkdownBody, PageHeader, PageStack } from '../../components/astryx/PageSurface';
+import OutlinedMarkdown from '../../components/astryx/OutlinedMarkdown';
+import { ArticleActions, ArticleSurface, PageHeader, PageStack } from '../../components/astryx/PageSurface';
 import TagLinks from '../../components/astryx/TagLinks';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { formatDate } from '../../utils/common-utils';
@@ -43,7 +44,7 @@ const nextEntries = [nextPost, prevPost]
     <PageStack>
         <ArticleSurface>
             <PageHeader title={title} description={excerpt} meta={`${formatDate(publishDate)}${updatedDate ? ` · Updated ${formatDate(updatedDate)}` : ''}`} />
-            <MarkdownBody content={content} />
+            <OutlinedMarkdown client:load content={content} />
             <ArticleActions>
                 {tags.length > 0 && <TagLinks tags={tags} />}
                 <CopyButton client:load value={href} />

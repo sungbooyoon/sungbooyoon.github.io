@@ -37,13 +37,15 @@ export default function ProjectCarousel({ entries }: ProjectCarouselProps) {
                         variant="muted"
                         padding={4}
                         width={320}
-                        className="project-carousel-card"
+                        height={320}
                     >
                         <VStack height="100%" gap={3}>
-                            <Heading level={3}>{entry.title}</Heading>
+                            <Heading level={3} maxLines={3}>
+                                {entry.title}
+                            </Heading>
                             {entry.description && (
                                 <StackItem size="fill">
-                                    <Text as="p" type="body" color="secondary">
+                                    <Text as="p" type="body" color="secondary" maxLines={4}>
                                         {entry.description}
                                     </Text>
                                 </StackItem>

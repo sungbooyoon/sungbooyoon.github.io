@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead, { type Props as HeadProps } from '../components/BaseHead.astro';
 import SiteNavigation from '../components/astryx/SiteNavigation';
 import SiteShell from '../components/astryx/SiteShell';
@@ -9,6 +10,20 @@ export type Props = HeadProps & { showHeader?: boolean };
 const { showHeader = true, ...head } = Astro.props;
 const avatarSrc = siteConfig.avatar?.src;
 const resolvedAvatarSrc = typeof avatarSrc === 'string' ? avatarSrc : avatarSrc?.src;
+const [posts, projects] = await Promise.all([getCollection('blog'), getCollection('projects')]);
+const searchItems = [
+    ...(siteConfig.headerNavLinks ?? []).map((link) => ({ ...link, group: 'Navigation' })),
+    ...projects.map((project) => ({
+        text: project.data.title,
+        href: project.data.externalUrl ?? `/projects/${project.id}/`,
+        group: 'Projects'
+    })),
+    ...posts.map((post) => ({
+        text: post.data.title,
+        href: `/blog/${post.id}/`,
+        group: 'Blog'
+    }))
+];
 ---
 
 <!doctype html>
@@ -31,7 +46,14 @@ const resolvedAvatarSrc = typeof avatarSrc === 'string' ? avatarSrc : avatarSrc?
             footerNavLinks={siteConfig.footerNavLinks ?? []}
             socialLinks={siteConfig.socialLinks ?? []}
         >
-            <SiteNavigation slot="navigation" client:load pathname={Astro.url.pathname} title={siteConfig.title} links={siteConfig.headerNavLinks ?? []} />
+            <SiteNavigation
+                slot="navigation"
+                client:load
+                pathname={Astro.url.pathname}
+                title={siteConfig.title}
+                links={siteConfig.headerNavLinks ?? []}
+                searchItems={searchItems}
+            />
             <slot />
         </SiteShell>
     </body>
