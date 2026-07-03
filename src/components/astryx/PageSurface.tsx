@@ -55,7 +55,7 @@ export function ArticleSurface({ children }: PageStackProps) {
 
 export function MarkdownBody({ content }: { content: string }) {
     return (
-        <Markdown contentWidth="100%" autolink="gfm">
+        <Markdown contentWidth={680} contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
             {content}
         </Markdown>
     );

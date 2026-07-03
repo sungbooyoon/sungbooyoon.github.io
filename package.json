@@ -18,7 +18,6 @@
         "@astryxdesign/core": "^0.1.2",
         "@astryxdesign/theme-neutral": "^0.1.2",
         "@fontsource-variable/noto-sans-kr": "^5.2.10",
-        "@fontsource-variable/noto-serif-kr": "^5.2.10",
         "astro": "^5.15.5",
         "react": "^19.2.7",
         "react-dom": "^19.2.7"

@@ -4,4 +4,8 @@ import RoutePagination from './astryx/RoutePagination';
 const { page } = Astro.props;
 ---
 
-<RoutePagination currentPage={page.currentPage} totalPages={page.lastPage} previousUrl={page.url.prev} nextUrl={page.url.next} />
+{
+    page.lastPage > 1 && (
+        <RoutePagination client:load currentPage={page.currentPage} totalPages={page.lastPage} previousUrl={page.url.prev} nextUrl={page.url.next} />
+    )
+}

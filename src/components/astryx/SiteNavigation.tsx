@@ -3,7 +3,7 @@ import { Icon } from '@astryxdesign/core/Icon';
 import { MobileNav } from '@astryxdesign/core/MobileNav';
 import { SideNavItem, SideNavSection } from '@astryxdesign/core/SideNav';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
-import { TopNav, TopNavHeading, TopNavItem, TopNavMenu } from '@astryxdesign/core/TopNav';
+import { TopNav, TopNavHeading, TopNavItem } from '@astryxdesign/core/TopNav';
 import { useEffect, useState } from 'react';
 
 type NavLink = {
@@ -18,8 +18,6 @@ type SiteNavigationProps = {
 };
 
 const THEME_STORAGE_KEY = 'astryx-theme';
-const PRIMARY_PATHS = ['/', '/publications', '/projects', '/blog'];
-
 function isSelected(pathname: string, href: string) {
     if (!href.startsWith('/')) return false;
     if (href === '/') return pathname === '/';
@@ -48,8 +46,6 @@ export default function SiteNavigation({ pathname, title, links }: SiteNavigatio
         applyTheme(nextIsDark ? 'dark' : 'light');
     };
 
-    const primaryLinks = links.filter((link) => PRIMARY_PATHS.includes(link.href));
-    const secondaryLinks = links.filter((link) => !primaryLinks.includes(link));
     const themeButton = <Button label={isDark ? 'Light mode' : 'Dark mode'} variant="ghost" size="sm" onClick={toggleTheme} />;
 
     return (
@@ -60,18 +56,9 @@ export default function SiteNavigation({ pathname, title, links }: SiteNavigatio
                     heading={<TopNavHeading heading={title} headingHref="/" />}
                     startContent={
                         <>
-                            {primaryLinks.map((link) => (
+                            {links.map((link) => (
                                 <TopNavItem key={link.href} label={link.text} href={link.href} isSelected={isSelected(pathname, link.href)} />
                             ))}
-                            {secondaryLinks.length > 0 && (
-                                <TopNavMenu
-                                    label="More"
-                                    items={secondaryLinks.map((link) => ({
-                                        title: link.text,
-                                        href: link.href
-                                    }))}
-                                />
-                            )}
                         </>
                     }
                     endContent={themeButton}

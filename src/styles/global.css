@@ -1,7 +1,6 @@
 @layer reset, base, astryx-base, astryx-theme, components;
 
 @import '@fontsource-variable/noto-sans-kr' layer(base);
-@import '@fontsource-variable/noto-serif-kr' layer(base);
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
 @import '../themes/site.css';
@@ -43,6 +42,16 @@
         display: none;
     }
 
+    .site-desktop-navigation,
+    .site-mobile-navigation {
+        background: var(--color-background-surface);
+    }
+
+    .site-content {
+        max-width: 60rem;
+        margin-inline: auto;
+    }
+
     @media (width < 48rem) {
         .site-desktop-navigation {
             display: none;
@@ -63,6 +72,39 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .project-carousel-card {
+        min-height: 13rem;
+    }
+
+    .outlined-document {
+        align-items: flex-start;
+    }
+
+    .document-outline {
+        position: sticky;
+        top: var(--spacing-4);
+        flex: 0 0 13rem;
+        max-height: calc(100vh - var(--spacing-8));
+        overflow-y: auto;
+    }
+
+    .document-markdown {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    @media (width < 48rem) {
+        .outlined-document {
+            flex-direction: column;
+        }
+
+        .document-outline {
+            position: static;
+            width: 100%;
+            max-height: none;
+        }
     }
 
     .visually-hidden {

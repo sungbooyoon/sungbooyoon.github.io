@@ -49,15 +49,20 @@ export default function HeroContent({ title, text, images, actions }: HeroConten
                     ))}
                 </Carousel>
             )}
-            {text && <Markdown contentWidth="100%">{text}</Markdown>}
+            {text && (
+                <Markdown contentWidth={680} contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
+                    {text}
+                </Markdown>
+            )}
             {actions.length > 0 && (
-                <HStack gap={3} wrap="wrap">
+                <HStack gap={2} wrap="wrap">
                     {actions.map((action, index) => (
                         <Button
                             key={action.href}
                             label={action.text}
                             href={action.href}
                             variant={index === 0 ? 'primary' : 'secondary'}
+                            size="md"
                             target={action.href.startsWith('http') ? '_blank' : undefined}
                             rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         />

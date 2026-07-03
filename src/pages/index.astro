@@ -1,17 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import { Button } from '@astryxdesign/core/Button';
-import { VStack } from '@astryxdesign/core/Stack';
 import Hero from '../components/Hero.astro';
-import ContentList from '../components/astryx/ContentList';
+import ProjectCarousel from '../components/astryx/ProjectCarousel';
 import { PageStack } from '../components/astryx/PageSurface';
 import siteConfig from '../data/site-config';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate } from '../utils/common-utils';
 import { sortItemsByDateDesc } from '../utils/data-utils';
-
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
 const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
@@ -19,34 +13,14 @@ const featuredProjectEntries = featuredProjects.map((project) => ({
     title: project.data.title,
     description: project.data.description,
     href: project.data.externalUrl ?? `/projects/${project.id}/`,
-    isExternal: Boolean(project.data.externalUrl)
-}));
-const featuredPostEntries = featuredPosts.map((post) => ({
-    title: post.data.title,
-    description: post.data.excerpt,
-    meta: formatDate(post.data.publishDate),
-    href: `/blog/${post.id}/`
+    isExternal: Boolean(project.data.externalUrl),
+    tags: project.data.tags
 }));
 ---
 
 <BaseLayout description={siteConfig.description}>
     <PageStack>
         <Hero {...siteConfig.hero} />
-        {
-            featuredProjects?.length > 0 && (
-                <VStack as="section" width="100%" gap={6}>
-                    <ContentList entries={featuredProjectEntries} heading="Projects" />
-                    <Button label="View all projects" href="/projects" variant="secondary" />
-                </VStack>
-            )
-        }
-        {
-            featuredPosts?.length > 0 && (
-                <VStack as="section" width="100%" gap={6}>
-                    <ContentList entries={featuredPostEntries} heading="Writing" />
-                    <Button label="View all posts" href="/blog" variant="secondary" />
-                </VStack>
-            )
-        }
+        {featuredProjects.length > 0 && <ProjectCarousel client:load entries={featuredProjectEntries} />}
     </PageStack>
 </BaseLayout>

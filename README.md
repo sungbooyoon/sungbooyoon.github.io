@@ -18,7 +18,7 @@ Clicking the button above ☝️ will create a new repo for you that looks exact
 - ✅ Subscription form
 - ✅ View transitions
 - ✅ Astryx component system and custom theme
-- ✅ Noto Sans KR / Noto Serif KR variable typography
+- ✅ Noto Sans KR variable typography across body and headings
 - ✅ Mobile-first responsive layout
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
 - ✅ Sitemap support
