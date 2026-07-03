@@ -52,7 +52,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                             <AspectRatio ratio={16 / 9}>
                                 <img className="media-card-image" src={entry.imageSrc} alt={entry.imageAlt} loading="lazy" />
                             </AspectRatio>
-                            <VStack gap={3} padding={4} height="100%">
+                            <VStack gap={3} height="100%" className="media-card-body">
                                 {entry.badges && entry.badges.length > 0 && (
                                     <HStack gap={1} wrap="wrap">
                                         {entry.badges.map((badge) => (

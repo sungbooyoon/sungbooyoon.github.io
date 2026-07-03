@@ -3,7 +3,6 @@ import { Lightbox, type LightboxMedia } from '@astryxdesign/core/Lightbox';
 import { Markdown } from '@astryxdesign/core/Markdown';
 import type { MarkdownInlinePlugin, MarkdownSource } from '@astryxdesign/core/Markdown';
 import { Outline, parseOutlineFromMarkdown } from '@astryxdesign/core/Outline';
-import { Section } from '@astryxdesign/core/Section';
 import { Selector } from '@astryxdesign/core/Selector';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
 import { Text } from '@astryxdesign/core/Text';
@@ -164,16 +163,12 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
                         return section.sectionIndex == null ? (
                             <div key={`preamble-${index}`}>{markdown}</div>
                         ) : (
-                            <Section
+                            <div
                                 key={`section-${section.sectionIndex}`}
-                                variant="transparent"
-                                padding={0}
-                                paddingBlock={6}
-                                dividers={section.sectionIndex > 0 ? ['top'] : undefined}
-                                width="100%"
+                                className={`document-section${section.sectionIndex > 0 ? ' document-section-divided' : ''}`}
                             >
                                 {markdown}
-                            </Section>
+                            </div>
                         );
                     })}
                 </div>

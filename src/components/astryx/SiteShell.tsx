@@ -1,6 +1,7 @@
 import { AppShell } from '@astryxdesign/core/AppShell';
 import { Avatar } from '@astryxdesign/core/Avatar';
 import { IconButton } from '@astryxdesign/core/IconButton';
+import { Icon } from '@astryxdesign/core/Icon';
 import { Link } from '@astryxdesign/core/Link';
 import { Section } from '@astryxdesign/core/Section';
 import { HStack, StackItem, VStack } from '@astryxdesign/core/Stack';
@@ -85,7 +86,7 @@ export default function SiteShell({ title, subtitle, avatarSrc, showHeader = tru
                                                         rel="noopener noreferrer"
                                                         variant="ghost"
                                                         size="sm"
-                                                        icon={icon ? <BrandIcon icon={icon} /> : <span aria-hidden="true">↗</span>}
+                                                        icon={icon ? <BrandIcon icon={icon} /> : <Icon icon="externalLink" size="sm" />}
                                                     />
                                                 );
                                             })}

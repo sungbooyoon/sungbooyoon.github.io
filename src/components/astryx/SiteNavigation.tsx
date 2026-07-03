@@ -203,8 +203,6 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
                                     key={link.href}
                                     label={link.text}
                                     href={link.href}
-                                    target={isExternal ? '_blank' : undefined}
-                                    rel={isExternal ? 'noopener noreferrer' : undefined}
                                     isSelected={isSelected(pathname, link.href)}
                                     endContent={isExternal ? <Icon icon="externalLink" size="sm" color="secondary" /> : undefined}
                                 />

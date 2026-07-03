@@ -41,7 +41,7 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
                         <AspectRatio ratio={16 / 9}>
                             <img className="media-card-image" src={entry.imageSrc} alt={entry.imageAlt} loading="lazy" />
                         </AspectRatio>
-                        <VStack gap={3} padding={4} height="100%">
+                        <VStack gap={3} height="100%" className="media-card-body">
                             <HStack gap={2} hAlign="between" vAlign="start">
                                 <Heading level={2}>{entry.title}</Heading>
                                 <Badge label={entry.status} variant={entry.status === 'Active' ? 'success' : 'neutral'} />
