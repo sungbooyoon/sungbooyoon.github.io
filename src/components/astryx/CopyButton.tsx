@@ -21,5 +21,5 @@ export default function CopyButton({ value }: CopyButtonProps) {
 
     const label = status === 'copied' ? 'Copied' : status === 'failed' ? 'Copy unavailable' : 'Share';
 
-    return <Button label={label} variant="secondary" icon={<Icon icon={status === 'copied' ? 'check' : 'copy'} size="sm" />} onClick={copy} />;
+    return <Button label={label} variant="secondary" size="md" icon={<Icon icon={status === 'copied' ? 'check' : 'copy'} size="sm" />} onClick={copy} />;
 }

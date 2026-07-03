@@ -27,7 +27,7 @@ export default function SubscribeForm({ action, title, description, emailFieldNa
             <VStack gap={4}>
                 {title && <Heading level={2}>{title}</Heading>}
                 {description && (
-                    <Text as="p" color="secondary">
+                    <Text as="p" type="body" color="secondary">
                         {description}
                     </Text>
                 )}
@@ -50,7 +50,7 @@ export default function SubscribeForm({ action, title, description, emailFieldNa
                         {honeypotFieldName && (
                             <input className="visually-hidden" type="text" name={honeypotFieldName} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                         )}
-                        <Button type="submit" label="Subscribe" variant="primary" />
+                        <Button type="submit" label="Subscribe" variant="primary" size="md" />
                     </HStack>
                 </form>
             </VStack>

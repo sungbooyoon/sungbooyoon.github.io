@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import ProjectCarousel from '../components/astryx/ProjectCarousel';
-import PublicationCarousel from '../components/astryx/PublicationCarousel';
+import SelectedPublications from '../components/astryx/SelectedPublications';
 import { PageStack } from '../components/astryx/PageSurface';
 import selectedPublications from '../data/selected-publications';
 import siteConfig from '../data/site-config';
@@ -23,7 +23,7 @@ const featuredProjectEntries = featuredProjects.map((project) => ({
 <BaseLayout description={siteConfig.description}>
     <PageStack>
         <Hero {...siteConfig.hero} />
+        <SelectedPublications client:load entries={selectedPublications} />
         {featuredProjects.length > 0 && <ProjectCarousel client:load entries={featuredProjectEntries} />}
-        <PublicationCarousel client:load entries={selectedPublications} />
     </PageStack>
 </BaseLayout>

@@ -58,7 +58,7 @@ export default function ProjectCarousel({ entries }: ProjectCarouselProps) {
                                 </HStack>
                             )}
                             <HStack gap={1} vAlign="center">
-                                <Text type="supporting" weight="medium">
+                                <Text type="label">
                                     {entry.isExternal ? 'Open external project' : 'View project'}
                                 </Text>
                                 <Icon icon={entry.isExternal ? 'externalLink' : 'chevronRight'} size="sm" color="inherit" />

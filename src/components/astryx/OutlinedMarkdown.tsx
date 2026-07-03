@@ -30,7 +30,7 @@ export default function OutlinedMarkdown({ content }: OutlinedMarkdownProps) {
                 </Markdown>
             </div>
             <VStack as="aside" gap={2} className="document-outline">
-                <Text type="supporting" weight="semibold">
+                <Text type="label">
                     On this page
                 </Text>
                 {isOutlineReady && <Outline items={items} density="compact" label="On this page" />}

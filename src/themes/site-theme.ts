@@ -5,10 +5,6 @@ export const siteTheme = defineTheme({
     name: 'site',
     extends: neutralTheme,
     typography: {
-        scale: {
-            base: 16,
-            ratio: 1.2
-        },
         body: {
             family: 'Noto Sans KR Variable',
             fallbacks: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'

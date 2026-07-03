@@ -50,7 +50,7 @@ export default function HeroContent({ title, text, images, actions }: HeroConten
                 </Carousel>
             )}
             {text && (
-                <Markdown contentWidth={680} contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
+                <Markdown contentWidth="100%" contentAlign="start" density="default" headingLevelStart={1} autolink="gfm">
                     {text}
                 </Markdown>
             )}
