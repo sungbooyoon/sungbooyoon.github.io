@@ -5,7 +5,7 @@ import ContentList from '../../components/astryx/ContentList';
 import CopyButton from '../../components/astryx/CopyButton';
 import OutlinedMarkdown from '../../components/astryx/OutlinedMarkdown';
 import { ArticleActions, ArticleSurface, PageHeader, PageStack } from '../../components/astryx/PageSurface';
-import TagLinks from '../../components/astryx/TagLinks';
+import ProjectMetadata from '../../components/astryx/ProjectMetadata';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { prepareAstryxMarkdown } from '../../utils/markdown-utils';
 
@@ -30,8 +30,11 @@ type Props = {
 
 const { href } = Astro.url;
 const { project, prevProject, nextProject } = Astro.props;
-const { title, description, tags = [], seo } = project.data;
-const content = await prepareAstryxMarkdown(project.body);
+const { title, description, status, period, role, tags = [], sources = [], seo } = project.data;
+const preparedContent = await prepareAstryxMarkdown(project.body);
+const citationSources = Object.fromEntries(sources.map((source, index) => [`source-${index + 1}`, source]));
+const sourceList = sources.length > 0 ? `\n\n## Sources\n\n${sources.map((_, index) => `[source-${index + 1}]`).join(' ')}` : '';
+const content = `${preparedContent}${sourceList}`;
 const nextEntries = [nextProject, prevProject]
     .filter((entry): entry is CollectionEntry<'projects'> => Boolean(entry))
     .map((entry) => ({
@@ -45,10 +48,10 @@ const nextEntries = [nextProject, prevProject]
 <BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} image={seo?.image} pageType="article" showHeader={false}>
     <PageStack>
         <ArticleSurface>
-            <PageHeader title={title} description={description} />
-            <OutlinedMarkdown client:load content={content} />
-            <ArticleActions>
-                {tags.length > 0 && <TagLinks tags={tags} />}
+            <PageHeader title={title} />
+            <ProjectMetadata status={status} tags={tags} period={period} role={role} />
+            <OutlinedMarkdown client:load content={content} sources={citationSources} enableLightbox />
+            <ArticleActions align="end">
                 <CopyButton client:load value={href} />
             </ArticleActions>
         </ArticleSurface>

@@ -2,11 +2,21 @@
 title: 'Viewpoint Control for Teleoperation in Construction'
 description: This project studies how construction robot operators should view remote workspaces during teleoperation. It compares coupled, decoupled, and hybrid viewpoint control techniques and develops a learning-based model for user-aligned viewpoint transitions.
 publishDate: 'Dec 31 2025'
+status: Ongoing
+period: '2024–2026'
+role: Principal Investigator
 tags:
   - Teleoperation
   - Construction robotics
   - Extended reality
 isFeatured: true
+sources:
+  - title: Evaluating Viewpoint Control Techniques in Virtual Reality
+    url: https://snu.elsevierpure.com/en/publications/evaluating-viewpoint-control-techniques-in-virtual-reality-interf
+  - title: Comparing Dynamic Viewpoint Control Techniques
+    url: https://doi.org/10.1016/j.autcon.2025.106053
+  - title: Learning Viewpoint Control from Human-Initiated Transitions
+    url: https://doi.org/10.1016/j.aei.2025.103665
 seo:
   image:
     src: '../../assets/images/project-viewpoint1.jpg'
@@ -50,8 +60,3 @@ Building on this evaluation, the second study develops a viewpoint control mode 
 2. Demonstrated hybrid vision-motion as a viewpoint control strategy for multi-phase construction teleoperation tasks.
 3. Developed a learning-based viewpoint control mode prediction model that autonomously manages user-aligned transitions between coupled and decoupled viewpoints.
 
-## Related links
-
-- Paper: [Publication page](https://snu.elsevierpure.com/en/publications/evaluating-viewpoint-control-techniques-in-virtual-reality-interf)
-- Paper: [Comparing Dynamic Viewpoint Control Techniques for Teleoperated Robotic Welding in Construction](https://doi.org/10.1016/j.autcon.2025.106053)
-- Paper: [Learning Viewpoint Control from Human-Initiated Transitions for Teleoperation in Construction](https://doi.org/10.1016/j.aei.2025.103665)

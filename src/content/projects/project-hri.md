@@ -2,10 +2,28 @@
 title: 'Multimodal Interface for Human-Robot Collaboration in Construction'
 description: This project develops intuitive multimodal interfaces for spatial tasking in construction robotics. By combining deictic gestures, laser pointing, and speech commands, the system enables workers to communicate distant spatial goals to robots without relying on low-level robot control.
 publishDate: 'Dec 31 2024'
+status: Completed
+period: '2021–2023'
+role: Lead Proposal Writer
 tags: 
   - Human-robot interface
   - Construction robotics
 isFeatured: true
+sources:
+  - title: CEM Research Project
+    url: https://cem.snu.ac.kr/research/75
+  - title: Challenges in Deictic Gesture-Based Spatial Referencing
+    url: https://doi.org/10.22260/ISARC2021/0067
+  - title: Effects of Spatial Characteristics on Human–Robot Communication
+    url: https://doi.org/10.1061/JCEMD4.COENG-12997
+  - title: A Deictic Gesture-Based Human–Robot Interface
+    url: https://doi.org/10.1061/9780784485224.054
+  - title: Understanding Laser Pointer-Guided Spatial Instruction
+    url: https://doi.org/10.1061/9780784486115.027
+  - title: Interpreting Spatial Instructions for Human–Robot Communication
+    url: https://doi.org/10.55785/JCAR.3.3.6
+  - title: LaserDex
+    url: https://ascelibrary.org/doi/10.1061/JCCEE5.CPENG-5715
 seo:
   image:
     src: '../../assets/images/project-hri.jpg'
@@ -45,12 +63,3 @@ This project develops a multimodal human–robot interface for construction spat
 2. Developed a global-to-local target identification method that combines deictic gesture-based coarse guidance with dynamic laser-based local refinement.
 3. Demonstrated that laser-assisted spatial goal communication can improve the accuracy and usability of construction robot tasking compared with a handheld controller baseline.
 
-## Related links
-
-- Project page: [CEM Research Project](https://cem.snu.ac.kr/research/75)
-- Paper: [ISARC 2021](https://doi.org/10.22260/ISARC2021/0067)
-- Paper: [Journal of Construction Engineering and Management](https://doi.org/10.1061/JCEMD4.COENG-12997)
-- Paper: [ASCE International Conference Proceedings](https://doi.org/10.1061/9780784485224.054)
-- Paper: [ASCE International Conference Proceedings](https://doi.org/10.1061/9780784486115.027)
-- Paper: [Journal of Construction Automation and Robotics](https://doi.org/10.55785/JCAR.3.3.6)
-- Paper: [Journal of Computing in Civil Engineering](https://ascelibrary.org/doi/10.1061/JCCEE5.CPENG-5715)

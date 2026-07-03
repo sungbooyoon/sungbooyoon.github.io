@@ -15,6 +15,7 @@ type PageHeaderProps = {
 
 type ArticleActionsProps = {
     children: ReactNode;
+    align?: 'start' | 'end' | 'between';
 };
 
 export function PageStack({ children }: PageStackProps) {
@@ -61,9 +62,9 @@ export function MarkdownBody({ content }: { content: string }) {
     );
 }
 
-export function ArticleActions({ children }: ArticleActionsProps) {
+export function ArticleActions({ children, align = 'between' }: ArticleActionsProps) {
     return (
-        <HStack as="footer" width="100%" gap={4} wrap="wrap" hAlign="between" vAlign="center">
+        <HStack as="footer" width="100%" gap={4} wrap="wrap" hAlign={align} vAlign="center">
             {children}
         </HStack>
     );

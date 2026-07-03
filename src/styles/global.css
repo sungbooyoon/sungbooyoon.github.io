@@ -90,6 +90,31 @@
         object-fit: cover;
     }
 
+    .project-metadata {
+        max-width: 42.5rem;
+    }
+
+    .markdown-lightbox-trigger {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: var(--radius-element);
+        background: transparent;
+        cursor: zoom-in;
+    }
+
+    .markdown-lightbox-trigger img {
+        display: block;
+        width: 100%;
+        border-radius: inherit;
+    }
+
+    .markdown-lightbox-trigger:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+
     .outlined-document {
         align-items: flex-start;
     }

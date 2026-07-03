@@ -14,7 +14,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.  
   [DOI](https://doi.org/10.1016/j.kscej.2026.100638)
 
-- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. **Best Paper Award and invited to the special issue of the Journal of Computing in Civil Engineering.**  
+- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. {{badge:Best Paper}} Invited to the special issue of the Journal of Computing in Civil Engineering.  
   [Video](https://youtu.be/Z28Tnz2dnQ0)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2026). Robotic Skill Acquisition for Construction Tasks from Augmented Reality-Assisted Robot-Free Demonstration: A Comparative Study of Visual Feedback Strategies. In *Computing in Civil Engineering 2026*.
@@ -29,7 +29,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 
 ## 2024
 
-- Yoon, S., Park, M., & Ahn, C. R. (2024). LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human-robot collaboration in construction. *Journal of Computing in Civil Engineering, 38*(3), 04024012. **Selected as Editor's Choice.**  
+- Yoon, S., Park, M., & Ahn, C. R. (2024). LaserDex: Improvising spatial tasks using deictic gestures and laser pointing for human-robot collaboration in construction. *Journal of Computing in Civil Engineering, 38*(3), 04024012. {{badge:Editor's Choice}}  
   [DOI](https://doi.org/10.1061/JCCEE5.CPENG-5715) [Video](https://youtu.be/w-w-SI-smOE)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2024). Interpreting Spatial Instructions for Effective Human-Robot Communication in Construction Environments. *Journal of Construction Automation and Robotics, 3*(3), 6-13.  
@@ -50,7 +50,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - Yoon, S., Park, J., Park, M., & Ahn, C. R. (2024). A deictic gesture-based human-robot interface for in situ task specification in construction. In *Computing in Civil Engineering 2023* (pp. 445-452). **Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering.**  
   [DOI](https://doi.org/10.1061/9780784485224.054)
 
-- Shin, S., Yoon, S., Park, M., & Ahn, C. R. (2024). Imitation Learning Framework for Construction Tasks Using Constraint Learning. *The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*. **Best Paper Award.**
+- Shin, S., Yoon, S., Park, M., & Ahn, C. R. (2024). Imitation Learning Framework for Construction Tasks Using Constraint Learning. *The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*. {{badge:Best Paper}}
 
 ## 2023
 
@@ -65,7 +65,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 
 - Heo, C., Ahn, C., Yoon, S., Jung, M., & Park, M. (2022). Measuring the Impact of Supply Network Topology on the Material Delivery Robustness in Construction Projects. In *International Conference on Construction Engineering and Project Management* (pp. 269-276).
 
-- Park, J., Yoon, S., Park, M., & Ahn, C. R. (2022). Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites. *The 2022 Autumn Annual Conference of Architectural Institute of Korea (AIK)*. **Best Paper Award.**
+- Park, J., Yoon, S., Park, M., & Ahn, C. R. (2022). Workspace-Aware 3D Mapping Framework for Social Navigation in Construction Sites. *The 2022 Autumn Annual Conference of Architectural Institute of Korea (AIK)*. {{badge:Best Paper}}
 
 - Ahn, C. R., & Yoon, S. (2022). Intelligent Robots in Construction. *Review of Architecture and Building Science, 66*(10), 40-43.
 
