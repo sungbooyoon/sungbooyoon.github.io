@@ -1,29 +1,23 @@
 ---
-import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
 import Hero from '../components/Hero.astro';
-import ProjectCarousel from '../components/astryx/ProjectCarousel';
 import SelectedPublications from '../components/astryx/SelectedPublications';
 import { PageStack } from '../components/astryx/PageSurface';
 import selectedPublications from '../data/selected-publications';
 import siteConfig from '../data/site-config';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { sortItemsByDateDesc } from '../utils/data-utils';
 
-const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
-const featuredProjects = projects.filter(({ data }) => data.isFeatured);
-const featuredProjectEntries = featuredProjects.map((project) => ({
-    title: project.data.title,
-    description: project.data.description,
-    href: project.data.externalUrl ?? `/projects/${project.id}/`,
-    isExternal: Boolean(project.data.externalUrl),
-    tags: project.data.tags
-}));
+const publicationEntries = await Promise.all(
+    selectedPublications.map(async (publication) => {
+        const image = await getImage({ src: publication.image, width: 960, height: 540, fit: 'cover', format: 'webp' });
+        return { ...publication, imageSrc: image.src };
+    })
+);
 ---
 
 <BaseLayout description={siteConfig.description}>
     <PageStack>
         <Hero {...siteConfig.hero} />
-        <SelectedPublications client:load entries={selectedPublications} />
-        {featuredProjects.length > 0 && <ProjectCarousel client:load entries={featuredProjectEntries} />}
+        <SelectedPublications client:load entries={publicationEntries} />
     </PageStack>
 </BaseLayout>

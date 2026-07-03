@@ -10,18 +10,13 @@ export type Props = HeadProps & { showHeader?: boolean };
 const { showHeader = true, ...head } = Astro.props;
 const avatarSrc = siteConfig.avatar?.src;
 const resolvedAvatarSrc = typeof avatarSrc === 'string' ? avatarSrc : avatarSrc?.src;
-const [posts, projects] = await Promise.all([getCollection('blog'), getCollection('projects')]);
+const projects = await getCollection('projects');
 const searchItems = [
     ...(siteConfig.headerNavLinks ?? []).map((link) => ({ ...link, group: 'Navigation' })),
     ...projects.map((project) => ({
         text: project.data.title,
         href: project.data.externalUrl ?? `/projects/${project.id}/`,
         group: 'Projects'
-    })),
-    ...posts.map((post) => ({
-        text: post.data.title,
-        href: `/blog/${post.id}/`,
-        group: 'Blog'
     }))
 ];
 ---
@@ -51,6 +46,8 @@ const searchItems = [
                 client:load
                 pathname={Astro.url.pathname}
                 title={siteConfig.title}
+                avatarSrc={resolvedAvatarSrc}
+                scholarHref={siteConfig.socialLinks?.find((link) => link.text === 'Google Scholar')?.href}
                 links={siteConfig.headerNavLinks ?? []}
                 searchItems={searchItems}
             />

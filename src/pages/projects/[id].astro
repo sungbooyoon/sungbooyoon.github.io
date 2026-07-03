@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
+import { Text } from '@astryxdesign/core/Text';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContentList from '../../components/astryx/ContentList';
 import CopyButton from '../../components/astryx/CopyButton';
@@ -30,7 +31,8 @@ type Props = {
 
 const { href } = Astro.url;
 const { project, prevProject, nextProject } = Astro.props;
-const { title, description, status, period, role, tags = [], sources = [], seo } = project.data;
+const { title, description, status, period, role, tags = [], sources = [], updatedDate, seo } = project.data;
+const lastUpdated = updatedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 const preparedContent = await prepareAstryxMarkdown(project.body);
 const citationSources = Object.fromEntries(sources.map((source, index) => [`source-${index + 1}`, source]));
 const sourceList = sources.length > 0 ? `\n\n## Sources\n\n${sources.map((_, index) => `[source-${index + 1}]`).join(' ')}` : '';
@@ -50,6 +52,7 @@ const nextEntries = [nextProject, prevProject]
         <ArticleSurface>
             <PageHeader title={title} />
             <ProjectMetadata status={status} tags={tags} period={period} role={role} />
+            <Text as="p" type="supporting" color="secondary">Last updated {lastUpdated}</Text>
             <OutlinedMarkdown client:load content={content} sources={citationSources} enableLightbox />
             <ArticleActions align="end">
                 <CopyButton client:load value={href} />

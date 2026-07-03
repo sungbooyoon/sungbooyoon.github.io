@@ -2,9 +2,13 @@
 title: 'Multimodal Interface for Human-Robot Collaboration in Construction'
 description: This project develops intuitive multimodal interfaces for spatial tasking in construction robotics. By combining deictic gestures, laser pointing, and speech commands, the system enables workers to communicate distant spatial goals to robots without relying on low-level robot control.
 publishDate: 'Dec 31 2024'
+updatedDate: 'Jul 4 2026'
 status: Completed
 period: '2021–2023'
 role: Lead Proposal Writer
+cover:
+  src: '../../assets/images/project-hri.jpg'
+  alt: LaserDex multimodal human-robot interface
 tags: 
   - Human-robot interface
   - Construction robotics

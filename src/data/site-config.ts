@@ -36,15 +36,7 @@ const siteConfig: SiteConfig = {
             href: '/projects'
         },
         {
-            text: 'Blog',
-            href: '/blog'
-        },
-        {
-            text: 'Tags',
-            href: '/tags'
-        },
-        {
-            text: 'CV↗',
+            text: 'CV',
             href: 'https://docs.google.com/document/d/1Tnd3iKZz4WaJ9mfMOJuBAnpDzHikDSTn2WGahqZOZII/edit?usp=sharing'
         }
     ],
@@ -64,6 +56,10 @@ const siteConfig: SiteConfig = {
     ],
     socialLinks: [
         {
+            text: 'Google Scholar',
+            href: 'https://scholar.google.com/citations?user=QFeaFbwAAAAJ'
+        },
+        {
             text: 'Github',
             href: 'https://github.com/sungbooyoon'
         },
@@ -74,10 +70,6 @@ const siteConfig: SiteConfig = {
         {
             text: 'LinkedIn',
             href: 'https://www.linkedin.com/in/sungboo-yoon-303662204/'
-        },
-        {
-            text: 'Google Scholar',
-            href: 'https://scholar.google.com/citations?user=QFeaFbwAAAAJ'
         },
         {
             text: 'Orcid',
@@ -103,10 +95,6 @@ Currently, I serve as a student coordinator of a joint project funded by the Min
             {
                 text: 'More About Me',
                 href: '/about'
-            },
-            {
-                text: 'Publications',
-                href: '/publications'
             },
             // {
             //     text: 'Get in Touch',

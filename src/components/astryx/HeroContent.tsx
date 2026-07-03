@@ -1,9 +1,12 @@
 import { AspectRatio } from '@astryxdesign/core/AspectRatio';
 import { Button } from '@astryxdesign/core/Button';
 import { Carousel } from '@astryxdesign/core/Carousel';
+import { Icon } from '@astryxdesign/core/Icon';
+import { Lightbox, type LightboxMedia } from '@astryxdesign/core/Lightbox';
 import { Markdown } from '@astryxdesign/core/Markdown';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
 import { Heading, Text } from '@astryxdesign/core/Text';
+import { useMemo, useState } from 'react';
 
 type HeroImage = {
     src: string;
@@ -24,7 +27,20 @@ type HeroContentProps = {
 };
 
 export default function HeroContent({ title, text, images, actions }: HeroContentProps) {
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const lightboxMedia = useMemo<LightboxMedia[]>(
+        () => images.map((image) => ({ src: image.src, alt: image.alt, caption: image.caption })),
+        [images]
+    );
+
+    const openImage = (index: number) => {
+        setLightboxIndex(index);
+        setIsLightboxOpen(true);
+    };
+
     return (
+        <>
         <VStack as="section" gap={8} width="100%">
             {title && (
                 <Heading level={1} type="display-2">
@@ -33,11 +49,18 @@ export default function HeroContent({ title, text, images, actions }: HeroConten
             )}
             {images.length > 0 && (
                 <Carousel aria-label="Research highlights" gap={3} hasSnap>
-                    {images.map((image) => (
+                    {images.map((image, index) => (
                         <VStack as="figure" key={image.src} gap={0} width="min(88vw, 960px)" className="hero-media">
-                            <AspectRatio ratio={16 / 9}>
-                                <img className="hero-image" src={image.src} alt={image.alt} loading="eager" />
-                            </AspectRatio>
+                            <button
+                                type="button"
+                                className="hero-lightbox-trigger"
+                                aria-label={`Open image: ${image.alt}`}
+                                onClick={() => openImage(index)}
+                            >
+                                <AspectRatio ratio={16 / 9}>
+                                    <img className="hero-image" src={image.src} alt={image.alt} loading="eager" />
+                                </AspectRatio>
+                            </button>
                             {image.caption && (
                                 <VStack as="figcaption">
                                     <Text type="supporting" color="secondary">
@@ -56,19 +79,34 @@ export default function HeroContent({ title, text, images, actions }: HeroConten
             )}
             {actions.length > 0 && (
                 <HStack gap={2} wrap="wrap">
-                    {actions.map((action, index) => (
-                        <Button
-                            key={action.href}
-                            label={action.text}
-                            href={action.href}
-                            variant={index === 0 ? 'primary' : 'secondary'}
-                            size="md"
-                            target={action.href.startsWith('http') ? '_blank' : undefined}
-                            rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        />
-                    ))}
+                    {actions.map((action, index) => {
+                        const isExternal = action.href.startsWith('http');
+                        return (
+                            <Button
+                                key={action.href}
+                                label={action.text}
+                                href={action.href}
+                                variant={index === 0 ? 'primary' : 'secondary'}
+                                size="md"
+                                target={isExternal ? '_blank' : undefined}
+                                rel={isExternal ? 'noopener noreferrer' : undefined}
+                                endContent={isExternal ? <Icon icon="externalLink" size="sm" color="inherit" /> : undefined}
+                            />
+                        );
+                    })}
                 </HStack>
             )}
         </VStack>
+        {lightboxMedia.length > 0 && (
+            <Lightbox
+                isOpen={isLightboxOpen}
+                onOpenChange={setIsLightboxOpen}
+                media={lightboxMedia}
+                index={lightboxIndex}
+                onIndexChange={setLightboxIndex}
+                hasZoom
+            />
+        )}
+        </>
     );
 }

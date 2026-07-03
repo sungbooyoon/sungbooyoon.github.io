@@ -8,6 +8,7 @@ import { TopNav, TopNavHeading, TopNavItem } from '@astryxdesign/core/TopNav';
 import { createStaticSource, type SearchableItem } from '@astryxdesign/core/Typeahead';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { useEffect, useMemo, useState } from 'react';
+import { siGooglescholar } from 'simple-icons';
 
 type NavLink = {
     text: string;
@@ -17,6 +18,8 @@ type NavLink = {
 type SiteNavigationProps = {
     pathname: string;
     title: string;
+    avatarSrc?: string;
+    scholarHref?: string;
     links: NavLink[];
     searchItems: SearchLink[];
 };
@@ -42,7 +45,15 @@ function applyTheme(mode: 'light' | 'dark') {
     window.localStorage.setItem(THEME_STORAGE_KEY, mode);
 }
 
-export default function SiteNavigation({ pathname, title, links, searchItems }: SiteNavigationProps) {
+function ScholarIcon() {
+    return (
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d={siGooglescholar.path} />
+        </svg>
+    );
+}
+
+export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref, links, searchItems }: SiteNavigationProps) {
     const [isDark, setIsDark] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -106,23 +117,57 @@ export default function SiteNavigation({ pathname, title, links, searchItems }: 
             onClick={toggleTheme}
         />
     );
+    const scholarButton = scholarHref ? (
+        <IconButton
+            label="Google Scholar"
+            tooltip="Google Scholar"
+            href={scholarHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="ghost"
+            size="sm"
+            icon={<ScholarIcon />}
+        />
+    ) : null;
+    const navHeading = (
+        <TopNavHeading
+            logo={avatarSrc ? <Avatar src={avatarSrc} name={title} size={24} /> : undefined}
+            headingHref="/"
+        />
+    );
+
+    const renderNavItem = (link: NavLink) => {
+        const isExternal = link.href.startsWith('http');
+        return (
+            <TopNavItem
+                key={link.href}
+                label={link.text}
+                href={link.href}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                isSelected={isSelected(pathname, link.href)}
+            >
+                {link.text}
+                {isExternal && <Icon icon="externalLink" size="sm" color="inherit" />}
+            </TopNavItem>
+        );
+    };
 
     return (
         <>
             <VStack className="site-desktop-navigation">
                 <TopNav
                     label="Primary navigation"
-                    heading={<TopNavHeading heading={title} headingHref="/" />}
+                    heading={navHeading}
                     centerContent={
                         <>
-                            {links.map((link) => (
-                                <TopNavItem key={link.href} label={link.text} href={link.href} isSelected={isSelected(pathname, link.href)} />
-                            ))}
+                            {links.map(renderNavItem)}
                         </>
                     }
                     endContent={
                         <HStack gap={1} vAlign="center">
                             {searchButton}
+                            {scholarButton}
                             {themeButton}
                         </HStack>
                     }
@@ -132,10 +177,11 @@ export default function SiteNavigation({ pathname, title, links, searchItems }: 
             <VStack className="site-mobile-navigation">
                 <TopNav
                     label="Primary navigation"
-                    heading={<TopNavHeading heading={title} headingHref="/" />}
+                    heading={navHeading}
                     endContent={
                         <HStack gap={1} vAlign="center">
                             {searchButton}
+                            {scholarButton}
                             {themeButton}
                             <IconButton
                                 label="Open navigation"
@@ -148,11 +194,22 @@ export default function SiteNavigation({ pathname, title, links, searchItems }: 
                         </HStack>
                     }
                 />
-                <MobileNav isOpen={isMobileOpen} onOpenChange={setIsMobileOpen} header="Navigation">
-                    <SideNavSection title="Navigation">
-                        {links.map((link) => (
-                            <SideNavItem key={link.href} label={link.text} href={link.href} isSelected={isSelected(pathname, link.href)} />
-                        ))}
+                <MobileNav isOpen={isMobileOpen} onOpenChange={setIsMobileOpen} header={navHeading} label="Navigation">
+                    <SideNavSection title="Navigation" isHeaderHidden>
+                        {links.map((link) => {
+                            const isExternal = link.href.startsWith('http');
+                            return (
+                                <SideNavItem
+                                    key={link.href}
+                                    label={link.text}
+                                    href={link.href}
+                                    target={isExternal ? '_blank' : undefined}
+                                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                                    isSelected={isSelected(pathname, link.href)}
+                                    endContent={isExternal ? <Icon icon="externalLink" size="sm" color="secondary" /> : undefined}
+                                />
+                            );
+                        })}
                     </SideNavSection>
                 </MobileNav>
             </VStack>
@@ -168,3 +225,4 @@ export default function SiteNavigation({ pathname, title, links, searchItems }: 
         </>
     );
 }
+import { Avatar } from '@astryxdesign/core/Avatar';

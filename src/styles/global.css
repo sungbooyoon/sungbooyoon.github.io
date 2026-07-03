@@ -1,6 +1,6 @@
 @layer reset, base, astryx-base, astryx-theme, components;
 
-@import '@fontsource-variable/noto-sans-kr' layer(base);
+@import '@fontsource-variable/figtree' layer(base);
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
 @import '../themes/site.css';
@@ -90,6 +90,31 @@
         object-fit: cover;
     }
 
+    .hero-lightbox-trigger {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        color: inherit;
+        background: transparent;
+        cursor: zoom-in;
+    }
+
+    .hero-lightbox-trigger:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: -2px;
+    }
+
+    .media-card {
+        overflow: hidden;
+    }
+
+    .media-card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .project-metadata {
         max-width: 42.5rem;
     }
@@ -113,6 +138,12 @@
         flex: 0 0 13rem;
     }
 
+    .document-outline-mobile {
+        display: none;
+        width: 100%;
+        margin-block-end: var(--spacing-6);
+    }
+
     .document-markdown {
         min-width: 0;
         flex: 1 1 auto;
@@ -120,12 +151,15 @@
 
     @media (width < 48rem) {
         .outlined-document {
-            flex-direction: column-reverse;
+            display: block;
         }
 
         .document-outline {
-            position: static;
-            width: 100%;
+            display: none;
+        }
+
+        .document-outline-mobile {
+            display: block;
         }
     }
 

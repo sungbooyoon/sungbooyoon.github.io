@@ -4,6 +4,7 @@ import { Markdown } from '@astryxdesign/core/Markdown';
 import type { MarkdownInlinePlugin, MarkdownSource } from '@astryxdesign/core/Markdown';
 import { Outline, parseOutlineFromMarkdown } from '@astryxdesign/core/Outline';
 import { Section } from '@astryxdesign/core/Section';
+import { Selector } from '@astryxdesign/core/Selector';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
 import { Text } from '@astryxdesign/core/Text';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -23,9 +24,13 @@ type MarkdownSection = {
 const markdownImagePattern = /!\[([^\]]*)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
 
 const awardBadgePlugin: MarkdownInlinePlugin = {
-    pattern: /\{\{badge:(Best Paper|Editor's Choice)\}\}/g,
+    pattern: /\{\{badge:(Best Paper|Editor's Choice|Invited)\}\}/g,
     render: (match, key) => (
-        <Badge key={key} label={match[1]} variant={match[1] === 'Best Paper' ? 'orange' : 'purple'} />
+        <Badge
+            key={key}
+            label={match[1]}
+            variant={match[1] === 'Best Paper' ? 'orange' : match[1] === "Editor's Choice" ? 'purple' : 'blue'}
+        />
     )
 };
 
@@ -61,6 +66,7 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
         [content]
     );
     const [isOutlineReady, setIsOutlineReady] = useState(false);
+    const [mobileOutlineId, setMobileOutlineId] = useState(items[0]?.id ?? '');
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
@@ -72,6 +78,14 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
         });
         setIsOutlineReady(true);
     }, [items]);
+
+    const navigateToOutline = (id: string) => {
+        setMobileOutlineId(id);
+        const target = document.getElementById(id);
+        if (!target) return;
+        window.history.replaceState(null, '', `#${id}`);
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
     useEffect(() => {
         if (!enableLightbox || !contentRef.current) return;
@@ -117,6 +131,19 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
 
     return (
         <>
+            {isOutlineReady && items.length > 0 && (
+                <div className="document-outline-mobile">
+                    <Selector
+                        label="On this page"
+                        isLabelHidden
+                        options={items.map((item) => ({ value: item.id, label: item.label }))}
+                        value={mobileOutlineId || items[0]?.id}
+                        onChange={navigateToOutline}
+                        size="sm"
+                        width="100%"
+                    />
+                </div>
+            )}
             <HStack width="100%" gap={8} className="outlined-document">
                 <div ref={contentRef} className="document-markdown">
                     {sections.map((section, index) => {

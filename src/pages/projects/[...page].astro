@@ -1,9 +1,10 @@
 ---
 import type { GetStaticPathsOptions, Page } from 'astro';
+import { getImage } from 'astro:assets';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Pagination from '../../components/Pagination.astro';
-import ContentList from '../../components/astryx/ContentList';
-import { PageStack } from '../../components/astryx/PageSurface';
+import { PageHeader, PageStack } from '../../components/astryx/PageSurface';
+import ProjectGrid from '../../components/astryx/ProjectGrid';
 import siteConfig from '../../data/site-config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
@@ -17,17 +18,27 @@ type Props = { page: Page<CollectionEntry<'projects'>> };
 
 const { page } = Astro.props;
 const portfolio = page.data;
-const entries = portfolio.map((project) => ({
-    title: project.data.title,
-    description: project.data.description,
-    href: project.data.externalUrl ?? `/projects/${project.id}/`,
-    isExternal: Boolean(project.data.externalUrl)
-}));
+const entries = await Promise.all(
+    portfolio.map(async (project) => {
+        const cover = await getImage({ src: project.data.cover.src, width: 960, height: 540, fit: 'cover', format: 'webp' });
+        return {
+            title: project.data.title,
+            description: project.data.description,
+            href: project.data.externalUrl ?? `/projects/${project.id}/`,
+            isExternal: Boolean(project.data.externalUrl),
+            imageSrc: cover.src,
+            imageAlt: project.data.cover.alt ?? project.data.title,
+            status: project.data.status,
+            tags: project.data.tags
+        };
+    })
+);
 ---
 
 <BaseLayout title="Projects" description="Explore a diverse portfolio showcasing my passion and expertise" showHeader={false}>
     <PageStack>
-        <ContentList entries={entries} heading="Projects" headingLevel={1} itemHeadingLevel={2} />
+        <PageHeader title="Projects" description="Research projects in construction robotics, human-robot interaction, and construction engineering." />
+        <ProjectGrid client:load entries={entries} />
         <Pagination page={page} />
     </PageStack>
 </BaseLayout>

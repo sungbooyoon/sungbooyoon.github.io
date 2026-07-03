@@ -26,6 +26,6 @@ const hasOutline = page.id === 'about' || page.id === 'publications';
 <BaseLayout title={seo?.title ?? title} description={seo?.description} image={seo?.image} showHeader={false}>
     <ArticleSurface>
         <PageHeader title={title} />
-        {hasOutline ? <OutlinedMarkdown client:load content={content} sectioned={page.id === 'about'} /> : <MarkdownBody content={content} />}
+        {hasOutline ? <OutlinedMarkdown client:load content={content} sectioned={page.id === 'about'} enableLightbox /> : <MarkdownBody content={content} />}
     </ArticleSurface>
 </BaseLayout>
