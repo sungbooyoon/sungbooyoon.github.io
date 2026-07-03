@@ -1,14 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import Subscribe from '../../components/Subscribe.astro';
 import ContentList from '../../components/astryx/ContentList';
 import { PageStack } from '../../components/astryx/PageSurface';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAllTags, getItemsByTag, sortItemsByDateDesc } from '../../utils/data-utils';
 
-const posts = await getCollection('blog');
 const projects = await getCollection('projects');
-const items = [...posts, ...projects].sort(sortItemsByDateDesc);
+const items = projects.sort(sortItemsByDateDesc);
 const tags = getAllTags(items).sort((tagA, tagB) => {
     const countTagA = getItemsByTag(items, tagA.id).length;
     const countTagB = getItemsByTag(items, tagB.id).length;
@@ -16,14 +14,8 @@ const tags = getAllTags(items).sort((tagA, tagB) => {
 });
 const entries = tags.map((tag) => {
     const taggedItems = getItemsByTag(items, tag.id);
-    const postCount = taggedItems.filter((item) => item.collection === 'blog').length;
-    const projectCount = taggedItems.filter((item) => item.collection === 'projects').length;
-    const description = [
-        postCount ? `${postCount} ${postCount === 1 ? 'post' : 'posts'}` : '',
-        projectCount ? `${projectCount} ${projectCount === 1 ? 'project' : 'projects'}` : ''
-    ]
-        .filter(Boolean)
-        .join(' + ');
+    const projectCount = taggedItems.length;
+    const description = `${projectCount} ${projectCount === 1 ? 'project' : 'projects'}`;
 
     return {
         title: tag.name,
@@ -40,6 +32,5 @@ const entries = tags.map((tag) => {
 >
     <PageStack>
         <ContentList entries={entries} heading="All tags" headingLevel={1} itemHeadingLevel={2} />
-        <Subscribe />
     </PageStack>
 </BaseLayout>

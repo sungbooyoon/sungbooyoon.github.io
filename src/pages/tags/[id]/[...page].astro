@@ -1,19 +1,16 @@
 ---
 import type { GetStaticPathsOptions, Page } from 'astro';
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Pagination from '../../../components/Pagination.astro';
-import Subscribe from '../../../components/Subscribe.astro';
 import ContentList from '../../../components/astryx/ContentList';
 import { PageStack } from '../../../components/astryx/PageSurface';
 import siteConfig from '../../../data/site-config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { formatDate } from '../../../utils/common-utils';
 import { getAllTags, getItemsByTag, sortItemsByDateDesc, type TaggableEntry } from '../../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-    const posts = await getCollection('blog');
     const projects = await getCollection('projects');
-    const items = [...posts, ...projects].sort(sortItemsByDateDesc);
+    const items = projects.sort(sortItemsByDateDesc);
     const tags = getAllTags(items);
 
     return tags.flatMap((tag) => {
@@ -30,37 +27,23 @@ type Props = { page: Page<TaggableEntry> };
 const { page } = Astro.props;
 const taggedItems = page.data;
 const params = Astro.params;
-const allPosts = await getCollection('blog');
 const allProjects = await getCollection('projects');
-const allTags = getAllTags([...allPosts, ...allProjects]);
+const allTags = getAllTags(allProjects);
 const currentTag = allTags.find((tag) => {
     return tag.id === params.id;
 });
 
-function isBlogEntry(item: TaggableEntry): item is CollectionEntry<'blog'> {
-    return item.collection === 'blog';
-}
-const entries = taggedItems.map((item) =>
-    isBlogEntry(item)
-        ? {
-              title: item.data.title,
-              description: item.data.excerpt,
-              meta: formatDate(item.data.publishDate),
-              href: `/blog/${item.id}/`
-          }
-        : {
-              title: item.data.title,
-              description: item.data.description,
-              href: item.data.externalUrl ?? `/projects/${item.id}/`,
-              isExternal: Boolean(item.data.externalUrl)
-          }
-);
+const entries = taggedItems.map((item) => ({
+    title: item.data.title,
+    description: item.data.description,
+    href: item.data.externalUrl ?? `/projects/${item.id}/`,
+    isExternal: Boolean(item.data.externalUrl)
+}));
 ---
 
-<BaseLayout title={`Tagged ${currentTag?.name}`} description={`Explore posts and projects tagged ${currentTag?.name}`} showHeader={false}>
+<BaseLayout title={`Tagged ${currentTag?.name}`} description={`Explore projects tagged ${currentTag?.name}`} showHeader={false}>
     <PageStack>
         <ContentList entries={entries} heading={`Tagged “${currentTag?.name}”`} headingLevel={1} itemHeadingLevel={2} />
         <Pagination page={page} />
-        <Subscribe />
     </PageStack>
 </BaseLayout>

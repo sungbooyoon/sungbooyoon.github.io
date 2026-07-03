@@ -14,7 +14,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.  
   [DOI](https://doi.org/10.1016/j.kscej.2026.100638)
 
-- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. {{badge:Best Paper}} Invited to the special issue of the Journal of Computing in Civil Engineering.  
+- Yoon, S., Park, M., & Ahn, C. R. (2026). Multi-Skill Robot Learning from Long-Horizon Expert Demonstrations: A Case Study of Joint Putty Application. In *Computing in Civil Engineering 2026*. {{badge:Best Paper}} {{badge:Invited}} Invited to the special issue of the Journal of Computing in Civil Engineering.  
   [Video](https://youtu.be/Z28Tnz2dnQ0)
 
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2026). Robotic Skill Acquisition for Construction Tasks from Augmented Reality-Assisted Robot-Free Demonstration: A Comparative Study of Visual Feedback Strategies. In *Computing in Civil Engineering 2026*.
@@ -38,7 +38,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - Kang, D., Yoon, S., Park, M., & Ahn, C. R. (2024). Analysis of Factors Affecting the Acceptance of Smart Personal Protective Equipment (Smart-PPE) by Construction Workers Based on the Technology Acceptance Model (TAM) Framework. *Journal of the Korea Institute of Construction Safety, 7*(1), 19-24.  
   [DOI](https://kiss.kstudy.com/DetailOa/Ar?key=54617229)
 
-- Yoon, S., Shin, S., Lee, S. H., Park, M., & Ahn, C. R. (2024). Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots. In *31st International Workshop on Intelligent Computing in Engineering, EG-ICE 2024*. **Recognized as a top paper and invited to the special issue of Advanced Engineering Informatics.**  
+- Yoon, S., Shin, S., Lee, S. H., Park, M., & Ahn, C. R. (2024). Evaluating Viewpoint Control Techniques in Virtual Reality Interface for Teleoperating Construction Welding Robots. In *31st International Workshop on Intelligent Computing in Engineering, EG-ICE 2024*. {{badge:Invited}} Recognized as a top paper and invited to the special issue of Advanced Engineering Informatics.  
   [DOI](https://snu.elsevierpure.com/en/publications/evaluating-viewpoint-control-techniques-in-virtual-reality-interf)
 
 - Yoon, S., Lee, C., Lee, S., Park, M., & Ahn, C. R. (2024). A Taxonomy of Extended Reality for Human-Robot Interaction in Construction Based on a Systematic Literature Review. In *Proceedings of the Creative Construction Conference 2024*.  
@@ -47,7 +47,7 @@ For a complete list of publications, see my [Google Scholar](https://scholar.goo
 - Lee, C., Yoon, S., Park, M., & Ahn, C. R. (2024). Understanding Laser Pointer-Guided Spatial Instruction in Collaboration with Construction Robots. In *Computing in Civil Engineering 2024* (pp. 260-265).  
   [DOI](https://doi.org/10.1061/9780784486115.027)
 
-- Yoon, S., Park, J., Park, M., & Ahn, C. R. (2024). A deictic gesture-based human-robot interface for in situ task specification in construction. In *Computing in Civil Engineering 2023* (pp. 445-452). **Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering.**  
+- Yoon, S., Park, J., Park, M., & Ahn, C. R. (2024). A deictic gesture-based human-robot interface for in situ task specification in construction. In *Computing in Civil Engineering 2023* (pp. 445-452). {{badge:Invited}} Recognized as a top paper and invited to the special issue of the Journal of Computing in Civil Engineering.  
   [DOI](https://doi.org/10.1061/9780784485224.054)
 
 - Shin, S., Yoon, S., Park, M., & Ahn, C. R. (2024). Imitation Learning Framework for Construction Tasks Using Constraint Learning. *The 2024 Annual Conference of Korea Institute of Construction Engineering and Management (KICEM)*. {{badge:Best Paper}}
