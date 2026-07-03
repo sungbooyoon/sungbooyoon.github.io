@@ -12,6 +12,9 @@ cover:
 tags:
   - Modular construction
 isFeatured: true
-sources: []
-externalUrl: 'https://cem.snu.ac.kr/research/11'
+sources:
+  - title: Modular Integrated Construction System (MoMIS)
+    url: https://cem.snu.ac.kr/research/11
 ---
+
+> **TL;DR** This project investigates modular construction planning and productivity support, including tower crane layout optimization and the MoMIS platform.

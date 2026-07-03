@@ -14,6 +14,9 @@ tags:
   - Construction robotics
   - Extended reality
 isFeatured: true
-sources: []
-externalUrl: 'https://cem.snu.ac.kr/research/90'
+sources:
+  - title: Multipurpose Robotic Platform and XR-Based Human-Robot Collaboration
+    url: https://cem.snu.ac.kr/research/90
 ---
+
+> **TL;DR** This project develops a multipurpose robotic platform and an XR-based human-robot collaboration system for high-risk construction work at height.

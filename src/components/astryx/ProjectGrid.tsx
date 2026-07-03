@@ -25,7 +25,7 @@ type ProjectGridProps = {
 
 export default function ProjectGrid({ entries }: ProjectGridProps) {
     return (
-        <Grid columns={{ minWidth: 280, max: 2, repeat: 'fit' }} gap={4} width="100%">
+        <Grid columns={{ minWidth: 280, repeat: 'fit' }} gap={4} width="100%">
             {entries.map((entry) => (
                 <ClickableCard
                     key={entry.href}

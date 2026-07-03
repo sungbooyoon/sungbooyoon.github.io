@@ -36,7 +36,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                     endContent={<Icon icon="chevronRight" size="sm" color="inherit" />}
                 />
             </HStack>
-            <Grid columns={{ minWidth: 280, max: 2, repeat: 'fit' }} gap={4} width="100%">
+            <Grid columns={{ minWidth: 280, repeat: 'fit' }} gap={4} width="100%">
                 {entries.map((entry) => (
                     <ClickableCard
                         key={entry.doi}

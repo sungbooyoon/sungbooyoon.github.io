@@ -1,3 +1,4 @@
+import { Avatar } from '@astryxdesign/core/Avatar';
 import { CommandPalette } from '@astryxdesign/core/CommandPalette';
 import { Icon } from '@astryxdesign/core/Icon';
 import { IconButton } from '@astryxdesign/core/IconButton';
@@ -223,4 +224,3 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
         </>
     );
 }
-import { Avatar } from '@astryxdesign/core/Avatar';
