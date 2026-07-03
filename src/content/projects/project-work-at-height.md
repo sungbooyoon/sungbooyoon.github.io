@@ -7,8 +7,8 @@ status: Active
 period: '2025–2029'
 role: Lead Proposal Writer
 cover:
-  src: '../../assets/images/hero3.jpg'
-  alt: XR-based robotic welding at height
+  src: '../../assets/images/project-work-at-height.jpg'
+  alt: XR operators controlling a robotic platform for construction work at height
 tags:
   - Teleoperation
   - Construction robotics

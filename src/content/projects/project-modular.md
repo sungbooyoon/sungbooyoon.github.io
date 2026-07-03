@@ -7,8 +7,8 @@ status: Completed
 period: '2020–2023'
 role: Participating Researcher
 cover:
-  src: '../../assets/images/hero2.jpeg'
-  alt: Robotic system operating in a construction mock-up
+  src: '../../assets/images/project-modular.jpg'
+  alt: Modular building units being installed by crane at a construction site
 tags:
   - Modular construction
 isFeatured: true

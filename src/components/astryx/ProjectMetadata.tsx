@@ -1,6 +1,6 @@
-import { Link } from '@astryxdesign/core/Link';
 import { HStack } from '@astryxdesign/core/Stack';
 import { Text } from '@astryxdesign/core/Text';
+import { Token } from '@astryxdesign/core/Token';
 import { slugify } from '../../utils/common-utils';
 
 type ProjectMetadataProps = {
@@ -26,9 +26,7 @@ export default function ProjectMetadata({ status, tags, period, role }: ProjectM
             {tags.map((tag) => (
                 <HStack key={tag} gap={1.5} vAlign="center">
                     <Text aria-hidden="true">・</Text>
-                    <Link href={`/tags/${slugify(tag)}`} isStandalone>
-                        {tag}
-                    </Link>
+                    <Token label={tag} href={`/tags/${slugify(tag)}`} size="sm" />
                 </HStack>
             ))}
         </HStack>
