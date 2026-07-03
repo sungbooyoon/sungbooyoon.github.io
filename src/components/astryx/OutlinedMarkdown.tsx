@@ -1,7 +1,7 @@
 import { Badge } from '@astryxdesign/core/Badge';
 import { Lightbox, type LightboxMedia } from '@astryxdesign/core/Lightbox';
 import { Markdown } from '@astryxdesign/core/Markdown';
-import type { MarkdownComponents, MarkdownInlinePlugin, MarkdownSource } from '@astryxdesign/core/Markdown';
+import type { MarkdownInlinePlugin, MarkdownSource } from '@astryxdesign/core/Markdown';
 import { Outline, parseOutlineFromMarkdown } from '@astryxdesign/core/Outline';
 import { Section } from '@astryxdesign/core/Section';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
@@ -64,33 +64,6 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
-    const lightboxImage = useMemo<NonNullable<MarkdownComponents['image']>>(
-        () =>
-            function MarkdownLightboxImage({ src, alt }) {
-                const mediaIndex = lightboxMedia.findIndex((item) => item.src === src && item.alt === alt);
-
-                return (
-                    <button
-                        type="button"
-                        className="markdown-lightbox-trigger"
-                        aria-label={`Open image: ${alt || 'Project image'}`}
-                        onClick={() => {
-                            setLightboxIndex(Math.max(0, mediaIndex));
-                            setIsLightboxOpen(true);
-                        }}
-                    >
-                        <img src={src} alt={alt} loading="lazy" />
-                    </button>
-                );
-            },
-        [lightboxMedia]
-    );
-
-    const markdownComponents = useMemo<Partial<MarkdownComponents> | undefined>(
-        () => (enableLightbox ? { image: lightboxImage } : undefined),
-        [enableLightbox, lightboxImage]
-    );
-
     useEffect(() => {
         const headings = contentRef.current?.querySelectorAll('h1,h2,h3,h4,h5,h6');
         headings?.forEach((heading, index) => {
@@ -99,6 +72,48 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
         });
         setIsOutlineReady(true);
     }, [items]);
+
+    useEffect(() => {
+        if (!enableLightbox || !contentRef.current) return;
+
+        const root = contentRef.current;
+        const images = [...root.querySelectorAll<HTMLImageElement>('img')];
+        const openImage = (image: HTMLImageElement) => {
+            const imageIndex = images.indexOf(image);
+            if (imageIndex < 0) return;
+            setLightboxIndex(imageIndex);
+            setIsLightboxOpen(true);
+        };
+        const handleClick = (event: MouseEvent) => {
+            if (event.target instanceof HTMLImageElement && event.target.classList.contains('markdown-lightbox-image')) {
+                openImage(event.target);
+            }
+        };
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (
+                event.target instanceof HTMLImageElement &&
+                event.target.classList.contains('markdown-lightbox-image') &&
+                (event.key === 'Enter' || event.key === ' ')
+            ) {
+                event.preventDefault();
+                openImage(event.target);
+            }
+        };
+
+        images.forEach((image) => {
+            image.classList.add('markdown-lightbox-image');
+            image.tabIndex = 0;
+            image.setAttribute('role', 'button');
+            image.setAttribute('aria-label', `Open image: ${image.alt || 'Project image'}`);
+        });
+        root.addEventListener('click', handleClick);
+        root.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            root.removeEventListener('click', handleClick);
+            root.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [content, enableLightbox]);
 
     return (
         <>
@@ -112,7 +127,6 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
                                 density="default"
                                 headingLevelStart={1}
                                 autolink="gfm"
-                                components={markdownComponents}
                                 inlinePlugins={[awardBadgePlugin]}
                                 sources={sources}
                             >
