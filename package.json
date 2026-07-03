@@ -13,11 +13,10 @@
     "dependencies": {
         "@astrojs/mdx": "^4.3.10",
         "@astrojs/react": "^4.4.2",
-        "@astrojs/rss": "^4.0.13",
         "@astrojs/sitemap": "^3.6.0",
         "@astryxdesign/core": "^0.1.2",
         "@astryxdesign/theme-neutral": "^0.1.2",
-        "@fontsource-variable/noto-sans-kr": "^5.2.10",
+        "@fontsource-variable/figtree": "^5.2.10",
         "@heroicons/react": "^2.2.0",
         "astro": "^5.15.5",
         "react": "^19.2.7",
