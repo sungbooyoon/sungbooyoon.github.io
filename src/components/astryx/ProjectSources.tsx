@@ -27,7 +27,7 @@ export default function ProjectSources({ sources }: ProjectSourcesProps) {
                         label={`Open external source: ${source.title}`}
                         href={source.url}
                         target="_blank"
-                        variant="muted"
+                        variant="default"
                         padding={3}
                         height="100%"
                     >

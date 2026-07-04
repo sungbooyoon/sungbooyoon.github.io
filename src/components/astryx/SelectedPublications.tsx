@@ -59,7 +59,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                                             <Badge
                                                 key={badge}
                                                 label={badge === 'Best Paper' ? 'best paper' : badge}
-                                                variant={badge === 'Best Paper' ? 'blue' : badge === "Editor's Choice" ? 'teal' : 'blue'}
+                                                variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'}
                                             />
                                         ))}
                                     </HStack>

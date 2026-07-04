@@ -34,7 +34,7 @@ const awardBadgePlugin: MarkdownInlinePlugin = {
         <Badge
             key={key}
             label={match[1] === 'Best Paper' ? 'best paper' : match[1]}
-            variant={match[1] === 'Best Paper' ? 'blue' : match[1] === "Editor's Choice" ? 'teal' : 'blue'}
+            variant={match[1] === 'Best Paper' ? 'yellow' : match[1] === "Editor's Choice" ? 'red' : 'blue'}
         />
     )
 };

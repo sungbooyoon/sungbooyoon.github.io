@@ -25,7 +25,7 @@ function AwardBadge({ badge }: { badge: PublicationBadge }) {
     return (
         <Badge
             label={badge === 'Best Paper' ? 'best paper' : badge}
-            variant={badge === 'Best Paper' ? 'blue' : badge === "Editor's Choice" ? 'teal' : 'blue'}
+            variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'}
         />
     );
 }
