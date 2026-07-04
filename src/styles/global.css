@@ -137,7 +137,7 @@
     }
 
     .project-filter-button {
-        border-radius: var(--radius-full) !important;
+        border-radius: var(--radius-element) !important;
     }
 
     .project-filter-button.is-selected {

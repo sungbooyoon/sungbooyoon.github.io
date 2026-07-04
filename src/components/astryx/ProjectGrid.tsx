@@ -21,6 +21,7 @@ export type ProjectGridEntry = {
     isExternal?: boolean;
     status: 'Active' | 'Completed';
     tags: string[];
+    endDate: string;
 };
 
 type ProjectGridProps = {
@@ -30,7 +31,7 @@ type ProjectGridProps = {
 export default function ProjectGrid({ entries }: ProjectGridProps) {
     const [query, setQuery] = useState('');
     const [selectedTag, setSelectedTag] = useState('All');
-    const [sort, setSort] = useState('default');
+    const [sort, setSort] = useState('newest');
     const tags = useMemo(() => [...new Set(entries.flatMap((entry) => entry.tags))].sort((a, b) => a.localeCompare(b)), [entries]);
     const filteredEntries = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
@@ -41,9 +42,9 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
         });
 
         return [...matches].sort((a, b) => {
+            if (sort === 'newest') return new Date(b.endDate).getTime() - new Date(a.endDate).getTime();
             if (sort === 'title-asc') return a.title.localeCompare(b.title);
             if (sort === 'title-desc') return b.title.localeCompare(a.title);
-            if (sort === 'status') return Number(b.status === 'Active') - Number(a.status === 'Active');
             return 0;
         });
     }, [entries, query, selectedTag, sort]);
@@ -69,10 +70,9 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
                     value={sort}
                     onChange={setSort}
                     options={[
-                        { value: 'default', label: 'Default order' },
+                        { value: 'newest', label: 'Newest' },
                         { value: 'title-asc', label: 'A–Z' },
-                        { value: 'title-desc', label: 'Z–A' },
-                        { value: 'status', label: 'Active first' }
+                        { value: 'title-desc', label: 'Z–A' }
                     ]}
                     size="md"
                     width={160}
@@ -101,7 +101,7 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
             </Text>
 
             {filteredEntries.length > 0 ? (
-                <Grid columns={{ minWidth: 280, repeat: 'fit' }} gap={4} width="100%">
+                <Grid columns={{ minWidth: 280, max: 3, repeat: 'fill' }} gap={4} width="100%">
                     {filteredEntries.map((entry) => (
                         <ClickableCard
                             key={entry.href}

@@ -29,7 +29,8 @@ const entries = await Promise.all(
             imageSrc: cover.src,
             imageAlt: project.data.cover.alt ?? project.data.title,
             status: project.data.status,
-            tags: project.data.tags
+            tags: project.data.tags,
+            endDate: project.data.publishDate.toISOString()
         };
     })
 );
