@@ -53,25 +53,26 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                                 <img className="media-card-image" src={entry.imageSrc} alt={entry.imageAlt} loading="lazy" />
                             </AspectRatio>
                             <VStack gap={3} height="100%" className="media-card-body">
-                                {entry.badges && entry.badges.length > 0 && (
-                                    <HStack gap={1} wrap="wrap">
-                                        {entry.badges.map((badge) => (
-                                            <Badge
-                                                key={badge}
-                                                label={badge === 'Best Paper' ? 'best paper' : badge}
-                                                variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'}
-                                            />
-                                        ))}
-                                    </HStack>
-                                )}
                                 <StackItem size="fill">
                                     <Heading level={3}>{entry.title}</Heading>
                                 </StackItem>
                                 <Text as="p" type="supporting" color="secondary">
                                     {entry.venue} · {entry.year}
                                 </Text>
+                                {entry.badges && entry.badges.length > 0 && (
+                                    <HStack gap={1} wrap="wrap">
+                                        {entry.badges.map((badge) => (
+                                            <Badge
+                                                key={badge}
+                                                label={badge}
+                                                variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'}
+                                            />
+                                        ))}
+                                    </HStack>
+                                )}
                                 <HStack gap={1} vAlign="center">
                                     <Text type="label">Open DOI</Text>
+                                    <Icon icon="externalLink" size="sm" color="inherit" />
                                 </HStack>
                             </VStack>
                         </VStack>

@@ -160,7 +160,7 @@
     }
 
     .library-filter-button {
-        border-radius: var(--radius-full) !important;
+        border-radius: var(--radius-element) !important;
     }
 
     .library-filter-button.is-selected {

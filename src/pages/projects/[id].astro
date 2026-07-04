@@ -51,7 +51,7 @@ const nextEntries = [nextProject, prevProject]
             <ProjectMetadata status={status} tags={tags} period={period} role={role} />
             <LastUpdated client:load value={updatedDate.toISOString()} />
             <OutlinedMarkdown client:load content={preparedContent} enableLightbox />
-            <ProjectSources sources={sources} />
+            <ProjectSources client:load sources={sources} />
             <ArticleActions align="end">
                 <CopyButton client:load value={href} />
             </ArticleActions>

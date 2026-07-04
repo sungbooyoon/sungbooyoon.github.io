@@ -22,12 +22,7 @@ type PublicationFilter = 'All' | 'Journal' | 'Conference' | 'Awarded' | 'With vi
 const filters: PublicationFilter[] = ['All', 'Journal', 'Conference', 'Awarded', 'With video'];
 
 function AwardBadge({ badge }: { badge: PublicationBadge }) {
-    return (
-        <Badge
-            label={badge === 'Best Paper' ? 'best paper' : badge}
-            variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'}
-        />
-    );
+    return <Badge label={badge} variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'} />;
 }
 
 function PublicationItem({ entry }: { entry: PublicationEntry }) {
@@ -37,12 +32,7 @@ function PublicationItem({ entry }: { entry: PublicationEntry }) {
             label={
                 <VStack width="100%" gap={2}>
                     <VStack gap={1}>
-                        <HStack gap={1} wrap="wrap" vAlign="center">
-                            <Heading level={3}>{entry.title}</Heading>
-                            {entry.badges.map((badge) => (
-                                <AwardBadge key={badge} badge={badge} />
-                            ))}
-                        </HStack>
+                        <Heading level={3}>{entry.title}</Heading>
                         <Text as="p" type="supporting" color="secondary">
                             {entry.authors}
                         </Text>
@@ -50,6 +40,13 @@ function PublicationItem({ entry }: { entry: PublicationEntry }) {
                             {entry.venue}
                         </Text>
                     </VStack>
+                    {entry.badges.length > 0 && (
+                        <HStack gap={1} wrap="wrap">
+                            {entry.badges.map((badge) => (
+                                <AwardBadge key={badge} badge={badge} />
+                            ))}
+                        </HStack>
+                    )}
                     {(entry.doi || entry.video) && (
                         <HStack gap={2} wrap="wrap">
                             {entry.doi && (
@@ -138,8 +135,8 @@ export default function PublicationLibrary({ intro, entries }: PublicationLibrar
                         value={sort}
                         onChange={setSort}
                         options={[
-                            { value: 'newest', label: 'Newest first' },
-                            { value: 'oldest', label: 'Oldest first' },
+                            { value: 'newest', label: 'Newest' },
+                            { value: 'oldest', label: 'Oldest' },
                             { value: 'title', label: 'Title A–Z' }
                         ]}
                         size="md"

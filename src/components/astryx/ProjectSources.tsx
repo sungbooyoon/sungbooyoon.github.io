@@ -1,8 +1,7 @@
-import { Badge } from '@astryxdesign/core/Badge';
 import { ClickableCard } from '@astryxdesign/core/ClickableCard';
 import { Grid } from '@astryxdesign/core/Grid';
-import { Icon } from '@astryxdesign/core/Icon';
-import { HStack, StackItem, VStack } from '@astryxdesign/core/Stack';
+import { Link } from '@astryxdesign/core/Link';
+import { StackItem, VStack } from '@astryxdesign/core/Stack';
 import { Heading, Text } from '@astryxdesign/core/Text';
 
 type ProjectSource = {
@@ -31,12 +30,14 @@ export default function ProjectSources({ sources }: ProjectSourcesProps) {
                         padding={3}
                         height="100%"
                     >
-                        <HStack gap={3} vAlign="center" hAlign="between" height="100%">
+                        <VStack gap={3} height="100%">
                             <StackItem size="fill">
                                 <Text type="body">{source.title}</Text>
                             </StackItem>
-                            <Badge label="External" variant="blue" icon={<Icon icon="externalLink" size="sm" color="inherit" />} />
-                        </HStack>
+                            <Link href={source.url} target="_blank" rel="noopener noreferrer" isExternalLink isStandalone>
+                                Open external
+                            </Link>
+                        </VStack>
                     </ClickableCard>
                 ))}
             </Grid>

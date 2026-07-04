@@ -31,11 +31,7 @@ const markdownImagePattern = /!\[([^\]]*)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g
 const awardBadgePlugin: MarkdownInlinePlugin = {
     pattern: /\{\{badge:(Best Paper|Editor's Choice|Invited)\}\}/g,
     render: (match, key) => (
-        <Badge
-            key={key}
-            label={match[1] === 'Best Paper' ? 'best paper' : match[1]}
-            variant={match[1] === 'Best Paper' ? 'yellow' : match[1] === "Editor's Choice" ? 'red' : 'blue'}
-        />
+        <Badge key={key} label={match[1]} variant={match[1] === 'Best Paper' ? 'yellow' : match[1] === "Editor's Choice" ? 'red' : 'blue'} />
     )
 };
 
