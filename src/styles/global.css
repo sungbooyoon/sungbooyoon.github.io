@@ -151,6 +151,30 @@
         text-align: center;
     }
 
+    .publication-search-field {
+        min-width: min(100%, 18rem);
+    }
+
+    .publication-type-filters {
+        row-gap: var(--spacing-1) !important;
+    }
+
+    .library-filter-button {
+        border-radius: var(--radius-full) !important;
+    }
+
+    .library-filter-button.is-selected {
+        background: var(--color-accent-muted) !important;
+    }
+
+    .publication-year-group > ul {
+        width: 100%;
+    }
+
+    .publication-list-item {
+        padding-block: var(--spacing-4) !important;
+    }
+
     .publication-action-button {
         margin-block: var(--spacing-1);
         margin-inline-end: var(--spacing-2);
@@ -234,6 +258,11 @@
         }
 
         .project-filter-toolbar > * {
+            flex-basis: 100%;
+            width: 100% !important;
+        }
+
+        .publication-filter-toolbar > * {
             flex-basis: 100%;
             width: 100% !important;
         }
