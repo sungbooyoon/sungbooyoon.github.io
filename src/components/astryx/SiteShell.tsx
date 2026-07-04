@@ -99,7 +99,7 @@ export default function SiteShell({ title, subtitle, avatarSrc, showHeader = tru
 
                     <VStack width="100%">{children}</VStack>
 
-                    <VStack as="footer" width="100%">
+                    <VStack as="footer" width="100%" className="site-footer">
                         <Section variant="transparent" padding={0} paddingBlock={6} dividers={['top']} width="100%">
                             <VStack gap={4}>
                                 <HStack gap={4} wrap="wrap" className="site-footer-links">

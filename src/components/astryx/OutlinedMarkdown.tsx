@@ -9,7 +9,7 @@ import { Outline, parseOutlineFromMarkdown } from '@astryxdesign/core/Outline';
 import { Selector } from '@astryxdesign/core/Selector';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
 import { Text } from '@astryxdesign/core/Text';
-import { LinkIcon, PlayCircleIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import { LinkIcon, PlayCircleIcon } from '@heroicons/react/24/outline';
 import { Children, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 
 type OutlinedMarkdownProps = {
@@ -33,9 +33,8 @@ const awardBadgePlugin: MarkdownInlinePlugin = {
     render: (match, key) => (
         <Badge
             key={key}
-            label={match[1]}
-            variant={match[1] === 'Best Paper' ? 'red' : match[1] === "Editor's Choice" ? 'purple' : 'blue'}
-            icon={match[1] === 'Best Paper' ? <TrophyIcon width={14} height={14} /> : undefined}
+            label={match[1] === 'Best Paper' ? 'best paper' : match[1]}
+            variant={match[1] === 'Best Paper' ? 'blue' : match[1] === "Editor's Choice" ? 'teal' : 'blue'}
         />
     )
 };
@@ -62,7 +61,6 @@ function PublicationLink({ href, children }: { href: string; children: ReactNode
                 variant="secondary"
                 size="sm"
                 icon={<Icon icon={isVideo ? PlayCircleIcon : LinkIcon} size="sm" color="inherit" />}
-                endContent={<Icon icon="externalLink" size="sm" color="inherit" />}
                 className="publication-action-button"
             />
         );
