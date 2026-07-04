@@ -56,7 +56,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                                 <StackItem size="fill">
                                     <Heading level={3}>{entry.title}</Heading>
                                 </StackItem>
-                                <Text as="p" type="supporting" color="secondary">
+                                <Text as="p" type="body" size="sm" color="secondary">
                                     {entry.venue} · {entry.year}
                                 </Text>
                                 {entry.badges && entry.badges.length > 0 && (
