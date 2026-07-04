@@ -5,10 +5,6 @@ seo:
   description: Journal articles and conference publications by Sungboo Yoon in construction robotics, human-robot interaction, and robot learning.
 ---
 
-My research interests include construction robotics, human-robot interaction, and robot learning. I am passionate about bringing ideas into reality and developing systems that have tangible impacts on the work and safety of real human workers on construction sites.
-
-For a complete list of publications, see my [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=QFeaFbwAAAAJ) profile.
-
 ## 2026
 
 - An, M., Yoon, S., Shin, S., Park, M., Ahn, C. R., & Oh, T. K. (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.  
