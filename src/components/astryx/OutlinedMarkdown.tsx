@@ -1,16 +1,22 @@
 import { Badge } from '@astryxdesign/core/Badge';
+import { Button } from '@astryxdesign/core/Button';
+import { Icon } from '@astryxdesign/core/Icon';
 import { Lightbox, type LightboxMedia } from '@astryxdesign/core/Lightbox';
+import { Link } from '@astryxdesign/core/Link';
 import { Markdown } from '@astryxdesign/core/Markdown';
 import type { MarkdownInlinePlugin, MarkdownSource } from '@astryxdesign/core/Markdown';
 import { Outline, parseOutlineFromMarkdown } from '@astryxdesign/core/Outline';
 import { Selector } from '@astryxdesign/core/Selector';
 import { HStack, VStack } from '@astryxdesign/core/Stack';
 import { Text } from '@astryxdesign/core/Text';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { LinkIcon, PlayCircleIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import { Children, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 
 type OutlinedMarkdownProps = {
     content: string;
     enableLightbox?: boolean;
+    outlineDepth?: number;
+    publicationActions?: boolean;
     sectioned?: boolean;
     sources?: Record<string, MarkdownSource>;
 };
@@ -28,10 +34,47 @@ const awardBadgePlugin: MarkdownInlinePlugin = {
         <Badge
             key={key}
             label={match[1]}
-            variant={match[1] === 'Best Paper' ? 'orange' : match[1] === "Editor's Choice" ? 'purple' : 'blue'}
+            variant={match[1] === 'Best Paper' ? 'red' : match[1] === "Editor's Choice" ? 'purple' : 'blue'}
+            icon={match[1] === 'Best Paper' ? <TrophyIcon width={14} height={14} /> : undefined}
         />
     )
 };
+
+function childText(children: ReactNode) {
+    return Children.toArray(children)
+        .filter((child): child is string | number => typeof child === 'string' || typeof child === 'number')
+        .join('')
+        .trim();
+}
+
+function PublicationLink({ href, children }: { href: string; children: ReactNode }) {
+    const label = childText(children);
+    const isAction = label === 'DOI' || label === 'Video';
+
+    if (isAction) {
+        const isVideo = label === 'Video';
+        return (
+            <Button
+                label={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                size="sm"
+                icon={<Icon icon={isVideo ? PlayCircleIcon : LinkIcon} size="sm" color="inherit" />}
+                endContent={<Icon icon="externalLink" size="sm" color="inherit" />}
+                className="publication-action-button"
+            />
+        );
+    }
+
+    const isExternal = href.startsWith('http://') || href.startsWith('https://');
+    return (
+        <Link href={href} isExternalLink={isExternal}>
+            {children}
+        </Link>
+    );
+}
 
 function splitMarkdownSections(content: string): MarkdownSection[] {
     const matches = [...content.matchAll(/^##\s+/gm)];
@@ -51,9 +94,17 @@ function splitMarkdownSections(content: string): MarkdownSection[] {
     return sections;
 }
 
-export default function OutlinedMarkdown({ content, enableLightbox = false, sectioned = false, sources }: OutlinedMarkdownProps) {
+export default function OutlinedMarkdown({
+    content,
+    enableLightbox = false,
+    outlineDepth,
+    publicationActions = false,
+    sectioned = false,
+    sources
+}: OutlinedMarkdownProps) {
     const contentRef = useRef<HTMLDivElement>(null);
-    const items = useMemo(() => parseOutlineFromMarkdown(content), [content]);
+    const allItems = useMemo(() => parseOutlineFromMarkdown(content), [content]);
+    const items = useMemo(() => (outlineDepth == null ? allItems : allItems.filter((item) => item.level <= outlineDepth)), [allItems, outlineDepth]);
     const sections = useMemo(() => (sectioned ? splitMarkdownSections(content) : [{ content }]), [content, sectioned]);
     const lightboxMedia = useMemo<LightboxMedia[]>(
         () =>
@@ -72,11 +123,11 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
     useEffect(() => {
         const headings = contentRef.current?.querySelectorAll('h1,h2,h3,h4,h5,h6');
         headings?.forEach((heading, index) => {
-            const item = items[index];
+            const item = allItems[index];
             if (item) heading.id = item.id;
         });
         setIsOutlineReady(true);
-    }, [items]);
+    }, [allItems]);
 
     const navigateToOutline = (id: string) => {
         setMobileOutlineId(id);
@@ -154,6 +205,7 @@ export default function OutlinedMarkdown({ content, enableLightbox = false, sect
                                 headingLevelStart={1}
                                 autolink="gfm"
                                 inlinePlugins={[awardBadgePlugin]}
+                                components={publicationActions ? { link: PublicationLink } : undefined}
                                 sources={sources}
                             >
                                 {section.content}

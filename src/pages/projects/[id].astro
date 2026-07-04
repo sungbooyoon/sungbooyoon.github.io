@@ -1,12 +1,13 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import { Text } from '@astryxdesign/core/Text';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContentList from '../../components/astryx/ContentList';
 import CopyButton from '../../components/astryx/CopyButton';
+import LastUpdated from '../../components/astryx/LastUpdated';
 import OutlinedMarkdown from '../../components/astryx/OutlinedMarkdown';
 import { ArticleActions, ArticleSurface, PageHeader, PageStack } from '../../components/astryx/PageSurface';
 import ProjectMetadata from '../../components/astryx/ProjectMetadata';
+import ProjectSources from '../../components/astryx/ProjectSources';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { prepareAstryxMarkdown } from '../../utils/markdown-utils';
 
@@ -32,11 +33,7 @@ type Props = {
 const { href } = Astro.url;
 const { project, prevProject, nextProject } = Astro.props;
 const { title, description, status, period, role, tags = [], sources = [], updatedDate, seo } = project.data;
-const lastUpdated = updatedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 const preparedContent = await prepareAstryxMarkdown(project.body);
-const citationSources = Object.fromEntries(sources.map((source, index) => [`source-${index + 1}`, source]));
-const sourceList = sources.length > 0 ? `\n\n## Sources\n\n${sources.map((_, index) => `[source-${index + 1}]`).join(' ')}` : '';
-const content = `${preparedContent}${sourceList}`;
 const nextEntries = [nextProject, prevProject]
     .filter((entry): entry is CollectionEntry<'projects'> => Boolean(entry))
     .map((entry) => ({
@@ -52,8 +49,9 @@ const nextEntries = [nextProject, prevProject]
         <ArticleSurface>
             <PageHeader title={title} />
             <ProjectMetadata status={status} tags={tags} period={period} role={role} />
-            <Text as="p" type="supporting" color="secondary">Last updated {lastUpdated}</Text>
-            <OutlinedMarkdown client:load content={content} sources={citationSources} enableLightbox />
+            <LastUpdated client:load value={updatedDate.toISOString()} />
+            <OutlinedMarkdown client:load content={preparedContent} enableLightbox />
+            <ProjectSources sources={sources} />
             <ArticleActions align="end">
                 <CopyButton client:load value={href} />
             </ArticleActions>

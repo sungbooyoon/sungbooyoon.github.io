@@ -1,4 +1,5 @@
 import { Avatar } from '@astryxdesign/core/Avatar';
+import { Button } from '@astryxdesign/core/Button';
 import { CommandPalette } from '@astryxdesign/core/CommandPalette';
 import { Icon } from '@astryxdesign/core/Icon';
 import { IconButton } from '@astryxdesign/core/IconButton';
@@ -68,6 +69,7 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
         [searchItems]
     );
     const searchSource = useMemo(() => createStaticSource<SiteSearchItem>(searchEntries), [searchEntries]);
+    const desktopLinks = links.filter((link) => link.href !== '/about');
 
     useEffect(() => {
         const savedMode = window.localStorage.getItem(THEME_STORAGE_KEY);
@@ -130,12 +132,7 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
             icon={<ScholarIcon />}
         />
     ) : null;
-    const navHeading = (
-        <TopNavHeading
-            logo={avatarSrc ? <Avatar src={avatarSrc} name={title} size={24} /> : undefined}
-            headingHref="/"
-        />
-    );
+    const navHeading = <TopNavHeading logo={avatarSrc ? <Avatar src={avatarSrc} name={title} size={24} /> : undefined} headingHref="/" />;
 
     const renderNavItem = (link: NavLink) => {
         const isExternal = link.href.startsWith('http');
@@ -160,16 +157,13 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
                 <TopNav
                     label="Primary navigation"
                     heading={navHeading}
-                    centerContent={
-                        <>
-                            {links.map(renderNavItem)}
-                        </>
-                    }
+                    centerContent={<>{desktopLinks.map(renderNavItem)}</>}
                     endContent={
                         <HStack gap={1} vAlign="center">
                             {searchButton}
                             {scholarButton}
                             {themeButton}
+                            <Button label="About me" href="/about" variant="primary" size="sm" />
                         </HStack>
                     }
                 />

@@ -1,4 +1,4 @@
-import hero0 from '../assets/images/hero0.png';
+import effectsSpatialCommunication from '../assets/images/effects-spatial-communication.jpg';
 import projectHri from '../assets/images/project-hri.jpg';
 import projectViewpoint1 from '../assets/images/project-viewpoint1.jpg';
 import projectViewpoint2 from '../assets/images/project-viewpoint2.jpg';
@@ -34,8 +34,8 @@ const selectedPublications = [
         venue: 'Journal of Construction Engineering and Management',
         year: 2023,
         doi: 'https://doi.org/10.1061/JCEMD4.COENG-12997',
-        image: hero0,
-        imageAlt: 'Human-robot collaboration experiment in construction'
+        image: effectsSpatialCommunication,
+        imageAlt: 'Participant using a deictic gesture during the spatial communication experiment'
     }
 ];
 

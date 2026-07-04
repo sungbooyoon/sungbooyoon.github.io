@@ -119,6 +119,17 @@
         padding: var(--spacing-4);
     }
 
+    .publication-action-button {
+        margin-block: var(--spacing-1);
+        margin-inline-end: var(--spacing-2);
+        vertical-align: middle;
+    }
+
+    .site-footer-links {
+        column-gap: var(--spacing-4) !important;
+        row-gap: var(--spacing-3) !important;
+    }
+
     .project-metadata {
         max-width: 42.5rem;
     }
@@ -179,6 +190,11 @@
         .document-markdown .astryx-markdown ol {
             width: auto;
             margin-inline: 0 !important;
+        }
+
+        .site-footer-links {
+            column-gap: var(--spacing-4) !important;
+            row-gap: var(--spacing-3) !important;
         }
     }
 

@@ -102,7 +102,7 @@ export default function SiteShell({ title, subtitle, avatarSrc, showHeader = tru
                     <VStack as="footer" width="100%">
                         <Section variant="transparent" padding={0} paddingBlock={6} dividers={['top']} width="100%">
                             <VStack gap={4}>
-                                <HStack gap={4} wrap="wrap">
+                                <HStack gap={4} wrap="wrap" className="site-footer-links">
                                     {footerNavLinks.map((link) => (
                                         <Link key={link.href} href={link.href} isStandalone>
                                             {link.text}

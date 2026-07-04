@@ -44,7 +44,12 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
                         <VStack gap={3} height="100%" className="media-card-body">
                             <HStack gap={2} hAlign="between" vAlign="start">
                                 <Heading level={2}>{entry.title}</Heading>
-                                <Badge label={entry.status} variant={entry.status === 'Active' ? 'success' : 'neutral'} />
+                                <HStack gap={1} wrap="wrap" hAlign="end">
+                                    {entry.isExternal && (
+                                        <Badge label="External" variant="blue" icon={<Icon icon="externalLink" size="sm" color="inherit" />} />
+                                    )}
+                                    <Badge label={entry.status} variant={entry.status === 'Active' ? 'success' : 'neutral'} />
+                                </HStack>
                             </HStack>
                             {entry.description && (
                                 <StackItem size="fill">

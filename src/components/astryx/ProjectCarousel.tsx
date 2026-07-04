@@ -1,4 +1,5 @@
 import { Button } from '@astryxdesign/core/Button';
+import { Badge } from '@astryxdesign/core/Badge';
 import { Carousel } from '@astryxdesign/core/Carousel';
 import { ClickableCard } from '@astryxdesign/core/ClickableCard';
 import { Icon } from '@astryxdesign/core/Icon';
@@ -40,6 +41,7 @@ export default function ProjectCarousel({ entries }: ProjectCarouselProps) {
                         height={320}
                     >
                         <VStack height="100%" gap={3}>
+                            {entry.isExternal && <Badge label="External" variant="blue" icon={<Icon icon="externalLink" size="sm" color="inherit" />} />}
                             <Heading level={3} maxLines={3}>
                                 {entry.title}
                             </Heading>
@@ -58,9 +60,7 @@ export default function ProjectCarousel({ entries }: ProjectCarouselProps) {
                                 </HStack>
                             )}
                             <HStack gap={1} vAlign="center">
-                                <Text type="label">
-                                    {entry.isExternal ? 'Open external project' : 'View project'}
-                                </Text>
+                                <Text type="label">{entry.isExternal ? 'Open external project' : 'View project'}</Text>
                                 <Icon icon={entry.isExternal ? 'externalLink' : 'chevronRight'} size="sm" color="inherit" />
                             </HStack>
                         </VStack>

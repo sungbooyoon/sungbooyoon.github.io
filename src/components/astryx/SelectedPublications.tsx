@@ -6,6 +6,7 @@ import { Grid } from '@astryxdesign/core/Grid';
 import { Icon } from '@astryxdesign/core/Icon';
 import { HStack, StackItem, VStack } from '@astryxdesign/core/Stack';
 import { Heading, Text } from '@astryxdesign/core/Text';
+import { TrophyIcon } from '@heroicons/react/24/outline';
 
 type PublicationEntry = {
     title: string;
@@ -59,7 +60,8 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                                             <Badge
                                                 key={badge}
                                                 label={badge}
-                                                variant={badge === 'Best Paper' ? 'orange' : badge === "Editor's Choice" ? 'purple' : 'blue'}
+                                                variant={badge === 'Best Paper' ? 'red' : badge === "Editor's Choice" ? 'purple' : 'blue'}
+                                                icon={badge === 'Best Paper' ? <TrophyIcon width={14} height={14} /> : undefined}
                                             />
                                         ))}
                                     </HStack>
