@@ -1,5 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
+import daewooIcon from '../assets/icons/daewoo.svg?url';
+import policeIcon from '../assets/icons/police.svg?url';
+import snuIcon from '../assets/icons/snu.svg?url';
 import { ArticleSurface, MarkdownBody, PageHeader } from '../components/astryx/PageSurface';
 import OutlinedMarkdown from '../components/astryx/OutlinedMarkdown';
 import PublicationLibrary from '../components/astryx/PublicationLibrary';
@@ -24,6 +27,13 @@ const { title, seo } = page.data;
 const content = await prepareAstryxMarkdown(page.body);
 const hasOutline = page.id === 'about';
 const publicationPage = page.id === 'publications' ? parsePublicationsMarkdown(content) : null;
+const organizationIcons = hasOutline
+    ? {
+          snu: { src: snuIcon, label: 'Seoul National University' },
+          daewoo: { src: daewooIcon, label: 'Daewoo E&C' },
+          police: { src: policeIcon, label: 'Korean National Police Agency' }
+      }
+    : undefined;
 ---
 
 <BaseLayout title={seo?.title ?? title} description={seo?.description} image={seo?.image} showHeader={false}>
@@ -33,7 +43,7 @@ const publicationPage = page.id === 'publications' ? parsePublicationsMarkdown(c
             publicationPage ? (
                 <PublicationLibrary client:load intro={publicationPage.intro} entries={publicationPage.entries} />
             ) : hasOutline ? (
-                <OutlinedMarkdown client:load content={content} sectioned outlineDepth={2} enableLightbox />
+                <OutlinedMarkdown client:load content={content} sectioned outlineDepth={2} enableLightbox organizationIcons={organizationIcons} />
             ) : (
                 <MarkdownBody content={content} />
             )

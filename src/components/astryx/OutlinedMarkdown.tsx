@@ -19,6 +19,7 @@ type OutlinedMarkdownProps = {
     publicationActions?: boolean;
     sectioned?: boolean;
     sources?: Record<string, MarkdownSource>;
+    organizationIcons?: Record<string, { src: string; label: string }>;
 };
 
 type MarkdownSection = {
@@ -94,12 +95,32 @@ export default function OutlinedMarkdown({
     outlineDepth,
     publicationActions = false,
     sectioned = false,
-    sources
+    sources,
+    organizationIcons
 }: OutlinedMarkdownProps) {
     const contentRef = useRef<HTMLDivElement>(null);
     const allItems = useMemo(() => parseOutlineFromMarkdown(content), [content]);
     const items = useMemo(() => (outlineDepth == null ? allItems : allItems.filter((item) => item.level <= outlineDepth)), [allItems, outlineDepth]);
     const sections = useMemo(() => (sectioned ? splitMarkdownSections(content) : [{ content }]), [content, sectioned]);
+    const inlinePlugins = useMemo<MarkdownInlinePlugin[]>(() => {
+        const plugins = [awardBadgePlugin];
+        if (!organizationIcons) return plugins;
+
+        plugins.push({
+            pattern: /\{\{organization:([a-z-]+)\}\}/g,
+            render: (match, key) => {
+                const organization = organizationIcons[match[1]];
+                if (!organization) return null;
+
+                return (
+                    <span key={key} className="about-organization-icon" aria-hidden="true" title={organization.label}>
+                        <img src={organization.src} alt="" />
+                    </span>
+                );
+            }
+        });
+        return plugins;
+    }, [organizationIcons]);
     const lightboxMedia = useMemo<LightboxMedia[]>(
         () =>
             [...content.matchAll(markdownImagePattern)].map((match) => ({
@@ -198,7 +219,7 @@ export default function OutlinedMarkdown({
                                 density="default"
                                 headingLevelStart={1}
                                 autolink="gfm"
-                                inlinePlugins={[awardBadgePlugin]}
+                                inlinePlugins={inlinePlugins}
                                 components={publicationActions ? { link: PublicationLink } : undefined}
                                 sources={sources}
                             >
