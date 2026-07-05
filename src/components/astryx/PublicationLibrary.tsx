@@ -33,10 +33,10 @@ function PublicationItem({ entry }: { entry: PublicationEntry }) {
                 <VStack width="100%" gap={2}>
                     <VStack gap={1}>
                         <Heading level={3}>{entry.title}</Heading>
-                        <Text as="p" type="supporting" color="secondary">
+                        <Text as="p" type="body" size="sm" color="secondary">
                             {entry.authors}
                         </Text>
-                        <Text as="p" type="body" color="secondary">
+                        <Text as="p" type="body" size="sm" color="secondary">
                             {entry.venue}
                         </Text>
                     </VStack>
@@ -86,7 +86,9 @@ export default function PublicationLibrary({ intro, entries }: PublicationLibrar
     const visibleEntries = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
         const filtered = entries.filter((entry) => {
-            const isAwarded = entry.badges.some((badge) => badge === 'Best Paper' || badge === "Editor's Choice");
+            const isAwarded = entry.badges.some(
+                (badge) => badge === 'Best Paper' || badge === "Editor's Choice" || badge === 'Invited'
+            );
             const matchesFilter =
                 filter === 'All' || entry.type === filter || (filter === 'Awarded' && isAwarded) || (filter === 'With video' && Boolean(entry.video));
             const searchableText = [entry.title, entry.authors, entry.venue, entry.year, ...entry.badges].join(' ').toLocaleLowerCase();

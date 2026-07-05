@@ -1,6 +1,7 @@
 ---
 import figtreeWoff2 from '@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2?url';
 import { getImage } from 'astro:assets';
+import avatar from '../assets/images/avatar.png';
 import siteConfig from '../data/site-config';
 import type { ImageInput } from '../types';
 
@@ -38,6 +39,7 @@ if (image?.src) {
     }
 }
 const canonicalURL = new URL(Astro.request.url, Astro.site);
+const favicon = await getImage({ src: avatar, width: 64, height: 64, format: 'png', fit: 'cover' });
 
 /**
  * Enforce some standard canonical URL formatting across the site.
@@ -64,7 +66,7 @@ function formatCanonicalURL(url: string | URL) {
 <link rel="preload" as="font" type="font/woff2" href={figtreeWoff2} crossorigin="anonymous" />
 
 <!-- Low Priority Global Metadata -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href={favicon.src} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Page Metadata -->

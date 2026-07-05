@@ -178,6 +178,7 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
                             {searchButton}
                             {scholarButton}
                             {themeButton}
+                            <Button label="About me" href="/about" variant="primary" size="sm" className="site-about-button" />
                             <IconButton
                                 label="Open navigation"
                                 variant="ghost"
