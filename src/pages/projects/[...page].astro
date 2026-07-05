@@ -37,7 +37,7 @@ const entries = await Promise.all(
 ---
 
 <BaseLayout title="Projects" description="Explore a diverse portfolio showcasing my passion and expertise" showHeader={false}>
-    <PageStack>
+    <PageStack gap={8}>
         <PageHeader title="Projects" />
         <ProjectGrid client:load entries={entries} />
         <Pagination page={page} />

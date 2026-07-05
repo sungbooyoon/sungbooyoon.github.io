@@ -30,7 +30,7 @@ function createEntry(raw: string, fallbackYear: number, index: number): Publicat
     const actions = Object.fromEntries([...raw.matchAll(actionPattern)].map((match) => [match[1].toLowerCase(), match[2]]));
     const citation = raw.replace(badgePattern, '').replace(actionPattern, '').replace(/\s+/g, ' ').trim();
     const citationMatch = citation.match(/^(.*?)\s+\((\d{4})\)\.\s+([\s\S]+)$/);
-    const authors = citationMatch?.[1]?.trim() ?? '';
+    const authors = (citationMatch?.[1]?.trim() ?? '').replace(/,?\s*&\s*/g, ', ');
     const year = Number(citationMatch?.[2] ?? fallbackYear);
     const body = citationMatch?.[3]?.trim() ?? citation;
     const titleAndVenue = body.match(/^(.*?)\.\s+((?:In\s+)?\*[\s\S]+)$/);

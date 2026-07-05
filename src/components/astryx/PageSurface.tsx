@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 
 type PageStackProps = {
     children: ReactNode;
+    gap?: 8 | 10;
 };
 
 type PageHeaderProps = {
@@ -18,9 +19,9 @@ type ArticleActionsProps = {
     align?: 'start' | 'end' | 'between';
 };
 
-export function PageStack({ children }: PageStackProps) {
+export function PageStack({ children, gap = 10 }: PageStackProps) {
     return (
-        <VStack width="100%" gap={10}>
+        <VStack width="100%" gap={gap}>
             {children}
         </VStack>
     );
