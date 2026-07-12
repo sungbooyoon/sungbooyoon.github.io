@@ -110,6 +110,11 @@
         outline-offset: -2px;
     }
 
+    .hero-description [role='paragraph'] {
+        font-size: var(--text-large-size);
+        line-height: var(--text-large-line-height);
+    }
+
     .media-card {
         overflow: hidden;
     }
