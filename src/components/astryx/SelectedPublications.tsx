@@ -72,7 +72,7 @@ export default function SelectedPublications({ entries }: SelectedPublicationsPr
                                 )}
                                 <HStack gap={1} vAlign="center">
                                     <Text type="label">Open DOI</Text>
-                                    <Icon icon="externalLink" size="sm" color="inherit" />
+                                    <Icon icon="externalLink" size="sm" color="inherit" className="media-card-cta-icon" />
                                 </HStack>
                             </VStack>
                         </VStack>

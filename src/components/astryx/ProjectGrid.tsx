@@ -9,7 +9,7 @@ import { HStack, StackItem, VStack } from '@astryxdesign/core/Stack';
 import { Heading, Text } from '@astryxdesign/core/Text';
 import { TextInput } from '@astryxdesign/core/TextInput';
 import { Token } from '@astryxdesign/core/Token';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { slugify } from '../../utils/common-utils';
 
 export type ProjectGridEntry = {
@@ -32,6 +32,8 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
     const [query, setQuery] = useState('');
     const [selectedTag, setSelectedTag] = useState('All');
     const [sort, setSort] = useState('newest');
+    const resultsRef = useRef<HTMLDivElement>(null);
+    const hasRenderedResults = useRef(false);
     const tags = useMemo(() => [...new Set(entries.flatMap((entry) => entry.tags))].sort((a, b) => a.localeCompare(b)), [entries]);
     const filteredEntries = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
@@ -49,8 +51,22 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
         });
     }, [entries, query, selectedTag, sort]);
 
+    useEffect(() => {
+        if (!hasRenderedResults.current) {
+            hasRenderedResults.current = true;
+            return;
+        }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const animation = resultsRef.current?.animate([{ opacity: 0.65 }, { opacity: 1 }], {
+            duration: 165,
+            easing: 'cubic-bezier(0.24, 1, 0.4, 1)'
+        });
+        return () => animation?.cancel();
+    }, [selectedTag, sort]);
+
     return (
-        <VStack width="100%" gap={5}>
+        <VStack width="100%" gap={4}>
             <HStack width="100%" gap={3} vAlign="end" wrap="wrap" className="project-filter-toolbar">
                 <StackItem size="fill" className="project-search-field">
                     <TextInput
@@ -100,62 +116,69 @@ export default function ProjectGrid({ entries }: ProjectGridProps) {
                 {filteredEntries.length} {filteredEntries.length === 1 ? 'project' : 'projects'}
             </Text>
 
-            {filteredEntries.length > 0 ? (
-                <Grid columns={{ minWidth: 280, max: 3, repeat: 'fill' }} gap={4} width="100%">
-                    {filteredEntries.map((entry) => (
-                        <ClickableCard
-                            key={entry.href}
-                            label={`Open project: ${entry.title}`}
-                            href={entry.href}
-                            target={entry.isExternal ? '_blank' : undefined}
-                            variant="default"
-                            padding={0}
-                            height="100%"
-                            className="media-card"
-                        >
-                            <VStack height="100%" gap={0}>
-                                <AspectRatio ratio={16 / 9}>
-                                    <img className="media-card-image" src={entry.imageSrc} alt={entry.imageAlt} loading="lazy" />
-                                </AspectRatio>
-                                <VStack gap={3} height="100%" className="media-card-body">
-                                    <HStack gap={2} hAlign="between" vAlign="start">
-                                        <Heading level={3}>{entry.title}</Heading>
-                                        <HStack gap={1} wrap="wrap" hAlign="end">
-                                            {entry.isExternal && (
-                                                <Badge label="External" variant="blue" icon={<Icon icon="externalLink" size="sm" color="inherit" />} />
-                                            )}
-                                            <Badge label={entry.status} variant={entry.status === 'Active' ? 'success' : 'neutral'} />
+            <div ref={resultsRef} className="filter-results">
+                {filteredEntries.length > 0 ? (
+                    <Grid columns={{ minWidth: 280, max: 3, repeat: 'fill' }} gap={4} width="100%">
+                        {filteredEntries.map((entry) => (
+                            <ClickableCard
+                                key={entry.href}
+                                label={`Open project: ${entry.title}`}
+                                href={entry.href}
+                                target={entry.isExternal ? '_blank' : undefined}
+                                variant="default"
+                                padding={0}
+                                height="100%"
+                                className="media-card"
+                            >
+                                <VStack height="100%" gap={0}>
+                                    <AspectRatio ratio={16 / 9}>
+                                        <img className="media-card-image" src={entry.imageSrc} alt={entry.imageAlt} loading="lazy" />
+                                    </AspectRatio>
+                                    <VStack gap={3} height="100%" className="media-card-body">
+                                        <HStack gap={2} hAlign="between" vAlign="start">
+                                            <Heading level={3}>{entry.title}</Heading>
+                                            <HStack gap={1} wrap="wrap" hAlign="end">
+                                                {entry.isExternal && (
+                                                    <Badge label="External" variant="blue" icon={<Icon icon="externalLink" size="sm" color="inherit" />} />
+                                                )}
+                                                <Badge label={entry.status} variant={entry.status === 'Active' ? 'success' : 'neutral'} />
+                                            </HStack>
                                         </HStack>
-                                    </HStack>
-                                    {entry.description && (
-                                        <StackItem size="fill">
-                                            <Text as="p" type="body" color="secondary" maxLines={4}>
-                                                {entry.description}
-                                            </Text>
-                                        </StackItem>
-                                    )}
-                                    {entry.tags.length > 0 && (
-                                        <HStack gap={1} wrap="wrap">
-                                            {entry.tags.map((tag) => (
-                                                <Token key={tag} label={tag} href={`/tags/${slugify(tag)}`} size="sm" />
-                                            ))}
+                                        {entry.description && (
+                                            <StackItem size="fill">
+                                                <Text as="p" type="body" color="secondary" maxLines={4}>
+                                                    {entry.description}
+                                                </Text>
+                                            </StackItem>
+                                        )}
+                                        {entry.tags.length > 0 && (
+                                            <HStack gap={1} wrap="wrap">
+                                                {entry.tags.map((tag) => (
+                                                    <Token key={tag} label={tag} href={`/tags/${slugify(tag)}`} size="sm" />
+                                                ))}
+                                            </HStack>
+                                        )}
+                                        <HStack gap={1} vAlign="center">
+                                            <Text type="label">{entry.isExternal ? 'Open external project' : 'View project'}</Text>
+                                            <Icon
+                                                icon={entry.isExternal ? 'externalLink' : 'chevronRight'}
+                                                size="sm"
+                                                color="inherit"
+                                                className="media-card-cta-icon"
+                                            />
                                         </HStack>
-                                    )}
-                                    <HStack gap={1} vAlign="center">
-                                        <Text type="label">{entry.isExternal ? 'Open external project' : 'View project'}</Text>
-                                        <Icon icon={entry.isExternal ? 'externalLink' : 'chevronRight'} size="sm" color="inherit" />
-                                    </HStack>
+                                    </VStack>
                                 </VStack>
-                            </VStack>
-                        </ClickableCard>
-                    ))}
-                </Grid>
-            ) : (
-                <VStack className="project-empty-state" width="100%" gap={1}>
-                    <Heading level={2}>No projects found</Heading>
-                    <Text color="secondary">Try another search or tag.</Text>
-                </VStack>
-            )}
+                            </ClickableCard>
+                        ))}
+                    </Grid>
+                ) : (
+                    <VStack className="project-empty-state" width="100%" gap={1}>
+                        <Heading level={2}>No projects found</Heading>
+                        <Text color="secondary">Try another search or tag.</Text>
+                    </VStack>
+                )}
+            </div>
         </VStack>
     );
 }

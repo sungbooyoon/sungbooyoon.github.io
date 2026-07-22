@@ -116,7 +116,11 @@ export default function SiteNavigation({ pathname, title, avatarSrc, scholarHref
             tooltip={isDark ? 'Light mode' : 'Dark mode'}
             variant="ghost"
             size="sm"
-            icon={<Icon icon={isDark ? SunIcon : MoonIcon} color="inherit" size="sm" />}
+            icon={
+                <span key={isDark ? 'sun' : 'moon'} className="theme-toggle-icon">
+                    <Icon icon={isDark ? SunIcon : MoonIcon} color="inherit" size="sm" />
+                </span>
+            }
             onClick={toggleTheme}
         />
     );

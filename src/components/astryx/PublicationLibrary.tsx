@@ -9,7 +9,7 @@ import { HStack, StackItem, VStack } from '@astryxdesign/core/Stack';
 import { Heading, Text } from '@astryxdesign/core/Text';
 import { TextInput } from '@astryxdesign/core/TextInput';
 import { LinkIcon, PlayCircleIcon } from '@heroicons/react/24/outline';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { PublicationBadge, PublicationEntry } from '../../utils/publication-utils';
 
 type PublicationLibraryProps = {
@@ -97,6 +97,8 @@ export default function PublicationLibrary({ intro, entries }: PublicationLibrar
     const [query, setQuery] = useState('');
     const [filter, setFilter] = useState<PublicationFilter>('All');
     const [sort, setSort] = useState('newest');
+    const resultsRef = useRef<HTMLDivElement>(null);
+    const hasRenderedResults = useRef(false);
     const visibleEntries = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
         const filtered = entries.filter((entry) => {
@@ -120,6 +122,20 @@ export default function PublicationLibrary({ intro, entries }: PublicationLibrar
         visibleEntries.forEach((entry) => grouped.set(entry.year, [...(grouped.get(entry.year) ?? []), entry]));
         return [...grouped].map(([year, groupedEntries]) => ({ label: String(year), entries: groupedEntries }));
     }, [sort, visibleEntries]);
+
+    useEffect(() => {
+        if (!hasRenderedResults.current) {
+            hasRenderedResults.current = true;
+            return;
+        }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const animation = resultsRef.current?.animate([{ opacity: 0.65 }, { opacity: 1 }], {
+            duration: 165,
+            easing: 'cubic-bezier(0.24, 1, 0.4, 1)'
+        });
+        return () => animation?.cancel();
+    }, [filter, sort]);
 
     return (
         <VStack width="100%" gap={8} className="publication-library">
@@ -175,24 +191,26 @@ export default function PublicationLibrary({ intro, entries }: PublicationLibrar
                 </HStack>
             </VStack>
 
-            {groups.length > 0 ? (
-                <VStack width="100%" gap={8}>
-                    {groups.map((group) => (
-                        <VStack as="section" width="100%" gap={3} key={group.label} className="publication-year-group">
-                            <Heading level={2} type="display-3">
-                                {group.label}
-                            </Heading>
-                            <List density="balanced" hasDividers>
-                                {group.entries.map((entry) => (
-                                    <PublicationItem key={entry.id} entry={entry} />
-                                ))}
-                            </List>
-                        </VStack>
-                    ))}
-                </VStack>
-            ) : (
-                <EmptyState title="No publications found" description="Try another search or filter." headingLevel={2} />
-            )}
+            <div ref={resultsRef} className="filter-results">
+                {groups.length > 0 ? (
+                    <VStack width="100%" gap={8}>
+                        {groups.map((group) => (
+                            <VStack as="section" width="100%" gap={3} key={group.label} className="publication-year-group">
+                                <Heading level={2} type="display-3">
+                                    {group.label}
+                                </Heading>
+                                <List density="balanced" hasDividers>
+                                    {group.entries.map((entry) => (
+                                        <PublicationItem key={entry.id} entry={entry} />
+                                    ))}
+                                </List>
+                            </VStack>
+                        ))}
+                    </VStack>
+                ) : (
+                    <EmptyState title="No publications found" description="Try another search or filter." headingLevel={2} />
+                )}
+            </div>
         </VStack>
     );
 }
