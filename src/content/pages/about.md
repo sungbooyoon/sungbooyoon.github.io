@@ -42,6 +42,7 @@ Advisor: Professor Changbum R. Ahn
 
 Contributed to interdisciplinary research projects spanning AEC, robotics, electronics, and field validation across academia, industry, and government collaborators.
 
+- Task-specific end-to-end processes for autonomous construction physical AI, from data collection to model deployment
 - Multipurpose robotic platform and XR-based human-robot collaboration for work at height in construction
 - Interactive communication systems for human-robot collaboration in construction
 - Smart safety model factory development and evaluation standards for construction sites
@@ -95,6 +96,8 @@ Coordinated daily situational monitoring, command oversight, and personnel deplo
 
 ### Reviewer Activities
 
-- 2026: Reviewer, Computing in Civil Engineering (i3CE 2026)
+- 2026: Reviewer, Scientific Reports
+- 2026: Reviewer, The Journal of Supercomputing
+- 2026: Reviewer, International Conference on Computing in Civil Engineering (i3CE 2026)
 - 2025-Present: Reviewer, Automation in Construction
 - 2025: Reviewer, Journal of Computing in Civil Engineering
