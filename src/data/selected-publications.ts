@@ -1,4 +1,3 @@
-import effectsSpatialCommunication from '../assets/images/effects-spatial-communication.jpg';
 import projectHri from '../assets/images/project-hri.jpg';
 import projectViewpoint1 from '../assets/images/project-viewpoint1.jpg';
 import projectViewpoint2 from '../assets/images/project-viewpoint2.jpg';
@@ -28,14 +27,6 @@ const selectedPublications = [
         image: projectHri,
         imageAlt: 'LaserDex human-robot interaction workflow',
         badges: ["Editor's Choice"] as const
-    },
-    {
-        title: 'Effects of spatial characteristics on the human-robot communication using deictic gesture in construction',
-        venue: 'Journal of Construction Engineering and Management',
-        year: 2023,
-        doi: 'https://doi.org/10.1061/JCEMD4.COENG-12997',
-        image: effectsSpatialCommunication,
-        imageAlt: 'Participant using a deictic gesture during the spatial communication experiment'
     }
 ];
 
