@@ -6,7 +6,7 @@ export type PublicationEntry = {
     authors: string;
     title: string;
     venue: string;
-    type: 'Journal' | 'Conference';
+    type: 'Journal' | 'Conference' | 'Preprint';
     doi?: string;
     video?: string;
     badges: PublicationBadge[];
@@ -20,6 +20,7 @@ export type PublicationPageData = {
 const badgePattern = /\{\{badge:(Best Paper|Editor's Choice|Invited)\}\}/g;
 const actionPattern = /\[(DOI|Video)\]\(([^)]+)\)/g;
 const conferencePattern = /\b(conference|workshop|isarc|proceedings)\b/i;
+const preprintPattern = /\b(preprint|ssrn)\b/i;
 
 function stripMarkdown(value: string) {
     return value.replace(/\*+/g, '').replace(/\s+/g, ' ').trim();
@@ -36,7 +37,11 @@ function createEntry(raw: string, fallbackYear: number, index: number): Publicat
     const titleAndVenue = body.match(/^(.*?)\.\s+((?:In\s+)?\*[\s\S]+)$/);
     const title = stripMarkdown(titleAndVenue?.[1] ?? body);
     const venue = stripMarkdown(titleAndVenue?.[2] ?? '');
-    const type = titleAndVenue?.[2]?.startsWith('In ') || conferencePattern.test(venue) ? 'Conference' : 'Journal';
+    const type = preprintPattern.test(venue)
+        ? 'Preprint'
+        : titleAndVenue?.[2]?.startsWith('In ') || conferencePattern.test(venue)
+          ? 'Conference'
+          : 'Journal';
 
     return {
         id: `${year}-${index}-${title

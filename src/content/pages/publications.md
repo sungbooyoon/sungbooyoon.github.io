@@ -7,6 +7,12 @@ seo:
 
 ## 2026
 
+- Chaewon Yang, Sungboo Yoon, Moonseo Park, & Changbum R. Ahn (2026). Closed-Loop Perception–Action Framework for VLM-Based Relational Safety Monitoring in Construction. *SSRN preprint*.
+  [DOI](https://doi.org/10.2139/ssrn.7201051)
+
+- Sungboo Yoon, Moonseo Park, & Changbum R. Ahn (2026). Multi-Skill Robot Learning Through Functional Decomposition and Spatial Sequencing for Construction Finishing. *SSRN preprint*.
+  [DOI](https://doi.org/10.2139/ssrn.7083099)
+
 - Mingi An, Sungboo Yoon, Seungmin Shin, Moonseo Park, Changbum R. Ahn, & Tae-Keun Oh (2026). The Impact of AR-Supported Interfaces on Cognition, Hazard Identification, and Task Efficiency in Construction Teleoperation. *KSCE Journal of Civil Engineering*, 100638.
   [DOI](https://doi.org/10.1016/j.kscej.2026.100638)
 
@@ -14,6 +20,10 @@ seo:
   [Video](https://youtu.be/Z28Tnz2dnQ0)
 
 - Chaeeun Lee, Sungboo Yoon, Moonseo Park, & Changbum R. Ahn (2026). Robotic Skill Acquisition for Construction Tasks from Augmented Reality-Assisted Robot-Free Demonstration: A Comparative Study of Visual Feedback Strategies. In *Computing in Civil Engineering 2026*.
+
+- Sungboo Yoon, Moonseo Park, & Changbum R. Ahn (2026). Hierarchical Multi-Skill Planning Framework for Robotic Puttying. In *Late Breaking Results, 23rd International Conference on Ubiquitous Robots (UR 2026)*. Poster presentation.
+
+- Sungboo Yoon, Moonseo Park, & Changbum R. Ahn (2026). Multi-Skill Robot Learning for Construction Finishing. In *ASCE International Conference on Computing in Civil Engineering (i3CE 2026)*. Poster presentation.
 
 ## 2025
 

@@ -17,9 +17,9 @@ type PublicationLibraryProps = {
     entries: PublicationEntry[];
 };
 
-type PublicationFilter = 'All' | 'Journal' | 'Conference' | 'Awarded' | 'With video';
+type PublicationFilter = 'All' | 'Journal' | 'Conference' | 'Preprint' | 'Awarded' | 'With video';
 
-const filters: PublicationFilter[] = ['All', 'Journal', 'Conference', 'Awarded', 'With video'];
+const filters: PublicationFilter[] = ['All', 'Journal', 'Conference', 'Preprint', 'Awarded', 'With video'];
 
 function AwardBadge({ badge }: { badge: PublicationBadge }) {
     return <Badge label={badge} variant={badge === 'Best Paper' ? 'yellow' : badge === "Editor's Choice" ? 'red' : 'blue'} />;

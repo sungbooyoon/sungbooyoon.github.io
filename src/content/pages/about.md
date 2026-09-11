@@ -96,6 +96,7 @@ Coordinated daily situational monitoring, command oversight, and personnel deplo
 
 ### Reviewer Activities
 
+- 2026: Reviewer, Robotics and Autonomous Systems
 - 2026: Reviewer, Scientific Reports
 - 2026: Reviewer, The Journal of Supercomputing
 - 2026: Reviewer, International Conference on Computing in Civil Engineering (i3CE 2026)
