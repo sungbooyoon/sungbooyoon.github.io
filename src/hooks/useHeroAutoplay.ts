@@ -50,7 +50,8 @@ export function useHeroAutoplay(imageCount: number, paused: boolean) {
         };
         const onPointerUp = () => {
             pointerDown = false;
-            settle();
+            // A click can end while native smooth scrolling is still in progress.
+            onScroll();
         };
         const onVisibility = () => {
             lastInteraction = performance.now();
